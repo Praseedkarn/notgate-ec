@@ -4,7 +4,7 @@
 ![React](https://img.shields.io/badge/React-18.2.0-61DAFB?logo=react)
 ![License](https://img.shields.io/badge/License-MIT-green)
 ![Status](https://img.shields.io/badge/Status-Live-success)
-![Deployment](https://img.shields.io/badge/Deployed_on-Netlify-00C7B7)
+![Deployment](https://img.shields.io/badge/Deployed_on-Vercel-000000?logo=vercel)
 
 🎯 **A comprehensive, interactive guide for GATE Electronics & Communication Engineering aspirants with electronic-themed UI**
 
@@ -138,17 +138,7 @@ Settings: Theme switcher, font size
 
 🌐 GitHub Repository: https://github.com/Praseedkarn/NotGate
 
-📋 GATE ECE Subjects Covered
-Subject	Weightage	Topics
-Engineering Mathematics	15%	Linear Algebra, Calculus, Probability
-Networks, Signals & Systems	15%	Network Theorems, Fourier Transforms
-Electronic Devices	10%	Semiconductor Physics, BJT, MOSFET
-Analog Circuits	9%	Op-Amps, Oscillators, Amplifiers
-Digital Circuits	10%	Boolean Algebra, Microprocessors
-Control Systems	8%	Stability Analysis, State Space
-Communications	10%	Modulation, Information Theory
-Electromagnetics	8%	Maxwell's Equations, Waveguides
-General Aptitude	15%	Verbal, Numerical, Logical
+
 🤝 Contributing
 We welcome contributions! Here's how:
 
@@ -197,10 +187,3 @@ ECE Community - For valuable feedback
 
 Open Source - For wonderful tools and libraries
 
-<div align="center">
-⭐ If you find this project helpful, give it a star! ⭐
-https://api.star-history.com/svg?repos=Praseedkarn/NotGate&type=Date
-
-"Success in GATE is not about working hard, but working smart with the right resources!" 🎯
-
-</div> ```
