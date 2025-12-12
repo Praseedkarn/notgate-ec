@@ -1,74 +1,206 @@
-<<<<<<< HEAD
-# Getting Started with Create React App
+# ⚡ NOT GATE - GATE ECE Electronic Reference
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![Project Banner](https://img.shields.io/badge/GATE-ECE-blueviolet)
+![React](https://img.shields.io/badge/React-18.2.0-61DAFB?logo=react)
+![License](https://img.shields.io/badge/License-MIT-green)
+![Status](https://img.shields.io/badge/Status-Live-success)
+![Deployment](https://img.shields.io/badge/Deployed_on-Netlify-00C7B7)
 
-## Available Scripts
+🎯 **A comprehensive, interactive guide for GATE Electronics & Communication Engineering aspirants with electronic-themed UI**
 
-In the project directory, you can run:
+[🚀 Live Demo](#) | [📁 Project Structure](#project-structure) | [🛠️ Features](#features) | [📸 Screenshots](#screenshots)
 
-### `npm start`
+## 📖 Overview
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+NOT GATE is an interactive web application designed specifically for GATE ECE aspirants. It provides complete subject-wise weightage analysis, topic details, study materials, calculators, and exam information - all wrapped in a sleek electronic-themed interface.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🎮 Quick Navigation
 
-### `npm test`
+| Section | Description |
+|---------|-------------|
+| [✨ Features](#features) | What makes this app special |
+| [🛠️ Tech Stack](#tech-stack) | Technologies used |
+| [🚀 Getting Started](#getting-started) | How to run locally |
+| [📁 Project Structure](#project-structure) | Folder organization |
+| [📸 Screenshots](#screenshots) | Visual tour |
+| [🔗 Live Demo](#live-demo) | Try it online |
+| [🤝 Contributing](#contributing) | How to contribute |
+| [📄 License](#license) | MIT License |
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## ✨ Features
 
-### `npm run build`
+### 📊 **Core Features**
+- **✅ Subject-wise Weightage Analysis** - Interactive cards showing percentage distribution
+- **✅ Detailed Topic Breakdown** - Click cards to expand and view all topics
+- **✅ Google Drive Integration** - Direct access to organized study materials
+- **✅ Electronic-Themed UI** - Circuit board animations & LED effects
+- **✅ Responsive Design** - Works on desktop, tablet, and mobile
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 🛠️ **Tools Included**
+- **🧮 Scientific Calculator** - ECE-specific calculations
+- **🔧 Unit Converter** - Common ECE unit conversions
+- **⚙️ Settings Panel** - Theme customization & font size
+- **📖 GATE Information Hub** - Complete exam details & syllabus
+- **🔍 Search Functionality** - Quick topic search
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 🎨 **UI/UX Highlights**
+- **⚡ Real-time Animations** - LED progress bars, circuit effects
+- **🌓 Theme Support** - Electronic, Dark, Light, Blue themes
+- **📱 Mobile Optimized** - Touch-friendly interactions
+- **🔔 Interactive Feedback** - Hover effects & smooth transitions
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🛠️ Tech Stack
 
-### `npm run eject`
+| Layer | Technology |
+|-------|------------|
+| **Frontend** | React 18.2.0, React Router |
+| **Styling** | CSS3 with CSS Variables, Flexbox, Grid |
+| **Animations** | CSS Keyframes, Transitions |
+| **Icons** | Emoji icons, Custom SVG |
+| **Storage** | LocalStorage (for settings) |
+| **Deployment** | Netlify / Vercel |
+| **Version Control** | Git, GitHub |
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 🚀 Getting Started
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Prerequisites
+- Node.js (v14 or higher)
+- npm or yarn
+- Git
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Installation
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```bash
+# 1. Clone the repository
+git clone https://github.com/Praseedkarn/NotGate.git
 
-## Learn More
+# 2. Navigate to project directory
+cd NotGate
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+# 3. Install dependencies
+npm install
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+# 4. Start development server
+npm start
 
-### Code Splitting
+# 5. Open in browser
+# Local: http://localhost:3000
+Build for Production
+bash
+npm run build
+📁 Project Structure
+text
+notgate/
+├── public/
+│   ├── index.html
+│   └── favicon.ico
+├── src/
+│   ├── components/
+│   │   ├── Header.js
+│   │   ├── Calculator.js
+│   │   ├── UnitConverter.js
+│   │   ├── Setting.js
+│   │   ├── Help.js
+│   │   └── GateInfo.js
+│   ├── pages/
+│   │   └── (various pages)
+│   ├── App.js
+│   ├── App.css
+│   └── index.js
+├── package.json
+├── README.md
+└── .gitignore
+📸 Screenshots
+🖥️ Main Dashboard
+text
+📱 [Course Weightage Cards]
+┌─────────────────────────┐
+│  Engineering Mathematics │
+│  ────────────────────── │
+│  📊 15% weightage        │
+│  ❓ 10-12 questions      │
+│  ⭐ Very High Importance │
+│  ↓ Click to expand →    │
+└─────────────────────────┘
+🎨 Theme Showcase
+Electronic Theme	Dark Theme	Light Theme
+Circuit effects	Dark mode	Clean white
+LED animations	Blue accent	Blue accent
+🛠️ Tools Preview
+Calculator: Scientific functions
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Unit Converter: dBm, MHz, Ω conversions
 
-### Analyzing the Bundle Size
+Settings: Theme switcher, font size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+🔗 Live Demo
+🚀 Live Application: Coming Soon
 
-### Making a Progressive Web App
+🌐 GitHub Repository: https://github.com/Praseedkarn/NotGate
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+📋 GATE ECE Subjects Covered
+Subject	Weightage	Topics
+Engineering Mathematics	15%	Linear Algebra, Calculus, Probability
+Networks, Signals & Systems	15%	Network Theorems, Fourier Transforms
+Electronic Devices	10%	Semiconductor Physics, BJT, MOSFET
+Analog Circuits	9%	Op-Amps, Oscillators, Amplifiers
+Digital Circuits	10%	Boolean Algebra, Microprocessors
+Control Systems	8%	Stability Analysis, State Space
+Communications	10%	Modulation, Information Theory
+Electromagnetics	8%	Maxwell's Equations, Waveguides
+General Aptitude	15%	Verbal, Numerical, Logical
+🤝 Contributing
+We welcome contributions! Here's how:
 
-### Advanced Configuration
+Fork the repository
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Create a feature branch (git checkout -b feature/AmazingFeature)
 
-### Deployment
+Commit changes (git commit -m 'Add AmazingFeature')
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Push to branch (git push origin feature/AmazingFeature)
 
-### `npm run build` fails to minify
+Open a Pull Request
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-=======
-# NotGate
->>>>>>> 0fbdb0de8a43794c49cf30de377edf2f797644f5
+Contribution Areas
+📚 Add more study materials
+
+🎨 Improve UI/UX designs
+
+🐛 Fix bugs and issues
+
+📱 Enhance mobile experience
+
+🌐 Add multi-language support
+
+📄 License
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+text
+MIT License
+
+Copyright (c) 2025 Praseed Kumar
+
+Permission is hereby granted...
+👨‍💻 Developer
+Praseed Kumar
+📧 Email: praseedkumar104@gmail.com
+🌐 GitHub: @Praseedkarn
+🔗 LinkedIn: Connect with me
+
+🙏 Acknowledgments
+GATE IIT KGP - For the official exam portal
+
+React Team - For the amazing framework
+
+ECE Community - For valuable feedback
+
+Open Source - For wonderful tools and libraries
+
+<div align="center">
+⭐ If you find this project helpful, give it a star! ⭐
+https://api.star-history.com/svg?repos=Praseedkarn/NotGate&type=Date
+
+"Success in GATE is not about working hard, but working smart with the right resources!" 🎯
+
+</div> ```
