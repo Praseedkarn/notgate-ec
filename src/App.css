@@ -2634,3 +2634,32 @@ body:not(.dark-mode):not(.light-mode):not(.blue-theme) {
   transform: translateY(-2px);
   box-shadow: 0 10px 20px rgba(255, 255, 255, 0.15);
 }
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-color) !important;
+}
+
+/* 2. Fix paragraph and span text */
+p, span, div:not(.digital-badge):not(.weight-badge):not(.resource-count) {
+  color: var(--text-color) !important;
+}
+
+/* 3. Fix list items */
+li, .electronic-item, .topic-item, .resource-item {
+  color: var(--text-light) !important;
+}
+
+/* 4. Fix meta information */
+.course-meta, .resource-desc, .section-subtitle, .view-tip {
+  color: var(--text-secondary) !important;
+}
+
+/* 5. Ensure buttons have good contrast */
+button:not(.digital-badge):not(.weight-badge) {
+  color: white !important;
+}
+
+/* 6. Fix preview sections */
+.preview-hint, .preview, .resource-preview {
+  background: rgba(var(--primary-rgb, 67, 97, 238), 0.1) !important;
+  color: var(--primary) !important;
+}
