@@ -2633,7 +2633,7 @@ body:not(.dark-mode):not(.light-mode):not(.blue-theme) {
   background: rgba(255, 255, 255, 0.3);
   transform: translateY(-2px);
   box-shadow: 0 10px 20px rgba(255, 255, 255, 0.15);
-<<<<<<< HEAD
+
 }
 h1, h2, h3, h4, h5, h6 {
   color: var(--text-color) !important;
@@ -2663,6 +2663,5 @@ button:not(.digital-badge):not(.weight-badge) {
 .preview-hint, .preview, .resource-preview {
   background: rgba(var(--primary-rgb, 67, 97, 238), 0.1) !important;
   color: var(--primary) !important;
-=======
->>>>>>> 31c56d11115778043e152da12e42f70929cd0df7
+
 }
