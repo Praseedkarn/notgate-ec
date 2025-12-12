@@ -14,18 +14,7 @@
 
 NOT GATE is an interactive web application designed specifically for GATE ECE aspirants. It provides complete subject-wise weightage analysis, topic details, study materials, calculators, and exam information - all wrapped in a sleek electronic-themed interface.
 
-## 🎮 Quick Navigation
 
-| Section | Description |
-|---------|-------------|
-| [✨ Features](#features) | What makes this app special |
-| [🛠️ Tech Stack](#tech-stack) | Technologies used |
-| [🚀 Getting Started](#getting-started) | How to run locally |
-| [📁 Project Structure](#project-structure) | Folder organization |
-| [📸 Screenshots](#screenshots) | Visual tour |
-| [🔗 Live Demo](#live-demo) | Try it online |
-| [🤝 Contributing](#contributing) | How to contribute |
-| [📄 License](#license) | MIT License |
 
 ## ✨ Features
 
