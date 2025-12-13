@@ -103,8 +103,8 @@
 
 .info-tab-btn {
   padding: 1rem 2rem;
-  background: var(--card-bg);
-  border: 2px solid var(--border-color);
+  background: var(--card-bg, #ffffff);
+  border: 2px solid #e2e8f0;
   border-radius: 12px;
   font-size: 1rem;
   font-weight: 600;
@@ -113,21 +113,41 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  color: #000000 !important; /* Black text for light theme */
 }
 
 .info-tab-btn:hover {
   transform: translateY(-2px);
   border-color: #4361ee;
   box-shadow: 0 5px 15px rgba(67, 97, 238, 0.2);
+  color: #000000 !important; /* Keep black on hover */
 }
 
 .info-tab-btn.active {
   background: linear-gradient(135deg, #4361ee, #3a0ca3);
-  color: white;
+  color: #ffffff !important; /* White text for active state */
   border-color: #4361ee;
   box-shadow: 0 5px 15px rgba(67, 97, 238, 0.3);
 }
 
+/* Dark theme - white text */
+.dark-theme .info-tab-btn {
+  color: #ffffff !important; /* White text for dark theme */
+  border-color: #4a5568;
+}
+
+.dark-theme .info-tab-btn:hover {
+  color: #ffffff !important; /* White text on hover */
+  border-color: #4cc9f0;
+  box-shadow: 0 5px 15px rgba(76, 201, 240, 0.2);
+}
+
+.dark-theme .info-tab-btn.active {
+  background: linear-gradient(135deg, #4cc9f0, #4361ee);
+  color: #ffffff !important; /* White text for active state */
+  border-color: #4cc9f0;
+  box-shadow: 0 5px 15px rgba(76, 201, 240, 0.3);
+}
 /* Content Sections */
 .info-content {
   background: var(--card-bg);

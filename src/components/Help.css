@@ -4,7 +4,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.85);
   backdrop-filter: blur(4px);
   display: flex;
   justify-content: center;
@@ -14,7 +14,7 @@
 }
 
 .help-container {
-  background: var(--card-bg);
+  background: var(--card-bg,#ffffff);
   backdrop-filter: blur(10px);
   border-radius: 20px;
   max-width: 900px;
@@ -24,6 +24,7 @@
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   animation: slideUp 0.3s ease-out;
   border: 2px solid #e2e8f0;
+  color: var(--text-colour,#2d3748) !important;
 }
 
 @keyframes slideUp {
@@ -43,7 +44,7 @@
   padding: 2rem;
   background: linear-gradient(135deg, #4361ee, #3a0ca3);
   border-radius: 20px 20px 0 0;
-  color: white;
+  color: white !important;
   position: relative;
 }
 
@@ -108,6 +109,7 @@
 
 .help-body {
   padding: 2rem;
+  background: var(--bg-color,#f8fafc);
 }
 
 .help-section {
@@ -421,4 +423,57 @@
   .header-main h1 {
     justify-content: flex-start;
   }
+}
+/* SIMPLE FIX - Add this after your existing CSS */
+.help-overlay .help-container .help-body h2,
+.help-overlay .help-container .help-body h3,
+.help-overlay .help-container .help-body .step-content h3,
+.help-overlay .help-container .help-body .faq-question h3,
+.help-overlay .help-container .help-body .contact-details h3 {
+  color: #2d3748 !important; /* Dark color for light theme */
+}
+
+/* Dark theme override */
+.dark-theme .help-overlay .help-container .help-body h2,
+.dark-theme .help-overlay .help-container .help-body h3,
+.dark-theme .help-overlay .help-container .help-body .step-content h3,
+.dark-theme .help-overlay .help-container .help-body .faq-question h3,
+.dark-theme .help-overlay .help-container .help-body .contact-details h3 {
+  color: #f7fafc !important; /* Light color for dark theme */
+}
+
+/* Electronic theme (if you have separate class) */
+.electronic-theme .help-overlay .help-container .help-body h2,
+.electronic-theme .help-overlay .help-container .help-body h3,
+.electronic-theme .help-overlay .help-container .help-body .step-content h3,
+.electronic-theme .help-overlay .help-container .help-body .faq-question h3,
+.electronic-theme .help-overlay .help-container .help-body .contact-details h3 {
+  color: #2d3748 !important;
+}
+/* SUPER SIMPLE GLOBAL FIX - Targets EVERYTHING except header */
+.help-overlay .help-container .help-body *:not(.help-header *) {
+  color: #2d3748 !important; /* Dark text for light theme */
+}
+
+.dark-theme .help-overlay .help-container .help-body *:not(.help-header *) {
+  color: #e2e8f0 !important; /* Light text for dark theme */
+}
+
+/* Keep the header gradient text white */
+.help-overlay .help-container .help-header,
+.help-overlay .help-container .help-header * {
+  color: white !important;
+}
+
+/* Optional: Make paragraph text slightly lighter */
+.help-overlay .help-container .help-body p,
+.help-overlay .help-container .help-body .step-content p,
+.help-overlay .help-container .help-body .faq-answer p {
+  color: #718096 !important;
+}
+
+.dark-theme .help-overlay .help-container .help-body p,
+.dark-theme .help-overlay .help-container .help-body .step-content p,
+.dark-theme .help-overlay .help-container .help-body .faq-answer p {
+  color: #a0aec0 !important;
 }
