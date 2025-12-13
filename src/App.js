@@ -852,7 +852,7 @@ function App() {
         <div className="footer-bottom">
           <p className="copyright">
             <span className="copyright-icon">©</span>
-            GATE ECE Electronic Reference • December 2025
+            NotGATE-EC • December 2025
           </p>
           <p className="tech-note"></p>
         </div>

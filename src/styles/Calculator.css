@@ -56,7 +56,7 @@
   backdrop-filter: blur(10px);
   border-radius: 20px;
   padding: 2rem;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 30px rgba(227, 221, 221, 0.1);
   margin-bottom: 2rem;
 }
 
@@ -440,4 +440,581 @@
   .tab-btn {
     width: 100%;
   }
+}
+/* QUICK THEME FIX FOR CALCULATOR PAGE */
+
+/* Default theme colors - electronic/light theme */
+.calculator-page {
+  color: #000000 !important;
+}
+
+/* Tab buttons - black text in light theme */
+.tab-btn {
+  color: #000000 !important;
+}
+
+.tab-btn.active {
+  color: #ffffff !important;
+}
+
+/* Calculator container text */
+.calculator-container,
+.scientific-calculator,
+.simple-calculator {
+  color: #000000 !important;
+}
+
+/* Calculator display - keep original (should be visible) */
+.calc-display {
+  background: #1a1a2e;
+  color: #4cc9f0;
+}
+
+.calc-mode {
+  color: #ffd166;
+}
+
+.calc-history {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.calc-screen {
+  color: #ffffff;
+}
+
+/* Button text */
+.calc-btn-number {
+  color: #2d3748 !important;
+}
+
+.calc-btn-clear {
+  color: #2d3748 !important;
+}
+
+/* Legend and guide */
+.calc-legend,
+.calc-guide {
+  color: #000000 !important;
+}
+
+.calc-legend h3,
+.calc-guide h4 {
+  color: #4361ee !important;
+}
+
+.calc-legend p,
+.calc-guide li {
+  color: #4a5568 !important;
+}
+
+/* Tool cards */
+.tool-card h4 {
+  color: #000000 !important;
+}
+
+.tool-card p {
+  color: #666 !important;
+}
+
+/* Header */
+.header-main p {
+  color: #666 !important;
+}
+
+/* Footer */
+.footer-note {
+  color: #666 !important;
+}
+
+/* Dark theme override - white text */
+.dark-theme .calculator-page {
+  color: #ffffff !important;
+}
+
+.dark-theme .tab-btn {
+  color: #ffffff !important;
+  border-color: #4a5568 !important;
+}
+
+.dark-theme .calculator-container,
+.dark-theme .scientific-calculator,
+.dark-theme .simple-calculator {
+  color: #ffffff !important;
+}
+
+.dark-theme .calc-legend,
+.dark-theme .calc-guide {
+  color: #ffffff !important;
+  background: rgba(76, 201, 240, 0.1) !important;
+  border-color: #4cc9f0 !important;
+}
+
+.dark-theme .calc-legend h3,
+.dark-theme .calc-guide h4 {
+  color: #4cc9f0 !important;
+}
+
+.dark-theme .calc-legend p,
+.dark-theme .calc-guide li {
+  color: #a0aec0 !important;
+}
+
+.dark-theme .calc-guide li {
+  border-bottom-color: #4a5568 !important;
+}
+
+.dark-theme .tool-card {
+  border-color: #4a5568 !important;
+}
+
+.dark-theme .tool-card h4 {
+  color: #ffffff !important;
+}
+
+.dark-theme .tool-card p {
+  color: #a0aec0 !important;
+}
+
+.dark-theme .header-main p {
+  color: #a0aec0 !important;
+}
+
+.dark-theme .footer-note {
+  color: #a0aec0 !important;
+}
+
+/* Electronic theme (if you have separate class) */
+.electronic-theme .calculator-page {
+  color: #000000 !important;
+}
+
+.electronic-theme .tab-btn {
+  color: #000000 !important;
+  border-color: #e2e8f0 !important;
+}
+
+.electronic-theme .calculator-container {
+  color: #000000 !important;
+}
+
+.electronic-theme .calc-legend p,
+.electronic-theme .calc-guide li {
+  color: #4a5568 !important;
+}
+
+.electronic-theme .tool-card h4 {
+  color: #2d3748 !important;
+}
+
+/* Light theme (if different from electronic) */
+.light-theme .calculator-page {
+  color: #000000 !important;
+}
+
+.light-theme .tab-btn {
+  color: #000000 !important;
+}
+
+/* Button colors in dark theme */
+.dark-theme .calc-btn-number {
+  background: linear-gradient(145deg, #4a5568, #2d3748) !important;
+  color: #ffffff !important;
+}
+
+.dark-theme .calc-btn-clear {
+  background: linear-gradient(135deg, #ffb347, #ff8c00) !important;
+  color: #2d3748 !important;
+}
+
+/* Calculator header gradient - keep same for all themes */
+.calculator-header {
+  background: linear-gradient(135deg, #4361ee, #3a0ca3) !important;
+  color: white !important;
+}
+
+/* Override for all text elements to ensure visibility */
+.calculator-page *:not(.calculator-header *):not(.calc-display *):not(.calc-btn) {
+  color: inherit !important;
+}
+/* MINIMAL FIX - Just for button digits/letters */
+.calc-btn {
+  color: #000000 !important;
+}
+
+.dark-theme .calc-btn {
+  color: #ffffff !important;
+}
+
+/* Keep operator/equals buttons with white text */
+.calc-btn-operator,
+.calc-btn-equals {
+  color: white !important;
+}
+
+/* Number buttons should be readable */
+.calc-btn-number {
+  background: linear-gradient(145deg, #f8fafc, #edf2f7) !important;
+  color: #2d3748 !important;
+}
+
+.dark-theme .calc-btn-number {
+  background: linear-gradient(145deg, #4a5568, #2d3748) !important;
+  color: #ffffff !important;
+}
+/* SIMPLE DIGIT FIX - Force contrast in all themes */
+
+/* Light theme - dark digits */
+.calc-btn:not(.calc-btn-operator):not(.calc-btn-equals) {
+  color: #000000 !important;
+}
+
+/* Dark theme - white digits */
+.dark-theme .calc-btn:not(.calc-btn-clear) {
+  color: #ffffff !important;
+}
+
+.dark-theme .calc-btn-clear {
+  color: #2d3748 !important;
+}
+
+/* Keep operator/equals buttons white */
+.calc-btn-operator,
+.calc-btn-equals {
+  color: white !important;
+}
+/* Alternative - Light theme display with white text */
+:not(.dark-theme) .calc-display {
+  background: #2d3748 !important; /* Dark blue-gray */
+  color: #ffffff !important;
+}
+
+:not(.dark-theme) .calc-screen {
+  color: #ffffff !important;
+}
+
+:not(.dark-theme) .calc-history {
+  color: #a0aec0 !important; /* Light gray */
+}
+
+:not(.dark-theme) .calc-mode {
+  color: #ffd166 !important;
+}
+
+/* Dark theme keeps dark display */
+.dark-theme .calc-display {
+  background: #1a1a2e !important;
+  color: #ffffff !important;
+}
+/* Calculator Display - White Result Text */
+.calc-display {
+  background: #1a1a2e !important; /* Dark background */
+  border-radius: 12px !important;
+  padding: 1.5rem !important;
+  margin-bottom: 1.5rem !important;
+  box-shadow: inset 0 2px 10px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Make ALL text in calculator display white */
+.calc-display * {
+  color: white !important;
+}
+
+/* Specifically target the result number (2683 in your example) */
+.calc-screen {
+  color: #ffffff !important; /* Pure white for result */
+  font-size: 2.5rem !important;
+  font-weight: 600 !important;
+  text-align: right !important;
+  min-height: 3rem !important;
+  font-family: 'Courier New', monospace !important;
+}
+
+/* History text (previous calculations) */
+.calc-history {
+  color: rgba(255, 255, 255, 0.8) !important; /* Slightly transparent white */
+  font-size: 1rem !important;
+  min-height: 1.5rem !important;
+  text-align: right !important;
+  font-family: 'Courier New', monospace !important;
+}
+
+/* Mode indicator (like DEG/RAD) */
+.calc-mode {
+  color: #ffd166 !important; /* Yellow for mode */
+  font-size: 0.9rem !important;
+  display: flex !important;
+  justify-content: space-between !important;
+  margin-bottom: 0.5rem !important;
+}
+
+/* Ensure this works for all themes */
+:root .calc-display,
+.light-theme .calc-display,
+.electronic-theme .calc-display,
+.dark-theme .calc-display {
+  background: #e0e0e6 !important;
+}
+
+:root .calc-screen,
+.light-theme .calc-screen,
+.electronic-theme .calc-screen,
+.dark-theme .calc-screen {
+  color: #ffffff !important;
+}
+
+/* Button text colors - keep operators visible */
+.calc-btn-operator,
+.calc-btn-equals {
+  color: white !important;
+}
+
+.calc-btn-number {
+  color: #f2f4f7 !important; /* Dark text on light buttons */
+}
+
+.dark-theme .calc-btn-number {
+  color: #ffffff !important; /* White text on dark buttons */
+}
+/* SIMPLE FIX: Calculator numbers - Black in light, White in dark */
+
+/* Default (Light/Electronic mode): Black numbers */
+.calc-btn {
+  color: #000000 !important; /* Black text */
+}
+
+/* Number buttons - black text on light background */
+.calc-btn-number {
+  background: linear-gradient(145deg, #f8fafc, #edf2f7) !important;
+  color: #000000 !important; /* Black numbers */
+}
+
+/* Function buttons - black text */
+.calc-btn-function {
+  background: linear-gradient(145deg, #e2e8f0, #cbd5e0) !important;
+  color: #000000 !important;
+}
+
+/* Clear button - black text */
+.calc-btn-clear {
+  background: linear-gradient(135deg, #ffd166, #ffb347) !important;
+  color: #000000 !important;
+}
+
+/* Keep operator buttons white */
+.calc-btn-operator,
+.calc-btn-equals {
+  color: rgb(242, 242, 242) !important; /* White text on colored buttons */
+}
+
+/* DARK MODE: White numbers */
+.dark-theme .calc-btn {
+  color: #ffffff !important; /* White text */
+}
+
+.dark-theme .calc-btn-number {
+  background: linear-gradient(145deg, #4a5568, #2d3748) !important;
+  color: #ffffff !important; /* White numbers */
+}
+
+.dark-theme .calc-btn-function {
+  background: linear-gradient(145deg, #4a5568, #2d3748) !important;
+  color: #ffffff !important;
+}
+
+.dark-theme .calc-btn-clear {
+  background: linear-gradient(135deg, #ffb347, #ff8c00) !important;
+  color: #000000 !important; /* Keep black for contrast */
+}
+
+/* Calculator display - always white on dark background */
+.calc-display {
+  background: #1a1a2e !important;
+}
+
+.calc-screen {
+  color: #f4f3f3 !important; /* White result */
+}
+
+.calc-history {
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+
+.calc-mode {
+  color: #ffd166 !important;
+}
+
+/* Ensure all themes use same display colors */
+.electronic-theme .calc-screen,
+.light-theme .calc-screen {
+  color: #242323 !important;
+}
+/* CALCULATOR THEME FIX - Updated Version */
+
+/* =========================================== */
+/* LIGHT/ELECTRONIC THEME - BLACK NUMBERS */
+/* =========================================== */
+
+/* All calculator buttons - black text in light mode */
+:not(.dark-theme) .calc-btn {
+  color: #000000 !important;
+}
+
+/* Number buttons (0-9) */
+:not(.dark-theme) .calc-btn-number {
+  background: linear-gradient(145deg, #f8fafc, #edf2f7) !important;
+  color: #000000 !important;
+}
+
+/* Function buttons (sin, cos, log, etc) */
+:not(.dark-theme) .calc-btn-function {
+  background: linear-gradient(145deg, #e2e8f0, #cbd5e0) !important;
+  color: #000000 !important;
+}
+
+/* Clear button (C, AC) */
+:not(.dark-theme) .calc-btn-clear {
+  background: linear-gradient(135deg, #ffd166, #ffb347) !important;
+  color: #000000 !important;
+}
+
+/* Operator buttons (+, -, ×, ÷) - always white */
+.calc-btn-operator {
+  background: linear-gradient(135deg, #4cc9f0, #4361ee) !important;
+  color: #ffffff !important;
+}
+
+/* Equals button (=) - always white */
+.calc-btn-equals {
+  background: linear-gradient(135deg, #f72585, #ff4081) !important;
+  color: #ffffff !important;
+}
+
+/* =========================================== */
+/* DARK THEME - WHITE NUMBERS */
+/* =========================================== */
+
+/* All calculator buttons - white text in dark mode */
+.dark-theme .calc-btn {
+  color: #ffffff !important;
+}
+
+/* Number buttons (0-9) */
+.dark-theme .calc-btn-number {
+  background: linear-gradient(145deg, #4a5568, #2d3748) !important;
+  color: #ffffff !important;
+}
+
+/* Function buttons (sin, cos, log, etc) */
+.dark-theme .calc-btn-function {
+  background: linear-gradient(145deg, #4a5568, #2d3748) !important;
+  color: #ffffff !important;
+}
+
+/* Clear button (C, AC) - keep dark text for contrast */
+.dark-theme .calc-btn-clear {
+  background: linear-gradient(135deg, #ffb347, #ff8c00) !important;
+  color: #2d3748 !important;
+}
+
+/* =========================================== */
+/* CALCULATOR DISPLAY - ALWAYS VISIBLE */
+/* =========================================== */
+
+/* Display background - always dark */
+.calc-display {
+  background: #1a1a2e !important;
+  border-radius: 12px !important;
+  padding: 1.5rem !important;
+  margin-bottom: 1.5rem !important;
+  box-shadow: inset 0 2px 10px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Result number - always white */
+.calc-screen {
+  color: #f8f5f5 !important;
+  font-size: 2.5rem !important;
+  font-weight: 600 !important;
+  text-align: right !important;
+  min-height: 3rem !important;
+  font-family: 'Courier New', monospace !important;
+}
+
+/* Calculation history - light gray */
+.calc-history {
+  color: rgba(249, 247, 247, 0.7) !important;
+  font-size: 1rem !important;
+  min-height: 1.5rem !important;
+  text-align: right !important;
+  font-family: 'Courier New', monospace !important;
+}
+
+/* Mode indicator (DEG/RAD) - yellow */
+.calc-mode {
+  color: #ffd166 !important;
+  font-size: 0.9rem !important;
+  display: flex !important;
+  justify-content: space-between !important;
+  margin-bottom: 0.5rem !important;
+}
+
+/* =========================================== */
+/* THEME SPECIFIC DISPLAY (for consistency) */
+/* =========================================== */
+
+/* Light theme display */
+.light-theme .calc-display,
+.electronic-theme .calc-display {
+  background: #1a1a2e !important;
+}
+
+.light-theme .calc-screen,
+.electronic-theme .calc-screen {
+  color: #ffffff !important;
+}
+
+/* Dark theme display */
+.dark-theme .calc-display {
+  background: #1a1a2e !important;
+}
+
+.dark-theme .calc-screen {
+  color: #ffffff !important;
+}
+
+/* =========================================== */
+/* HOVER EFFECTS */
+/* =========================================== */
+
+/* Hover effects for all themes */
+.calc-btn:hover {
+  opacity: 0.9 !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* =========================================== */
+/* BUTTON TEXT INSIDE (digits, letters, symbols) */
+/* =========================================== */
+
+/* Ensure all text inside buttons inherits color */
+.calc-btn span,
+.calc-btn div,
+.calc-btn i {
+  color: inherit !important;
+}
+
+/* Force digit visibility */
+.calc-btn[data-type="number"],
+.calc-btn[data-type="digit"],
+.calc-btn[data-value] {
+  color: inherit !important;
+}
+
+/* =========================================== */
+/* ACTIVE STATE */
+/* =========================================== */
+
+.calc-btn:active {
+  transform: translateY(0) !important;
+  opacity: 0.8 !important;
 }

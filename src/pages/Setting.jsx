@@ -202,7 +202,7 @@ const Settings = ({ onClose, currentTheme, onThemeChange }) => {
         </div>
 
         {/* Calculator Settings */}
-        <div className="settings-section">
+        {/* <div className="settings-section">
           <div className="section-header">
             <h2>🧮 Calculator</h2>
             <p>Customize calculator preferences</p>
@@ -226,7 +226,7 @@ const Settings = ({ onClose, currentTheme, onThemeChange }) => {
               </button>
             ))}
           </div>
-        </div>
+        </div> */}
 
         {/* Toggle Settings */}
         <div className="settings-section">
@@ -303,10 +303,10 @@ const Settings = ({ onClose, currentTheme, onThemeChange }) => {
               className="language-dropdown"
             >
               <option value="english">🇺🇸 English</option>
-              <option value="hindi">🇮🇳 Hindi</option>
-              <option value="telugu">🌐 Telugu</option>
-              <option value="tamil">🌐 Tamil</option>
-              <option value="bengali">🌐 Bengali</option>
+              {/* <option value="hindi">🇮🇳 Hindi</option> */}
+              {/* <option value="telugu">🌐 Telugu</option> */}
+              {/* <option value="tamil">🌐 Tamil</option> */}
+              {/* <option value="bengali">🌐 Bengali</option> */}
             </select>
           </div>
         </div>
@@ -319,20 +319,20 @@ const Settings = ({ onClose, currentTheme, onThemeChange }) => {
           <div className="info-grid">
             <div className="info-item">
               <span className="info-label">Version</span>
-              <span className="info-value">2.0.1</span>
+              <span className="info-value">2.0.2</span>
             </div>
             <div className="info-item">
               <span className="info-label">Last Updated</span>
-              <span className="info-value">Dec 2025</span>
+              <span className="info-value">14 Dec 2025</span>
+            </div>
+            {/* <div className="info-item">
+              <span className="info-label"></span>
+              <span className="info-value"></span>
             </div>
             <div className="info-item">
-              <span className="info-label">Total Users</span>
-              <span className="info-value">1,250+</span>
-            </div>
-            <div className="info-item">
-              <span className="info-label">Storage Used</span>
-              <span className="info-value">45 MB</span>
-            </div>
+              <span className="info-label"></span>
+              <span className="info-value"></span>
+            </div> */}
           </div>
           <div className="app-actions">
             <button className="action-btn clear-btn" title="Clear cache">

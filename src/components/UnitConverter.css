@@ -686,3 +686,559 @@
     font-size: 1.8rem;
   }
 }
+/* UNIT CONVERTER THEME FIX */
+
+/* =========================================== */
+/* LIGHT/ELECTRONIC THEME - BLACK TEXT */
+/* =========================================== */
+
+/* Main container text */
+:not(.dark-theme) .unit-converter-container {
+  color: #000000 !important;
+}
+
+/* Input labels and text */
+:not(.dark-theme) .input-group label,
+:not(.dark-theme) .unit-select-group label,
+:not(.dark-theme) .calc-header h3,
+:not(.dark-theme) .calc-info {
+  color: #000000 !important;
+}
+
+/* Input fields */
+:not(.dark-theme) .value-input,
+:not(.dark-theme) .unit-select {
+  background: #ffffff !important;
+  border-color: #e2e8f0 !important;
+  color: #000000 !important;
+}
+
+/* Unit info text */
+:not(.dark-theme) .unit-info {
+  color: #666666 !important;
+}
+
+/* Tab buttons - black text in light theme */
+:not(.dark-theme) .tab-btn {
+  color: #000000 !important;
+  background: rgba(0, 0, 0, 0.1) !important;
+  border-color: rgba(0, 0, 0, 0.2) !important;
+}
+
+:not(.dark-theme) .tab-btn.active {
+  background: #4361ee !important;
+  color: #ffffff !important;
+}
+
+/* Tool cards */
+:not(.dark-theme) .tool-card {
+  background: #ffffff !important;
+  border-color: #e2e8f0 !important;
+}
+
+:not(.dark-theme) .tool-card h4 {
+  color: #000000 !important;
+}
+
+:not(.dark-theme) .tool-card p {
+  color: #666666 !important;
+}
+
+/* History items */
+:not(.dark-theme) .history-item {
+  border-bottom-color: #e2e8f0 !important;
+  color: #000000 !important;
+}
+
+:not(.dark-theme) .history-meta {
+  color: #666666 !important;
+}
+
+/* Guide items */
+:not(.dark-theme) .calc-guide li {
+  color: #000000 !important;
+  border-bottom-color: #e2e8f0 !important;
+}
+
+/* Footer note */
+:not(.dark-theme) .footer-note {
+  color: #666666 !important;
+}
+
+/* Calculator buttons - black text */
+:not(.dark-theme) .calc-btn-clear {
+  color: #2d3748 !important;
+}
+
+/* =========================================== */
+/* DARK THEME - WHITE TEXT */
+/* =========================================== */
+
+/* Main container text */
+.dark-theme .unit-converter-container {
+  color: #ffffff !important;
+}
+
+/* Input labels and text */
+.dark-theme .input-group label,
+.dark-theme .unit-select-group label,
+.dark-theme .calc-header h3,
+.dark-theme .calc-info {
+  color: #ffffff !important;
+}
+
+/* Input fields */
+.dark-theme .value-input,
+.dark-theme .unit-select {
+  background: #2d3748 !important;
+  border-color: #4a5568 !important;
+  color: #ffffff !important;
+}
+
+/* Unit info text */
+.dark-theme .unit-info {
+  color: #a0aec0 !important;
+}
+
+/* Tab buttons - white text in dark theme */
+.dark-theme .tab-btn {
+  color: #ffffff !important;
+  background: rgba(255, 255, 255, 0.1) !important;
+  border-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+.dark-theme .tab-btn.active {
+  background: #4361ee !important;
+  color: #ffffff !important;
+}
+
+/* Tool cards */
+.dark-theme .tool-card {
+  background: #2d3748 !important;
+  border-color: #4a5568 !important;
+}
+
+.dark-theme .tool-card h4 {
+  color: #ffffff !important;
+}
+
+.dark-theme .tool-card p {
+  color: #a0aec0 !important;
+}
+
+/* History items */
+.dark-theme .history-item {
+  border-bottom-color: #4a5568 !important;
+  color: #ffffff !important;
+}
+
+.dark-theme .history-meta {
+  color: #a0aec0 !important;
+}
+
+/* Guide items */
+.dark-theme .calc-guide li {
+  color: #a0aec0 !important;
+  border-bottom-color: #4a5568 !important;
+}
+
+/* Footer note */
+.dark-theme .footer-note {
+  color: #a0aec0 !important;
+}
+
+/* Calculator buttons - white text */
+.dark-theme .calc-btn-clear {
+  color: #ffffff !important;
+}
+
+/* =========================================== */
+/* UNIVERSAL FIXES (Both themes) */
+/* =========================================== */
+
+/* Keep header gradient and white text */
+.unit-converter-header {
+  background: linear-gradient(135deg, #4361ee, #3a0ca3) !important;
+}
+
+.unit-converter-header,
+.unit-converter-header * {
+  color: #ffffff !important;
+}
+
+/* Calculator display - always visible */
+.calc-display {
+  background: #1a1a2e !important;
+}
+
+.calc-screen {
+  color: #ffffff !important;
+}
+
+.calc-history {
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+
+.calc-mode {
+  color: #ffd166 !important;
+}
+
+/* Action buttons - keep colors consistent */
+.calc-btn-equals,
+.calc-btn-operator,
+.tool-btn,
+.back-home-btn,
+.back-home-btn-footer {
+  color: #ffffff !important;
+}
+
+/* Make sure all text in the converter is visible */
+.converter-body *:not(.unit-converter-header *) {
+  color: inherit !important;
+}
+
+/* Force tab button text visibility */
+.tab-btn,
+.tab-btn * {
+  color: inherit !important;
+}
+
+/* Ensure option text in dropdowns is visible */
+.unit-select option {
+  background: #ffffff !important;
+  color: #000000 !important;
+}
+
+.dark-theme .unit-select option {
+  background: #2d3748 !important;
+  color: #ffffff !important;
+}
+
+/* Section headers fix */
+.converter-tabs ~ div h3,
+.converter-tabs ~ div h4 {
+  color: inherit !important;
+}
+/* COMPREHENSIVE UNIT CONVERTER THEME FIX */
+
+/* =========================================== */
+/* UNIVERSAL OVERRIDE - Force text visibility */
+/* =========================================== */
+
+/* Target ALL text in converter except header */
+.unit-converter-container .converter-body *,
+.unit-converter-container .calculator-container *,
+.unit-converter-container .conversion-inputs *,
+.unit-converter-container .calc-legend *,
+.unit-converter-container .calc-guide *,
+.unit-converter-container .calculator-tools *,
+.unit-converter-container .calculator-footer * {
+  color: #000000 !important; /* Black for light theme */
+}
+
+/* =========================================== */
+/* SPECIFIC ELEMENT FIXES - Light Theme */
+/* =========================================== */
+
+/* Input groups */
+.input-group label,
+.unit-select-group label {
+  color: #000000 !important;
+}
+
+/* Input fields */
+.value-input,
+.unit-select {
+  color: #000000 !important;
+  background: #ffffff !important;
+  border: 2px solid #e2e8f0 !important;
+}
+
+.value-input::placeholder {
+  color: #666666 !important;
+}
+
+/* Select dropdown text */
+.unit-select option {
+  color: #000000 !important;
+  background: #ffffff !important;
+}
+
+/* Calculator header */
+.calc-header h3 {
+  color: #000000 !important;
+}
+
+.calc-info {
+  color: #666666 !important;
+}
+
+/* Tool cards */
+.tool-card {
+  background: #ffffff !important;
+}
+
+.tool-card h4 {
+  color: #000000 !important;
+}
+
+.tool-card p {
+  color: #666666 !important;
+}
+
+/* History section */
+.calc-legend h3 {
+  color: #000000 !important;
+}
+
+.history-item {
+  color: #000000 !important;
+}
+
+.history-from {
+  color: #f72585 !important;
+}
+
+.history-to {
+  color: #4cc9f0 !important;
+}
+
+.history-meta {
+  color: #666666 !important;
+}
+
+/* Guide section */
+.calc-guide h4 {
+  color: #000000 !important;
+}
+
+.calc-guide li {
+  color: #666666 !important;
+}
+
+/* Footer */
+.footer-note {
+  color: #666666 !important;
+}
+
+/* Tab buttons - Light theme */
+.tab-btn {
+  color: #000000 !important;
+  background: rgba(0, 0, 0, 0.05) !important;
+  border: 2px solid rgba(0, 0, 0, 0.1) !important;
+}
+
+.tab-btn.active {
+  background: #4361ee !important;
+  color: #ffffff !important;
+  border-color: #4361ee !important;
+}
+
+/* Unit info text */
+.unit-info {
+  color: #666666 !important;
+}
+
+/* =========================================== */
+/* DARK THEME OVERRIDE - White text */
+/* =========================================== */
+
+/* Target ALL text in converter for dark theme */
+.dark-theme .unit-converter-container .converter-body *,
+.dark-theme .unit-converter-container .calculator-container *,
+.dark-theme .unit-converter-container .conversion-inputs *,
+.dark-theme .unit-converter-container .calc-legend *,
+.dark-theme .unit-converter-container .calc-guide *,
+.dark-theme .unit-converter-container .calculator-tools *,
+.dark-theme .unit-converter-container .calculator-footer * {
+  color: #ffffff !important; /* White for dark theme */
+}
+
+/* =========================================== */
+/* SPECIFIC ELEMENT FIXES - Dark Theme */
+/* =========================================== */
+
+/* Input groups - Dark theme */
+.dark-theme .input-group label,
+.dark-theme .unit-select-group label {
+  color: #ffffff !important;
+}
+
+/* Input fields - Dark theme */
+.dark-theme .value-input,
+.dark-theme .unit-select {
+  color: #ffffff !important;
+  background: #2d3748 !important;
+  border: 2px solid #4a5568 !important;
+}
+
+.dark-theme .value-input::placeholder {
+  color: #a0aec0 !important;
+}
+
+/* Select dropdown text - Dark theme */
+.dark-theme .unit-select option {
+  color: #ffffff !important;
+  background: #2d3748 !important;
+}
+
+/* Calculator header - Dark theme */
+.dark-theme .calc-header h3 {
+  color: #ffffff !important;
+}
+
+.dark-theme .calc-info {
+  color: #a0aec0 !important;
+}
+
+/* Tool cards - Dark theme */
+.dark-theme .tool-card {
+  background: #2d3748 !important;
+  border-color: #4a5568 !important;
+}
+
+.dark-theme .tool-card h4 {
+  color: #ffffff !important;
+}
+
+.dark-theme .tool-card p {
+  color: #a0aec0 !important;
+}
+
+/* History section - Dark theme */
+.dark-theme .calc-legend h3 {
+  color: #ffffff !important;
+}
+
+.dark-theme .history-item {
+  border-bottom-color: #4a5568 !important;
+  color: #ffffff !important;
+}
+
+.dark-theme .history-meta {
+  color: #a0aec0 !important;
+}
+
+/* Guide section - Dark theme */
+.dark-theme .calc-guide h4 {
+  color: #ffffff !important;
+}
+
+.dark-theme .calc-guide li {
+  color: #a0aec0 !important;
+  border-bottom-color: #4a5568 !important;
+}
+
+/* Footer - Dark theme */
+.dark-theme .footer-note {
+  color: #a0aec0 !important;
+}
+
+/* Tab buttons - Dark theme */
+.dark-theme .tab-btn {
+  color: #ffffff !important;
+  background: rgba(255, 255, 255, 0.1) !important;
+  border: 2px solid rgba(255, 255, 255, 0.2) !important;
+}
+
+.dark-theme .tab-btn.active {
+  background: #4361ee !important;
+  color: #ffffff !important;
+  border-color: #4361ee !important;
+}
+
+/* Unit info text - Dark theme */
+.dark-theme .unit-info {
+  color: #a0aec0 !important;
+}
+
+/* =========================================== */
+/* KEEP THESE SAME FOR ALL THEMES */
+/* =========================================== */
+
+/* Header - always white on gradient */
+.unit-converter-header,
+.unit-converter-header * {
+  color: #ffffff !important;
+  /* background: linear-gradient(135deg, #4361ee, #3a0ca3) !important; */
+}
+
+/* Calculator display - always visible */
+.calc-display {
+  background: #1a1a2e !important;
+}
+
+.calc-screen {
+  color: #ffffff !important;
+}
+
+.calc-history {
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+
+.calc-mode {
+  color: #ffd166 !important;
+}
+
+/* Action buttons - always white text */
+.calc-btn-equals,
+.calc-btn-operator,
+.swap-btn,
+.tool-btn,
+.back-home-btn,
+.back-home-btn-footer {
+  color: #ffffff !important;
+}
+
+/* Keep colored text for conversion values */
+.history-from {
+  color: #f72585 !important;
+}
+
+.history-to {
+  color: #4cc9f0 !important;
+}
+
+.history-arrow {
+  color: #4361ee !important;
+}
+
+/* Clear button text - dark for contrast */
+.calc-btn-clear {
+  color: #2d3748 !important;
+}
+
+.dark-theme .calc-btn-clear {
+  color: #ffffff !important;
+}
+
+/* =========================================== */
+/* FORCE VISIBILITY FOR ALL TEXT ELEMENTS */
+/* =========================================== */
+
+/* Force ALL text elements to have proper color */
+.unit-converter-container p,
+.unit-converter-container span,
+.unit-converter-container div,
+.unit-converter-container li,
+.unit-converter-container td,
+.unit-converter-container th {
+  color: inherit !important;
+}
+
+/* Specifically target conversion categories */
+.converter-body div[class*="conversion"],
+.converter-body div[class*="category"],
+.converter-body div[class*="section"] {
+  color: inherit !important;
+}
+
+/* Ensure all headings are visible */
+.converter-body h1,
+.converter-body h2,
+.converter-body h3,
+.converter-body h4,
+.converter-body h5,
+.converter-body h6 {
+  color: inherit !important;
+}
