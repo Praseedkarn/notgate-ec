@@ -93,15 +93,30 @@ const Header = ({
         
         {/* Navigation */}
         <nav className="nav-links">
-          <button 
-            className="nav-link" 
-            onClick={scrollToTop}
-            title="Go to top"
-          >
-            <span className="nav-icon">🏠</span>
-            <span className="nav-text">Home</span>
-          </button>
-          
+         <button 
+    className="nav-link" 
+    onClick={() => {
+      // Close all open pages
+      setShowCalculator(false);
+      setShowSettings(false);
+      setShowUnitConverter(false);
+      setShowHelp(false);
+      setShowGateInfo(false);
+      setShowMaterials && setShowMaterials(false);
+      
+      // Scroll to top smoothly
+      window.scrollTo({ 
+        top: 0, 
+        behavior: 'smooth' 
+      });
+    }}
+    title="Go to Home"
+  >
+    <span className="nav-icon">🏠</span>
+    <span className="nav-text">Home</span>
+  </button>
+
+        
           <div className="nav-dropdown">
             <button className="nav-link">
               <span className="nav-icon">📚</span>
@@ -127,12 +142,12 @@ const Header = ({
               >
                 🧮 Mathematics & Aptitude
               </button>
-              <button 
+              {/* <button 
                 onClick={() => scrollToSection('resources')}
                 className="dropdown-item"
               >
                 📁 Study Resources
-              </button>
+              </button> */}
               <button 
                 onClick={() => scrollToSection('reference')}
                 className="dropdown-item"
