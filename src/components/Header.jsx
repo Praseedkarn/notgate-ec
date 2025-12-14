@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './Header.css';
+import '../styles/Header.css';
 
 const Header = ({ 
   setShowCalculator, 
@@ -7,7 +7,7 @@ const Header = ({
   setShowSettings, 
   setShowUnitConverter,
   setShowHelp,
-  setShowGateInfo, // Add this prop
+  setShowGateInfo,
   onSearch 
 }) => {
   const [lastScrollY, setLastScrollY] = useState(0);
@@ -42,6 +42,8 @@ const Header = ({
     });
   };
 
+
+  
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
     if (element) {

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './Setting.css';
+import '../styles/Setting.css';
 
 const Settings = ({ onClose, currentTheme, onThemeChange }) => {
   // Initialize settings from localStorage or use currentTheme prop
@@ -102,6 +102,28 @@ const Settings = ({ onClose, currentTheme, onThemeChange }) => {
   const handleSave = () => {
     alert('Settings saved successfully!');
     if (onClose) onClose();
+  };
+
+  const handleClearCache = () => {
+    console.log("Clearing cache...");
+    
+    // Show confirmation dialog
+    const confirmed = window.confirm("Are you sure you want to clear the cache?");
+    
+    if (confirmed) {
+      // Clear local storage cache
+      localStorage.removeItem('calculator-history');
+      localStorage.removeItem('app-settings');
+      localStorage.removeItem('user-preferences');
+      
+      // Clear session storage
+      sessionStorage.clear();
+      
+      // Show success message
+      alert("Cache cleared successfully!");
+      
+    
+    }
   };
 
   const themes = [
@@ -319,7 +341,7 @@ const Settings = ({ onClose, currentTheme, onThemeChange }) => {
           <div className="info-grid">
             <div className="info-item">
               <span className="info-label">Version</span>
-              <span className="info-value">2.0.2</span>
+              <span className="info-value">2.0.3</span>
             </div>
             <div className="info-item">
               <span className="info-label">Last Updated</span>
@@ -335,15 +357,16 @@ const Settings = ({ onClose, currentTheme, onThemeChange }) => {
             </div> */}
           </div>
           <div className="app-actions">
-            <button className="action-btn clear-btn" title="Clear cache">
+            <button className="action-btn clear-btn" title="Clear cache" onClick={handleClearCache}
+            >
               🗑️ Clear Cache
             </button>
-            <button className="action-btn feedback-btn" title="Send feedback">
-              💬 Send Feedback
+            {/* <button className="action-btn feedback-btn" title="Send feedback">
+              💬
             </button>
             <button className="action-btn update-btn" title="Check for updates">
               🔄 Check Updates
-            </button>
+            </button> */}
           </div>
         </div>
       </div>

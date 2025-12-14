@@ -453,7 +453,7 @@ function App() {
           <h2 className="section-title">
             <span className="title-icon">📊</span>
             Course Weightage & Topics
-            <span className="title-tag"></span>
+            {/* <span className="title-tag"></span> */}
           </h2>
           <p className="section-subtitle">Click on any subject to see detailed topic information</p>
           

@@ -282,8 +282,9 @@ body {
   50% { opacity: 0.7; }
 }
 
-.section-subtitle {
-  color: #666;
+.section-subtitle ,
+.section-subtitle p {
+  color: #000000 !important;
   font-size: 1rem;
   margin-bottom: 2rem;
   max-width: 600px;
@@ -2664,4 +2665,190 @@ button:not(.digital-badge):not(.weight-badge) {
   background: rgba(var(--primary-rgb, 67, 97, 238), 0.1) !important;
   color: var(--primary) !important;
 
+}
+/* =========================================== */
+/* LIGHT THEME TEXT COLOR FIXES */
+/* =========================================== */
+
+/* Light Theme - Dark text on light background */
+.light-theme {
+  --text-color: #000000 !important;
+  --text-secondary: #4a5568 !important;
+  --text-light: #2d3748 !important;
+  --text-primary: #000000 !important;
+  --text-muted: #718096 !important;
+}
+
+/* Apply to all text elements in light theme */
+.light-theme h1,
+.light-theme h2,
+.light-theme h3,
+.light-theme h4,
+.light-theme h5,
+.light-theme h6 {
+  color: #000000 !important;
+}
+
+.light-theme p,
+.light-theme span,
+.light-theme div:not(.digital-badge):not(.weight-badge):not(.resource-count) {
+  color: #000000 !important;
+}
+
+.light-theme li,
+.light-theme .electronic-item,
+.light-theme .topic-item,
+.light-theme .resource-item {
+  color: #2d3748 !important;
+}
+
+.light-theme .course-meta,
+.light-theme .resource-desc,
+.light-theme .section-subtitle,
+.light-theme .view-tip {
+  color: #4a5568 !important;
+}
+
+/* Specific fix for section subtitle */
+.light-theme .section-subtitle,
+.light-theme .section-subtitle p {
+  color: #000000 !important;
+}
+
+/* Card backgrounds in light theme */
+.light-theme .weightage-card,
+.light-theme .aptitude-card,
+.light-theme .resource-card,
+.light-theme .ref-card,
+.light-theme .stat-card {
+  background: #ffffff !important;
+  color: #000000 !important;
+}
+
+.light-theme .course-info h3,
+.light-theme .aptitude-header h3,
+.light-theme .resource-title h3,
+.light-theme .ref-card h3 {
+  color: #000000 !important;
+}
+
+/* Fix for electronic items and topics */
+.light-theme .electronic-item,
+.light-theme .topic-item {
+  background: #f8fafc !important;
+  color: #2d3748 !important;
+}
+
+.light-theme .electronic-item:hover,
+.light-theme .topic-item:hover {
+  background: #edf2f7 !important;
+}
+
+/* Preview sections */
+.light-theme .preview-hint,
+.light-theme .preview,
+.light-theme .resource-preview {
+  background: rgba(67, 97, 238, 0.05) !important;
+  color: #4361ee !important;
+}
+
+/* Progress bars and indicators */
+.light-theme .progress-container {
+  background: rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Badge colors (keep them visible) */
+.light-theme .digital-badge,
+.light-theme .weight-badge,
+.light-theme .resource-count {
+  color: #ffffff !important;
+}
+
+/* Keep header stats readable */
+.light-theme .stat {
+  background: rgba(0, 0, 0, 0.05) !important;
+  color: #000000 !important;
+}
+
+.light-theme .digital {
+  color: #000000 !important;
+}
+
+.light-theme .stat-label {
+  color: #4a5568 !important;
+}
+
+/* Welcome banner in light theme */
+.light-theme .welcome-banner {
+  background: #ffffff !important;
+  color: #000000 !important;
+}
+
+.light-theme .banner-text h2 {
+  color: #4361ee !important;
+}
+
+.light-theme .stat-chip {
+  color: #ffffff !important;
+}
+
+/* Table-like content */
+.light-theme .weightage-card .course-info,
+.light-theme .aptitude-card .aptitude-header,
+.light-theme .resource-card .resource-header {
+  color: #000000 !important;
+}
+
+/* Fix for all text in cards */
+.light-theme .weightage-card *,
+.light-theme .aptitude-card *,
+.light-theme .resource-card * {
+  color: inherit !important;
+}
+
+/* =========================================== */
+/* SPECIFIC FIX FOR SECTION SUBTITLE */
+/* =========================================== */
+.section-subtitle,
+.section-subtitle p {
+  color: #000000 !important;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  max-width: 600px;
+}
+
+/* Force it to work in light theme */
+.light-theme .section-subtitle,
+.light-theme .section-subtitle p {
+  color: #000000 !important;
+}
+
+/* Dark theme override */
+.dark-theme .section-subtitle,
+.dark-theme .section-subtitle p {
+  color: #ffffff !important;
+}
+/* SIMPLE DARK THEME FIX */
+.dark-theme h1,
+.dark-theme h2,
+.dark-theme h3,
+.dark-theme h4,
+.dark-theme h5,
+.dark-theme h6,
+.dark-theme p,
+.dark-theme span,
+.dark-theme div,
+.dark-theme li {
+  color: white !important;
+}
+
+.dark-theme .weightage-card,
+.dark-theme .aptitude-card,
+.dark-theme .resource-card {
+  background: #2d3748 !important;
+}
+
+.dark-theme .electronic-item,
+.dark-theme .topic-item {
+  background: #4a5568 !important;
 }

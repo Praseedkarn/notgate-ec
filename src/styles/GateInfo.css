@@ -4,11 +4,49 @@
   margin: 0 auto;
   padding: 2rem;
   animation: fadeIn 0.5s ease;
+  color: var(--text-primary, #2d3748); /* Default text color */
 }
 
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
+}
+
+/* Light Theme Override - Black text */
+.light-theme .gate-info-page,
+.light-theme .gate-info-page *:not(.gate-info-header *):not(.countdown-timer *):not(.pattern-table th):not(.weightage-table th) {
+  color: #000000 !important;
+}
+
+/* Specific elements for light theme */
+.light-theme .pattern-table td,
+.light-theme .particular-cell,
+.light-theme .detail-cell,
+.light-theme .mark-distribution h3,
+.light-theme .dist-value,
+.light-theme .dist-label,
+.light-theme .weightage-insights h3,
+.light-theme .insight-card h4,
+.light-theme .insight-card p,
+.light-theme .timeline-content h3,
+.light-theme .tip-content h4,
+.light-theme .tip-content p,
+.light-theme .phase-title,
+.light-theme .phase p,
+.light-theme .stat-value,
+.light-theme .stat-label,
+.light-theme .footer-note,
+.light-theme .section-title,
+.light-theme .section-subtitle {
+  color: #000000 !important;
+}
+
+/* Keep headers white on gradient */
+.light-theme .gate-info-header,
+.light-theme .gate-info-header *,
+.light-theme .countdown-timer,
+.light-theme .countdown-timer * {
+  color: #ffffff !important;
 }
 
 /* Header */
@@ -43,6 +81,10 @@
   display: flex;
   align-items: flex-start;
   gap: 1.5rem;
+}
+
+.header-main p {
+  color: rgba(255, 255, 255, 0.9) !important;
 }
 
 .back-home-btn {
@@ -81,6 +123,7 @@
   align-items: center;
   justify-content: center;
   gap: 0.75rem;
+  color: white;
 }
 
 .info-icon {
@@ -113,7 +156,7 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  color: #000000 !important; /* Black text for light theme */
+  color: #000000 !important; /* Black text for default/light theme */
 }
 
 .info-tab-btn:hover {
@@ -134,6 +177,7 @@
 .dark-theme .info-tab-btn {
   color: #ffffff !important; /* White text for dark theme */
   border-color: #4a5568;
+  background: rgba(255, 255, 255, 0.1) !important;
 }
 
 .dark-theme .info-tab-btn:hover {
@@ -148,6 +192,7 @@
   border-color: #4cc9f0;
   box-shadow: 0 5px 15px rgba(76, 201, 240, 0.3);
 }
+
 /* Content Sections */
 .info-content {
   background: var(--card-bg);
@@ -157,6 +202,7 @@
   margin-bottom: 2rem;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   border: 1px solid var(--border-color);
+  color: var(--text-primary);
 }
 
 .section-title {
@@ -190,6 +236,7 @@
 .pattern-table {
   width: 100%;
   border-collapse: collapse;
+  color: var(--text-primary);
 }
 
 .pattern-table th {
@@ -230,7 +277,7 @@
 }
 
 .mark-distribution h3 {
-  color: black;
+  color: var(--text-primary);
   margin-bottom: 1rem;
   display: flex;
   align-items: center;
@@ -256,12 +303,12 @@
 .dist-value {
   font-size: 2rem;
   font-weight: 800;
-  color: rgb(42, 46, 48);
+  color: var(--text-primary);
   margin-bottom: 0.5rem;
 }
 
 .dist-label {
-  color: rgb(46, 45, 45);
+  color: var(--text-secondary);
   font-size: 0.9rem;
   margin-bottom: 1rem;
 }
@@ -269,7 +316,7 @@
 .dist-bar {
   height: 6px;
   border-radius: 3px;
-  background: #4b63cf;
+  background: #4361ee;
   transition: width 1s ease;
 }
 
@@ -285,6 +332,7 @@
   width: 100%;
   border-collapse: collapse;
   min-width: 1000px;
+  color: var(--text-primary);
 }
 
 .weightage-table th {
@@ -577,11 +625,11 @@
 .stat-value {
   font-size: 1.8rem;
   font-weight: 700;
-  color: rgb(70, 68, 68);
+  color: var(--text-primary);
 }
 
 .stat-label {
-  color: rgb(66, 63, 63);
+  color: var(--text-secondary);
   font-size: 0.9rem;
 }
 
@@ -589,14 +637,15 @@
 .gate-info-footer {
   text-align: center;
   padding: 2rem;
-  background: rgba(0, 2, 12, 0.05);
+  background: rgba(67, 97, 238, 0.05);
   border-radius: 15px;
   border-left: 4px solid #4361ee;
+  color: var(--text-primary);
 }
 
 .back-home-btn-footer {
   background: linear-gradient(135deg, #4361ee, #3a0ca3);
-  color: rgb(26, 23, 23);
+  color: white;
   border: none;
   padding: 1rem 2rem;
   border-radius: 10px;
@@ -608,11 +657,11 @@
 
 .back-home-btn-footer:hover {
   transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(2, 6, 22, 0.3);
+  box-shadow: 0 5px 15px rgba(67, 97, 238, 0.3);
 }
 
 .footer-note {
-  color:#27262a;
+  color: var(--text-secondary);
   font-size: 0.9rem;
   margin-top: 0.5rem;
 }
