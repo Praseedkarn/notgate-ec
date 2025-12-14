@@ -84,7 +84,10 @@ const Header = ({
               style={{ cursor: 'pointer' }}
               title="Click to return to home"
             >
-              <div className="logo-icon">📡</div>
+              {/* <div className="logo-icon">📡</div> */}
+              <img src="output-onlinepngtools (3).png" alt="NOTGATE Logo" 
+              className='logo-image
+              '/>
               <div className="logo-text">
                 <h1 className="tech-title">NOT<span>GATE</span></h1>
                 <div className="subtitle">Electronics & Communication Engineering</div>
