@@ -140,7 +140,7 @@ const Help = ({ onClose }) => {
                 </div>
               ))}
             </div>
-            <div className="contact-form">
+            {/* <div className="contact-form">
               <h3>Send us a message</h3>
               <form>
                 <input type="text" placeholder="Your Name" className="form-input" />
@@ -148,7 +148,7 @@ const Help = ({ onClose }) => {
                 <textarea placeholder="Your Message" className="form-textarea" rows="4"></textarea>
                 <button type="submit" className="submit-btn">Send Message</button>
               </form>
-            </div>
+            </div> */}
           </div>
 
           {/* Tips & Tricks */}

@@ -130,7 +130,7 @@ const Settings = ({ onClose, currentTheme, onThemeChange }) => {
     { id: 'electronic', name: 'Electronic Theme', icon: '⚡', desc: 'Default electronic style' },
     { id: 'dark', name: 'Dark Mode', icon: '🌙', desc: 'Pure dark theme' },
     { id: 'light', name: 'Light Mode', icon: '☀️', desc: 'Light theme for day' },
-    { id: 'blue', name: 'Blue Theme', icon: '🔵', desc: 'Professional blue theme' }
+    // { id: 'blue', name: 'Blue Theme', icon: '🔵', desc: 'Professional blue theme' }
   ];
 
   const fontSizes = [
