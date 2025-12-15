@@ -103,7 +103,8 @@ function App() {
         'Probability & Statistics: Random variables, Distributions'
       ],
       importance: 'Very High',
-      color: '#4299e1'
+      color: '#4299e1',
+      youtubeLink :"https://youtube.com/playlist?list=PLvTTv60o7qj_tdY9zH7YceES7jfXiZkAz&si=O4cdEU0MJDgHaE7p"
     },
     { 
       id: 2,
@@ -118,7 +119,8 @@ function App() {
         'Laplace Transform: System analysis, Transfer functions'
       ],
       importance: 'Very High',
-      color: '#38a169'
+      color: '#38a169',
+      youtubeLink:" https://youtube.com/playlist?list=PL3eEXnCBViH-mxwEDOfUaTNazck6Pf8Jt&si=pQ2QurY075aXUqHE"
     },
     { 
       id: 3,
@@ -133,7 +135,8 @@ function App() {
         'Optoelectronic Devices: LEDs, Photodiodes, Solar cells'
       ],
       importance: 'High',
-      color: '#d69e2e'
+      color: '#d69e2e',
+      youtubeLink:"https://youtube.com/playlist?list=PL3eEXnCBViH_ynvBiNPBBkzCOZ4vDCG7f&si=QmxrtQMirsRIjFHI"
     },
     { 
       id: 4,
@@ -148,7 +151,8 @@ function App() {
         'Oscillators: RC, LC, Crystal oscillators'
       ],
       importance: 'High',
-      color: '#ed8936'
+      color: '#ed8936',
+      youtubeLink:"https://youtube.com/playlist?list=PL3eEXnCBViH8x_j-ulD23V4CIDazfrWfa&si=ECH3tfX7gfIfnI5q"
     },
     { 
       id: 5,
@@ -163,7 +167,8 @@ function App() {
         'Microprocessors: 8085/8086 architecture, Programming'
       ],
       importance: 'High',
-      color: '#9f7aea'
+      color: '#9f7aea',
+      youtubeLink:"https://youtube.com/playlist?list=PLs5_Rtf2P2r77kmBnXAe06RsI3VadeQ5s&si=6-WB1E_NbliUXf30"
     },
     { 
       id: 6,
@@ -178,7 +183,8 @@ function App() {
         'State Space Analysis: State equations, Controllability'
       ],
       importance: 'Medium',
-      color: '#f56565'
+      color: '#f56565',
+      youtubeLink:"https://youtube.com/playlist?list=PL3eEXnCBViH9hKdP7FLT9XBBwdaKC0SPk&si=ez0-gjmO-E7KGDxG"
     },
     { 
       id: 7,
@@ -193,7 +199,8 @@ function App() {
         'Wireless Communication: Cellular systems, Multipath'
       ],
       importance: 'Very High',
-      color: '#4299e1'
+      color: '#4299e1',
+      youtubeLink:"https://youtube.com/playlist?list=PL3eEXnCBViH9XJFSr_u4KDhtIihTJ6Kl6&si=YIio-F87ATdm9XbN"
     },
     { 
       id: 8,
@@ -209,7 +216,8 @@ function App() {
         
       ],
       importance: 'Medium',
-      color: '#4fd1c7'
+      color: '#4fd1c7',
+      youtubeLink:"https://youtube.com/playlist?list=PLgwJf8NK-2e4I_YltJja47CwZJkzNWK89&si=PZ9WPaQ9if7yh9nJ"
     },
     { 
       id: 9,
@@ -224,7 +232,8 @@ function App() {
         'Data Sufficiency: Problem solving, Analysis'
       ],
       importance: 'Very High',
-      color: '#a0aec0'
+      color: '#a0aec0',
+      youtubeLink:"https://youtube.com/playlist?list=PLvTTv60o7qj_znrv7_BwPkcHpBwM-pqod&si=Bzo8553rx9PqmvAL"
     }
   ];
 
@@ -520,6 +529,47 @@ function App() {
                         </li>
                       ))}
                     </ul>
+
+                    {/* {Add YOUYUBE BUTON HERE} */}
+
+                      {course.youtubeLink &&(
+                        <a
+                        href={course.youtubeLink}
+                        target='_blank'
+                        rel='noopner noreferrer'
+                        className='youtube-btn'
+                        style={{
+                          display: 'flex',
+                          alignItems: 'center',
+                          justifyContent: 'center',
+                          gap: '10px',
+                          padding: '12px 20px',
+                          background: '#FF0000',
+                          color: 'white',
+                          borderRadius: '10px',
+                          textDecoration: 'none',
+                          fontWeight: '600',
+                          marginTop: '20px',
+                          marginBottom: '15px',
+                          width: '100%',
+                          transition: 'all 0.3s ease'
+                        }}
+                        onMouseEnter={(e) => {
+                          e.target.style.background = '#CC0000';
+                          e.target.style.transform = 'translateY(-2px)';
+                        }}
+                        onMouseLeave={(e) => {
+                          e.target.style.background = '#FF0000';
+                          e.target.style.transform = 'translateY(0)'
+                  
+                        }}
+                        >
+                          <i className='fab fa-youtube' style={{fontSize:'1.2rem'}}></i>
+                          Watch Youtube playlist
+                        </a>
+                      )}
+
+
                     <div className="view-tip">
                       <span className="tip-icon">👆</span>
                       Click again to collapse

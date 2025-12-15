@@ -251,7 +251,7 @@ const Settings = ({ onClose, currentTheme, onThemeChange }) => {
         </div> */}
 
         {/* Toggle Settings */}
-        <div className="settings-section">
+        {/* <div className="settings-section">
           <div className="section-header">
             <h2>⚡ Features</h2>
             <p>Enable or disable app features</p>
@@ -282,7 +282,7 @@ const Settings = ({ onClose, currentTheme, onThemeChange }) => {
               </div>
             ))}
           </div>
-        </div>
+        </div> */}
 
         {/* Download Quality */}
         <div className="settings-section">

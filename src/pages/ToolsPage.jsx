@@ -196,6 +196,31 @@ const ToolsPage = () => {
       ],
       isFree: true,
       difficulty: "intermediate"
+    },
+    {
+      id: 9,
+      name: "EDA Playground  ",
+      category: "tool",
+      icon: "🔧",
+      description: "Online IDE for Verilog ,VHDL ,SystemVerilog ,and other HDLs with instant simulation",
+      website: "https://www.edaplayground.com/",
+      websiteName: "EDA Playground",
+      howToUse: [
+        "create for account or use without login ",
+        "Select HDL language (Verilog ,VHDL, SystemVerilog)",
+        "Choose simulator (Icarus Verilog ,VCS , etc .)",
+        "Write your HDl code in the editor ",
+        "Run simulation and view waveform instantly"
+      ],
+      features: [
+        "Multi-language HDL support",
+        "Select your HDL code in the editor",
+        "Waveform visualization ",
+        "Code sharing and collaboration ",
+        "No installation required "
+      ],
+      isFree: true,
+      difficulty: "intermediate"
     }
   ];
 
