@@ -1,0 +1,1460 @@
+/* ToolPage.css - With Dark & Electronic Themes */
+
+/* Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Main Container - LIGHT THEME (DEFAULT) */
+.tools-page {
+  min-height: 100vh;
+  background:transparent;
+  color: #000000;
+  padding: 2rem;
+  position: relative;
+}
+
+/* DARK THEME */
+.dark-theme .tools-page,
+.dark-mode .tools-page {
+  background: transparent;
+  color: #111010;
+}
+
+/* ELECTRONIC THEME */
+.electronic-theme .tools-page {
+  background: transparent;
+  color: #ffffff;
+}
+
+/* Page Header */
+.page-header {
+  max-width: 1200px;
+  margin: 0 auto 3rem;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.page-header h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #1e293b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+/* Dark Theme Header */
+.dark-theme .page-header h1,
+.dark-mode .page-header h1 {
+  color: #ffffff;
+}
+
+/* Electronic Theme Header */
+.electronic-theme .page-header h1 {
+  color: #000000;
+}
+
+.page-header h1 i {
+  color: #3b82f6;
+}
+
+/* Dark Theme Icon */
+.dark-theme .page-header h1 i,
+.dark-mode .page-header h1 i {
+  color: #60a5fa;
+}
+
+/* Electronic Theme Icon */
+.electronic-theme .page-header h1 i {
+  color: #4cc9f0;
+}
+
+.page-header .subtitle {
+  font-size: 1.25rem;
+  color: #475569;
+  max-width: 700px;
+  margin: 0 auto 2rem;
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+/* Dark Theme Subtitle */
+.dark-theme .page-header .subtitle,
+.dark-mode .page-header .subtitle {
+  color: #cbd5e1;
+}
+
+/* Electronic Theme Subtitle */
+.electronic-theme .page-header .subtitle {
+  color: #94a3b8;
+}
+
+/* Header Controls */
+.header-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid #e2e8f0;
+}
+
+/* Dark Theme Header Controls */
+.dark-theme .header-controls,
+.dark-mode .header-controls {
+  border-top: 1px solid #4a5568;
+}
+
+/* Electronic Theme Header Controls */
+.electronic-theme .header-controls {
+  border-top: 1px solid #2d3748;
+}
+
+.stats-bar {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.stat {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1.5rem;
+  background: white;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease;
+}
+
+/* Dark Theme Stat */
+.dark-theme .stat,
+.dark-mode .stat {
+  background: #2d3748;
+  border: 1px solid #4a5568;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+/* Electronic Theme Stat */
+.electronic-theme .stat {
+  background: #1e293b;
+  border: 1px solid #334155;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.stat:hover {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transform: translateY(-1px);
+}
+
+/* Dark Theme Stat Hover */
+.dark-theme .stat:hover,
+.dark-mode .stat:hover {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+}
+
+/* Electronic Theme Stat Hover */
+.electronic-theme .stat:hover {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+}
+
+.stat i {
+  font-size: 1.25rem;
+  color: #3b82f6;
+}
+
+/* Dark Theme Stat Icon */
+.dark-theme .stat i,
+.dark-mode .stat i {
+  color: #60a5fa;
+}
+
+/* Electronic Theme Stat Icon */
+.electronic-theme .stat i {
+  color: #4cc9f0;
+}
+
+.stat span {
+  font-weight: 600;
+  color: #334155;
+  font-size: 0.95rem;
+}
+
+/* Dark Theme Stat Text */
+.dark-theme .stat span,
+.dark-mode .stat span {
+  color: #e2e8f0;
+}
+
+/* Electronic Theme Stat Text */
+.electronic-theme .stat span {
+  color: #ffffff;
+}
+
+.expand-toggle-btn {
+  padding: 0.875rem 1.75rem;
+  background: #3b82f6;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.2s ease;
+  font-size: 0.95rem;
+}
+
+/* Dark Theme Button */
+.dark-theme .expand-toggle-btn,
+.dark-mode .expand-toggle-btn {
+  background: #4f46e5;
+}
+
+/* Electronic Theme Button */
+.electronic-theme .expand-toggle-btn {
+  background: #3b82f6;
+}
+
+.expand-toggle-btn:hover {
+  background: #2563eb;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 6px rgba(37, 99, 235, 0.2);
+}
+
+/* Dark Theme Button Hover */
+.dark-theme .expand-toggle-btn:hover,
+.dark-mode .expand-toggle-btn:hover {
+  background: #4338ca;
+  box-shadow: 0 4px 6px rgba(79, 70, 229, 0.3);
+}
+
+/* Electronic Theme Button Hover */
+.electronic-theme .expand-toggle-btn:hover {
+  background: #2563eb;
+  box-shadow: 0 4px 6px rgba(37, 99, 235, 0.2);
+}
+
+.expand-toggle-btn i {
+  font-size: 1rem;
+}
+
+/* Category Tabs */
+.category-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 3rem;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 1rem;
+}
+
+.tab-btn {
+  padding: 1rem 2rem;
+  border: 2px solid #cbd5e1;
+  background: white;
+  color: #475569;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  transition: all 0.2s ease;
+  font-size: 1rem;
+}
+
+/* Dark Theme Tab */
+.dark-theme .tab-btn,
+.dark-mode .tab-btn {
+  background: #2d3748;
+  border: 2px solid #4a5568;
+  color: #cbd5e1;
+}
+
+/* Electronic Theme Tab */
+.electronic-theme .tab-btn {
+  background: transparent;
+  border: 2px solid #334155;
+  color: #94a3b8;
+}
+
+.tab-btn:hover {
+  border-color: #3b82f6;
+  color: #3b82f6;
+}
+
+/* Dark Theme Tab Hover */
+.dark-theme .tab-btn:hover,
+.dark-mode .tab-btn:hover {
+  border-color: #60a5fa;
+  color: #60a5fa;
+}
+
+/* Electronic Theme Tab Hover */
+.electronic-theme .tab-btn:hover {
+  border-color: #4cc9f0;
+  color: #4cc9f0;
+}
+
+.tab-btn.active {
+  background: #3b82f6;
+  color: white;
+  border-color: #3b82f6;
+}
+
+/* Dark Theme Active Tab */
+.dark-theme .tab-btn.active,
+.dark-mode .tab-btn.active {
+  background: #4f46e5;
+  border-color: #4f46e5;
+}
+
+/* Electronic Theme Active Tab */
+.electronic-theme .tab-btn.active {
+  background: #3b82f6;
+  border-color: #3b82f6;
+}
+
+.tab-btn.active i {
+  color: white;
+}
+
+.tab-btn i {
+  color: #64748b;
+  font-size: 1rem;
+}
+
+/* Dark Theme Tab Icon */
+.dark-theme .tab-btn i,
+.dark-mode .tab-btn i {
+  color: #94a3b8;
+}
+
+/* Electronic Theme Tab Icon */
+.electronic-theme .tab-btn i {
+  color: #94a3b8;
+}
+
+/* Tools Grid */
+.tools-grid-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.tools-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 2rem;
+  margin-bottom: 4rem;
+  /* background-color: #000; */
+}
+
+/* Tool Card */
+.tool-card {
+  background: rgb(211, 193, 193);
+  border-radius: 12px;
+  padding: 1.75rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+  
+}
+
+/* Dark Theme Tool Card */
+.dark-theme .tool-card,
+.dark-mode .tool-card {
+  background: #2d3748;
+  border: 1px solid #4a5568;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+/* Electronic Theme Tool Card */
+.electronic-theme .tool-card {
+  background: #1e293b;
+  border: 1px solid #334155;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.tool-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  border-color: #cbd5e1;
+}
+
+/* Dark Theme Tool Card Hover */
+.dark-theme .tool-card:hover,
+.dark-mode .tool-card:hover {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+  border-color: #718096;
+}
+
+/* Electronic Theme Tool Card Hover */
+.electronic-theme .tool-card:hover {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+  border-color: #475569;
+}
+
+.tool-card.expanded {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  border-color: #3b82f6;
+}
+
+/* Dark Theme Expanded */
+.dark-theme .tool-card.expanded,
+.dark-mode .tool-card.expanded {
+  border-color: #60a5fa;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+/* Electronic Theme Expanded */
+.electronic-theme .tool-card.expanded {
+  border-color: #4cc9f0;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+/* Card Header */
+.tool-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+}
+
+.tool-icon {
+  width: 60px;
+  height: 60px;
+  background: #eff6ff;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  transition: all 0.2s ease;
+  color: #1e40af;
+}
+
+/* Dark Theme Tool Icon */
+.dark-theme .tool-icon,
+.dark-mode .tool-icon {
+  background: #1e40af;
+  color: #ffffff;
+}
+
+/* Electronic Theme Tool Icon */
+.electronic-theme .tool-icon {
+  background: #1d55d8;
+  color: #ffffff;
+}
+
+.tool-card:hover .tool-icon {
+  background: #dbeafe;
+  transform: scale(1.05);
+}
+
+/* Dark Theme Tool Icon Hover */
+.dark-theme .tool-card:hover .tool-icon,
+.dark-mode .tool-card:hover .tool-icon {
+  background: #3730a3;
+}
+
+/* Electronic Theme Tool Icon Hover */
+.electronic-theme .tool-card:hover .tool-icon {
+  background: #1d55d8;
+}
+
+.tool-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: flex-end;
+}
+
+.difficulty-badge {
+  padding: 0.375rem 1rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #000000;
+  border: 1px solid;
+}
+
+.difficulty-badge.beginner {
+  background: #dcfce7;
+  border-color: #86efac;
+  color: #fafafa;
+}
+
+.difficulty-badge.intermediate {
+  background: #fef3c7;
+  border-color: #fde68a;
+  color: #92400e;
+}
+
+.difficulty-badge.advanced {
+  background: #dbeafe;
+  border-color: #93c5fd;
+  color: #1e40af;
+}
+
+/* Dark Theme Badges - Keep same colors for visibility */
+.dark-theme .difficulty-badge.beginner,
+.dark-mode .difficulty-badge.beginner {
+  background: #7a6c6c;
+  border-color: #ffffff;
+  color: #a7f3d0;
+}
+
+.dark-theme .difficulty-badge.intermediate,
+.dark-mode .difficulty-badge.intermediate {
+  background: #7c2d12;
+  border-color: #ea580c;
+  color: #fed7aa;
+}
+
+.dark-theme .difficulty-badge.advanced,
+.dark-mode .difficulty-badge.advanced {
+  background: #1e3a8a;
+  border-color: #3b82f6;
+  color: #93c5fd;
+}
+
+/* Electronic Theme Badges */
+.electronic-theme .difficulty-badge.beginner {
+  background: #030303;
+  border-color: #f3f3f3;
+  color: #000000;
+}
+
+.electronic-theme .difficulty-badge.intermediate {
+  background: #7c2d12;
+  border-color: #f97316;
+  color: #fed7aa;
+}
+
+.electronic-theme .difficulty-badge.advanced {
+  background: #1e3a8a;
+  border-color: #3b82f6;
+  color: #93c5fd;
+}
+
+.free-badge {
+  padding: 0.375rem 1rem;
+  border-radius: 20px;
+  background: #ecfdf5;
+  color: #040404;
+  font-size: 0.8rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+  border: 1px solid #a7f3d0;
+}
+
+/* Dark Theme Free Badge */
+.dark-theme .free-badge,
+.dark-mode .free-badge {
+  background: #000000;
+  color: #a7f3d0;
+  border: 1px solid #000000;
+}
+
+/* Electronic Theme Free Badge */
+.electronic-theme .free-badge {
+  background: #b0298a;
+  color: #a7f3d0;
+  border: 1px solid #ffffff;
+}
+
+.free-badge i {
+  color: #10b981;
+}
+
+/* Dark Theme Free Badge Icon */
+.dark-theme .free-badge i,
+.dark-mode .free-badge i {
+  color: #34d399;
+}
+
+/* Electronic Theme Free Badge Icon */
+.electronic-theme .free-badge i {
+  color: #16c188;
+}
+
+/* Basic Info */
+.tool-basic-info h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+/* Dark Theme Tool Title */
+.dark-theme .tool-basic-info h3,
+.dark-mode .tool-basic-info h3 {
+  color: #ffffff;
+}
+
+/* Electronic Theme Tool Title */
+.electronic-theme .tool-basic-info h3 {
+  color: #ffffff;
+}
+
+.website-source {
+  color: #000000;
+  margin-bottom: 1rem;
+  font-size: bold;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Dark Theme Website Source */
+.dark-theme .website-source,
+.dark-mode .website-source {
+  color: #000000;
+  font-size: large;
+}
+
+/* Electronic Theme Website Source */
+.electronic-theme .website-source {
+  color: #000000;
+}
+
+.website-source i {
+  color: #3b82f6;
+  font-size: 0.875rem;
+}
+
+/* Dark Theme Website Icon */
+.dark-theme .website-source i,
+.dark-mode .website-source i {
+  color: #60a5fa;
+}
+
+/* Electronic Theme Website Icon */
+.electronic-theme .website-source i {
+  color: #4cc9f0;
+}
+
+.tool-description {
+  color: #000000;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+}
+
+/* Dark Theme Description */
+.dark-theme .tool-description,
+.dark-mode .tool-description {
+  color: #cbd5e1;
+}
+
+/* Electronic Theme Description */
+.electronic-theme .tool-description {
+  color: #141415;
+}
+
+.tool-features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.feature-tag {
+  padding: 0.375rem 0.75rem;
+  background: #f1f5f9;
+  color: #334155;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  border: 1px solid #e2e8f0;
+}
+
+/* Dark Theme Feature Tag */
+.dark-theme .feature-tag,
+.dark-mode .feature-tag {
+  background: #4a5568;
+  color: #e2e8f0;
+  border: 1px solid #718096;
+}
+
+/* Electronic Theme Feature Tag */
+.electronic-theme .feature-tag {
+  background: #334155;
+  color: #cbd5e1;
+  border: 1px solid #475569;
+}
+
+.feature-tag:hover {
+  background: #e2e8f0;
+  color: #1e293b;
+}
+
+/* Dark Theme Feature Tag Hover */
+.dark-theme .feature-tag:hover,
+.dark-mode .feature-tag:hover {
+  background: #718096;
+  color: #ffffff;
+}
+
+/* Electronic Theme Feature Tag Hover */
+.electronic-theme .feature-tag:hover {
+  background: #475569;
+  color: #ffffff;
+}
+
+/* Expanded Content */
+.expanded-content {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, opacity 0.3s ease;
+}
+
+.tool-card.expanded .expanded-content {
+  max-height: 2000px;
+  opacity: 1;
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid #e2e8f0;
+}
+
+/* Dark Theme Expanded Border */
+.dark-theme .tool-card.expanded .expanded-content,
+.dark-mode .tool-card.expanded .expanded-content {
+  border-top: 1px solid #4a5568;
+}
+
+/* Electronic Theme Expanded Border */
+.electronic-theme .tool-card.expanded .expanded-content {
+  border-top: 1px solid #334155;
+}
+
+/* Sections in Expanded Content */
+.expanded-content h4 {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: #1e293b;
+  font-weight: 600;
+}
+
+/* Dark Theme Section Title */
+.dark-theme .expanded-content h4,
+.dark-mode .expanded-content h4 {
+  color: #ffffff;
+}
+
+/* Electronic Theme Section Title */
+.electronic-theme .expanded-content h4 {
+  color: #ffffff;
+}
+
+.expanded-content h4 i {
+  color: #3b82f6;
+  font-size: 1rem;
+}
+
+/* Dark Theme Section Icon */
+.dark-theme .expanded-content h4 i,
+.dark-mode .expanded-content h4 i {
+  color: #60a5fa;
+}
+
+/* Electronic Theme Section Icon */
+.electronic-theme .expanded-content h4 i {
+  color: #4cc9f0;
+}
+
+.full-features-section,
+.how-to-use-section {
+  margin-bottom: 2rem;
+}
+
+.features-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 0.75rem;
+}
+
+.features-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: #475569;
+  padding: 0.75rem;
+  background: #f8fafc;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  border: 1px solid #f1f5f9;
+}
+
+/* Dark Theme Feature List */
+.dark-theme .features-list li,
+.dark-mode .features-list li {
+  background: #2d3748;
+  color: #cbd5e1;
+  border: 1px solid #4a5568;
+}
+
+/* Electronic Theme Feature List */
+.electronic-theme .features-list li {
+  background: #1e293b;
+  color: #94a3b8;
+  border: 1px solid #334155;
+}
+
+.features-list li:hover {
+  background: #f1f5f9;
+}
+
+/* Dark Theme Feature List Hover */
+.dark-theme .features-list li:hover,
+.dark-mode .features-list li:hover {
+  background: #4a5568;
+}
+
+/* Electronic Theme Feature List Hover */
+.electronic-theme .features-list li:hover {
+  background: #334155;
+}
+
+.features-list li i {
+  color: #10b981;
+  font-size: 0.875rem;
+}
+
+/* Dark Theme Feature List Icon */
+.dark-theme .features-list li i,
+.dark-mode .features-list li i {
+  color: #34d399;
+}
+
+/* Electronic Theme Feature List Icon */
+.electronic-theme .features-list li i {
+  color: #10b981;
+}
+
+.steps-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  counter-reset: step-counter;
+}
+
+.steps-list li {
+  counter-increment: step-counter;
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background: #f8fafc;
+  border-radius: 8px;
+  border: 1px solid #f1f5f9;
+}
+
+/* Dark Theme Step List */
+.dark-theme .steps-list li,
+.dark-mode .steps-list li {
+  background: #2d3748;
+  border: 1px solid #4a5568;
+}
+
+/* Electronic Theme Step List */
+.electronic-theme .steps-list li {
+  background: #1e293b;
+  border: 1px solid #334155;
+}
+
+.steps-list li:last-child {
+  margin-bottom: 0;
+}
+
+.step-number {
+  width: 32px;
+  height: 32px;
+  background: #3779e3;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.9rem;
+  flex-shrink: 0;
+}
+
+/* Dark Theme Step Number */
+.dark-theme .step-number,
+.dark-mode .step-number {
+  background: #4f46e5;
+}
+
+/* Electronic Theme Step Number */
+.electronic-theme .step-number {
+  background: #3b82f6;
+}
+
+.step-text {
+  color: #0c0d0e;
+  line-height: 1.6;
+  flex: 1;
+}
+
+/* Dark Theme Step Text */
+.dark-theme .step-text,
+.dark-mode .step-text {
+  color: #e2e8f0;
+}
+
+/* Electronic Theme Step Text */
+.electronic-theme .step-text {
+  color: #cbd5e1;
+}
+
+/* Quick Stats */
+.tool-quick-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1rem;
+  margin: 2rem 0;
+  padding: 1.5rem;
+  background: #ffffff;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+}
+
+/* Dark Theme Quick Stats */
+.dark-theme .tool-quick-stats,
+.dark-mode .tool-quick-stats {
+  background: #2d3748;
+  border: 1px solid #4a5568;
+}
+
+/* Electronic Theme Quick Stats */
+.electronic-theme .tool-quick-stats {
+  background: #1e293b;
+  border: 1px solid #334155;
+}
+
+.stat-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.stat-icon {
+  width: 48px;
+  height: 48px;
+  background: #eff6ff;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  color: #3b82f6;
+}
+
+/* Dark Theme Stat Icon */
+.dark-theme .stat-icon,
+.dark-mode .stat-icon {
+  background: #1e40af;
+  color: #ffffff;
+}
+
+/* Electronic Theme Stat Icon */
+.electronic-theme .stat-icon {
+  background: #0f172a;
+  color: #ffffff;
+}
+
+.stat-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-value {
+  font-size: 1.5rem;
+  color: #1d4986;
+  font-weight: 600;
+}
+
+/* Dark Theme Stat Value */
+.dark-theme .stat-value,
+.dark-mode .stat-value {
+  color: #60a5fa;
+}
+
+/* Electronic Theme Stat Value */
+.electronic-theme .stat-value {
+  color: #4cc9f0;
+}
+
+.stat-label {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+/* Dark Theme Stat Label */
+.dark-theme .stat-label,
+.dark-mode .stat-label {
+  color: #cbd5e1;
+}
+
+/* Electronic Theme Stat Label */
+.electronic-theme .stat-label {
+  color: #94a3b8;
+}
+
+/* Action Buttons */
+.tool-action-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.action-btn {
+  padding: 0.875rem 1.75rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.2s ease;
+  font-size: 0.95rem;
+  border: none;
+  flex: 1;
+  justify-content: center;
+  min-width: 140px;
+}
+
+.action-btn.primary {
+  background: #3b82f6;
+  color: white;
+}
+
+/* Dark Theme Primary Button */
+.dark-theme .action-btn.primary,
+.dark-mode .action-btn.primary {
+  background: #4f46e5;
+}
+
+/* Electronic Theme Primary Button */
+.electronic-theme .action-btn.primary {
+  background: #3b82f6;
+}
+
+.action-btn.primary:hover {
+  background: #2563eb;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(37, 99, 235, 0.2);
+}
+
+/* Dark Theme Primary Button Hover */
+.dark-theme .action-btn.primary:hover,
+.dark-mode .action-btn.primary:hover {
+  background: #4338ca;
+  box-shadow: 0 4px 6px rgba(79, 70, 229, 0.3);
+}
+
+/* Electronic Theme Primary Button Hover */
+.electronic-theme .action-btn.primary:hover {
+  background: #2563eb;
+  box-shadow: 0 4px 6px rgba(37, 99, 235, 0.2);
+}
+
+.action-btn.secondary {
+  background: white;
+  color: #475569;
+  border: 1px solid #cbd5e1;
+}
+
+/* Dark Theme Secondary Button */
+.dark-theme .action-btn.secondary,
+.dark-mode .action-btn.secondary {
+  background: #2d3748;
+  color: #cbd5e1;
+  border: 1px solid #4a5568;
+}
+
+/* Electronic Theme Secondary Button */
+.electronic-theme .action-btn.secondary {
+  background: #1e293b;
+  color: #94a3b8;
+  border: 1px solid #334155;
+}
+
+.action-btn.secondary:hover {
+  background: #f8fafc;
+  border-color: #3b82f6;
+  color: #3b82f6;
+}
+
+/* Dark Theme Secondary Button Hover */
+.dark-theme .action-btn.secondary:hover,
+.dark-mode .action-btn.secondary:hover {
+  background: #4a5568;
+  border-color: #60a5fa;
+  color: #60a5fa;
+}
+
+/* Electronic Theme Secondary Button Hover */
+.electronic-theme .action-btn.secondary:hover {
+  background: #334155;
+  border-color: #4cc9f0;
+  color: #4cc9f0;
+}
+
+/* Collapsed Actions */
+.collapsed-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #e2e8f0;
+}
+
+/* Dark Theme Collapsed Actions */
+.dark-theme .collapsed-actions,
+.dark-mode .collapsed-actions {
+  border-top: 1px solid #4a5568;
+}
+
+/* Electronic Theme Collapsed Actions */
+.electronic-theme .collapsed-actions {
+  border-top: 1px solid #334155;
+}
+
+.expand-btn {
+  background: black;
+  border: none;
+  color: #3b82f6;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+}
+
+/* Dark Theme Expand Button */
+.dark-theme .expand-btn,
+.dark-mode .expand-btn {
+  background: #4a5568;
+  color: #60a5fa;
+}
+
+/* Electronic Theme Expand Button */
+.electronic-theme .expand-btn {
+  background: #334155;
+  color: #4cc9f0;
+}
+
+.quick-visit-btn {
+  padding: 0.75rem 1.5rem;
+  background: rgb(0, 0, 0);
+  color: #3b82f6;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.2s ease;
+}
+
+/* Dark Theme Quick Visit Button */
+.dark-theme .quick-visit-btn,
+.dark-mode .quick-visit-btn {
+  background: #4a5568;
+  color: #60a5fa;
+  border: 1px solid #718096;
+}
+
+/* Electronic Theme Quick Visit Button */
+.electronic-theme .quick-visit-btn {
+  background: #334155;
+  color: #4cc9f0;
+  border: 1px solid #475569;
+}
+
+/* Resources Footer */
+.resources-footer {
+  max-width: 1200px;
+  margin: 4rem auto 0;
+  padding: 2.5rem;
+  background: white;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  text-align: center;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Dark Theme Resources Footer */
+.dark-theme .resources-footer,
+.dark-mode .resources-footer {
+  background: #2d3748;
+  border: 1px solid #4a5568;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+/* Electronic Theme Resources Footer */
+.electronic-theme .resources-footer {
+  background: #1e293b;
+  border: 1px solid #334155;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.resources-footer h3 {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  color: #1e293b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  font-weight: 700;
+}
+
+/* Dark Theme Footer Title */
+.dark-theme .resources-footer h3,
+.dark-mode .resources-footer h3 {
+  color: #ffffff;
+}
+
+/* Electronic Theme Footer Title */
+.electronic-theme .resources-footer h3 {
+  color: #ffffff;
+}
+
+.resources-footer h3 i {
+  color: #3b82f6;
+  font-size: 1.5rem;
+}
+
+/* Dark Theme Footer Icon */
+.dark-theme .resources-footer h3 i,
+.dark-mode .resources-footer h3 i {
+  color: #60a5fa;
+}
+
+/* Electronic Theme Footer Icon */
+.electronic-theme .resources-footer h3 i {
+  color: #4cc9f0;
+}
+
+.resource-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.resource-links a {
+  padding: 0.875rem 1.75rem;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  color: #475569;
+  text-decoration: none;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  transition: all 0.2s ease;
+}
+
+/* Dark Theme Resource Link */
+.dark-theme .resource-links a,
+.dark-mode .resource-links a {
+  background: #4a5568;
+  border: 1px solid #718096;
+  color: #cbd5e1;
+}
+
+/* Electronic Theme Resource Link */
+.electronic-theme .resource-links a {
+  background: #334155;
+  border: 1px solid #475569;
+  color: #94a3b8;
+}
+
+.resource-links a:hover {
+  background: #f1f5f9;
+  border-color: #3b82f6;
+  color: #3b82f6;
+  transform: translateY(-2px);
+}
+
+/* Dark Theme Resource Link Hover */
+.dark-theme .resource-links a:hover,
+.dark-mode .resource-links a:hover {
+  background: #718096;
+  border-color: #60a5fa;
+  color: #60a5fa;
+}
+
+/* Electronic Theme Resource Link Hover */
+.electronic-theme .resource-links a:hover {
+  background: #475569;
+  border-color: #4cc9f0;
+  color: #4cc9f0;
+}
+
+.resource-links a i {
+  color: #3b82f6;
+  font-size: 1rem;
+}
+
+/* Dark Theme Resource Link Icon */
+.dark-theme .resource-links a i,
+.dark-mode .resource-links a i {
+  color: #60a5fa;
+}
+
+/* Electronic Theme Resource Link Icon */
+.electronic-theme .resource-links a i {
+  color: #4cc9f0;
+}
+
+/* Keep existing responsive design */
+@media (max-width: 768px) {
+  .tools-page {
+    padding: 1rem;
+  }
+  
+  .page-header h1 {
+    font-size: 2rem;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .page-header .subtitle {
+    font-size: 1.1rem;
+    padding: 0 1rem;
+  }
+  
+  .header-controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .stats-bar {
+    justify-content: center;
+  }
+  
+  .expand-toggle-btn {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .category-tabs {
+    flex-direction: column;
+  }
+  
+  .tab-btn {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .tools-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .features-list {
+    grid-template-columns: 1fr;
+  }
+  
+  .tool-quick-stats {
+    grid-template-columns: 1fr;
+  }
+  
+  .tool-action-buttons {
+    flex-direction: column;
+  }
+  
+  .action-btn {
+    width: 100%;
+  }
+  
+  .collapsed-actions {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .expand-btn,
+  .quick-visit-btn {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .resource-links {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .resource-links a {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .tools-page {
+    background: white;
+    padding: 0;
+  }
+  
+  .tool-card {
+    break-inside: avoid;
+    border: 1px solid #000;
+    box-shadow: none;
+  }
+  
+  .header-controls,
+  .expand-toggle-btn,
+  .collapsed-actions,
+  .tool-action-buttons {
+    display: none;
+  }
+}

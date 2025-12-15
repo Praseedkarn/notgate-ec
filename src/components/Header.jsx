@@ -8,7 +8,8 @@ const Header = ({
   setShowUnitConverter,
   setShowHelp,
   setShowGateInfo,
-  onSearch 
+  onSearch ,
+  setShowToolPage
 }) => {
   const [lastScrollY, setLastScrollY] = useState(0);
   const [showHeader, setShowHeader] = useState(true);
@@ -85,7 +86,7 @@ const Header = ({
               title="Click to return to home"
             >
               {/* <div className="logo-icon">📡</div> */}
-              <img src="output-onlinepngtools (3).png" alt="NOTGATE Logo" 
+              <img src="logo_test2.png" alt="NOTGATE Logo" 
               className='logo-image
               '/>
               <div className="logo-text">
@@ -192,6 +193,12 @@ const Header = ({
       className="dropdown-item"
     >
       ⚙️ Settings
+    </button>
+    <button 
+      onClick={() => setShowToolPage && setShowToolPage(true)}
+      className="dropdown-item"
+    >
+      🔧Tools & Software
     </button>
   </div>
 </div>

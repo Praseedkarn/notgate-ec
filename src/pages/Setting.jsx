@@ -341,7 +341,7 @@ const Settings = ({ onClose, currentTheme, onThemeChange }) => {
           <div className="info-grid">
             <div className="info-item">
               <span className="info-label">Version</span>
-              <span className="info-value">2.0.3</span>
+              <span className="info-value">2.1.0</span>
             </div>
             <div className="info-item">
               <span className="info-label">Last Updated</span>

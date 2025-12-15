@@ -6,6 +6,8 @@ import Header from './components/Header';
 import UnitConverter from './components/UnitConverter';
 import Help from './components/Help';
 import GateInfo from './pages/GateInfo';
+import ToolsPage from './pages/ToolsPage';
+
 
 function App() {
   const [expandedCourse, setExpandedCourse] = useState(null);
@@ -14,11 +16,12 @@ function App() {
   const [showCalculator, setShowCalculator] = useState(false);
   const [showSettings, setShowSettings] = useState(false);
   const [searchTerm, setSearchTerm] = useState('');
-   const [showMaterials, setShowMaterials] = useState(false);
+  const [showMaterials, setShowMaterials] = useState(false);
   const [showUnitConverter, setShowUnitConverter] = useState(false);
   const [showHelp, setShowHelp] = useState(false);
   const [currentTheme, setCurrentTheme] = useState('electronic');
   const [showGateInfo, setShowGateInfo] = useState(false);
+  const [showToolPage , setShowToolPage]=useState(false);
 
   const handleNavigation = (page) => {
     // Close all pages first
@@ -28,6 +31,7 @@ function App() {
     setShowMaterials(false);
     setShowSettings(false);
     setShowHelp(false);
+    setShowToolPage(false);
     
     // Then open the requested page
     if (page === 'calculator') setShowCalculator(true);
@@ -36,6 +40,7 @@ function App() {
     else if (page === 'materials') setShowMaterials(true);
     else if (page === 'settings') setShowSettings(true);
     else if (page === 'help') setShowHelp(true);
+    else if(page ==='tools')setShowToolPage(true);
   };
 
 
@@ -200,7 +205,8 @@ function App() {
         'Maxwell\'s Equations: Differential & integral forms',
         'EM Waves: Propagation, Reflection, Refraction',
         'Transmission Lines: Parameters, Smith chart',
-        'Waveguides: Rectangular, Circular waveguides'
+        'Waveguides: Rectangular, Circular waveguides',
+        
       ],
       importance: 'Medium',
       color: '#4fd1c7'
@@ -235,7 +241,7 @@ function App() {
         'Communication Systems - Simon Haykin',
       ],
       description: 'Standard textbooks for GATE ECE preparation',
-      icon: '📚',
+      icon: '',
       folderLink:'https://drive.google.com/drive/folders/1sJQg9MSp69gQ2RfG85U1y6cSSUlkH2VS?usp=drive_link'
     },
     {
@@ -249,7 +255,7 @@ function App() {
         'Control Systems Formulae'
       ],
       description: 'Important formulas and equations for quick revision',
-      icon: '🧮',
+      icon: '',
       folderLink:'https://drive.google.com/drive/folders/1ztNXiuKoobjr0ghGGqXwKS5dzjGPDHW-?usp=drive_link'
     },
     {
@@ -263,7 +269,7 @@ function App() {
         'Expected Questions 2025'
       ],
       description: 'Previous year questions with detailed solutions',
-      icon: '📝',
+      icon: '',
       folderLink:'https://drive.google.com/drive/folders/1X1FIZ-DLTm1oq5hP3FJpNCJes0NZ85_u?usp=drive_link'
     },
     {
@@ -274,10 +280,10 @@ function App() {
         'Quick Revision Points',
         'Important Concepts Summary',
         'Problem Solving Techniques',
-        'Exam Strategy Guide'
+        'Exam Strategy Guide',
       ],
       description: 'Personalized study materials and strategies',
-      icon: '📓',
+      icon: '',
       folderLink:'https://drive.google.com/drive/folders/1wUSH0NVeVzspq2LCI361FnR8kPjLXjCv?usp=drive_link'
     },
     {
@@ -291,8 +297,9 @@ function App() {
         'Communication Tools'
       ],
       description: 'Software and tools for ECE practicals',
-      icon: '🔧',
-      folderLink:'https://drive.google.com/drive/folders/1wh--9c-EwYNph3TJDiqja6iIuEtSJEMe?usp=drive_link'
+      icon: '',
+      // folderLink:'https://drive.google.com/drive/folders/1wh--9c-EwYNph3TJDiqja6iIuEtSJEMe?usp=drive_link'
+      isToolPage:true,
     },
     {
       id: 6,
@@ -304,7 +311,7 @@ function App() {
         'Last Minute Tips'
       ],
       description: 'Strategies for GATE exam success',
-      icon: '🎯',
+      icon: '',
       folderLink:'https://drive.google.com/drive/folders/1JpuVxWEe0Bk3nrSqLI9ySR4GNCq9PV9N?usp=drive_link'
     }
   ];
@@ -335,10 +342,11 @@ function App() {
         'Numerical Ability: Arithmetic, Algebra, Geometry',
         'Logical Reasoning: Puzzles, Data interpretation',
         'Quantitative Aptitude: Number systems, Percentages',
-        'Data Sufficiency: Problem solving, Analysis'
+        'Data Sufficiency: Problem solving, Analysis',
+        
       ],
       important: 'High - Common for all GATE papers',
-      chapters: 5,
+       chapters: 5,
       folderLink:'https://drive.google.com/drive/folders/1CyaaptB3flEsNjD5TLhNpPMP7Ab7wu35?usp=drive_link'
     }
   ];
@@ -421,7 +429,9 @@ function App() {
     if (showGateInfo) {
       return <GateInfo onClose={() => setShowGateInfo(false)} />;
     }
-
+    if(showToolPage){
+      return <ToolsPage onClose={() =>setShowToolPage(false)}/>
+    }
     return (
       <main className="main">
         {/* Global Search Bar */}
@@ -521,7 +531,7 @@ function App() {
                   <div className="preview-hint">
                     <span className="hint-text">
                       <span className="hint-icon">📂</span>
-                      Click to view {course.topics.length} topics
+                      Click to view topics
                     </span>
                     <span className="hint-arrow">▼</span>
                   </div>
@@ -611,7 +621,7 @@ function App() {
         </section>
 
         {/* Resources Section */}
-        <section className="section resources-section" id="resources">
+                <section className="section resources-section" id="resources">
           <h2 className="section-title">
             <span className="title-icon">📁</span>
             Study Resources
@@ -623,8 +633,16 @@ function App() {
             {resources.map((resource) => (
               <div 
                 key={resource.id}
-                className={`resource-card electronic-card ${expandedResource === resource.id ? 'expanded' : ''}`}
-                onClick={() => toggleResource(resource.id)}
+                className={`resource-card electronic-card ${expandedResource === resource.id ? 'expanded' : ''} ${resource.type === '🔧 Tools & Software' ? 'tool-special-card' : ''}`}
+                onClick={() => {
+                  if (resource.type === '🔧 Tools & Software') {
+                    // Redirect to ToolsPage for Tools & Software
+                    setShowToolPage(true);
+                  } else {
+                    // Normal behavior for other resources
+                    toggleResource(resource.id);
+                  }
+                }}
               >
                 <div className="card-glow"></div>
                 <div className="resource-header">
@@ -635,9 +653,15 @@ function App() {
                     </div>
                     <p className="resource-desc">{resource.description}</p>
                   </div>
+                  {/* {resource.type === '🔧 Tools & Software' && (
+                    <span className="tool-redirect-badge">
+                      <span className="badge-icon">⚡</span>
+                      Online Tools
+                    </span>
+                  )} */}
                 </div>
 
-                {expandedResource === resource.id && (
+                {expandedResource === resource.id && resource.type !== '🔧 Tools & Software' && (
                   <div className="resource-details">
                     <div className="details-header">
                       <h4>Available Materials:</h4>
@@ -676,7 +700,35 @@ function App() {
                   </div>
                 )}
 
-                {expandedResource !== resource.id && (
+                {/* Special preview for Tools & Software card */}
+                {resource.type === '🔧 Tools & Software' ? (
+                  <div className="tool-preview-content">
+                    <div className="tool-features-showcase">
+                      <div className="tool-feature-item">
+                        {/* <span className="feature-icon">🔌</span> */}
+                        <span className="feature-text">Circuit Simulators</span>
+                      </div>
+                      <div className="tool-feature-item">
+                        {/* <span className="feature-icon">🧮</span> */}
+                        <span className="feature-text">Calculators</span>
+                      </div>
+                      <div className="tool-feature-item">
+                        {/* <span className="feature-icon">💻</span> */}
+                        <span className="feature-text">Design Tools</span>
+                      </div>
+                    </div>
+                    <div className="tool-access-hint">
+                      <div className="hint-content">
+                        {/* <span className="hint-icon">🚀</span> */}
+                        <div className="hint-text">
+                          <span className="hint-title">Access Online Tools</span>
+                          <span className="hint-subtitle">Click to explore all available tools</span>
+                        </div>
+                        <span className="hint-arrow">→</span>
+                      </div>
+                    </div>
+                  </div>
+                ) : expandedResource !== resource.id && (
                   <div className="resource-preview">
                     <span className="preview-icon">{resource.icon}</span>
                     <span>Contains study materials</span>
@@ -713,21 +765,21 @@ function App() {
 
         {/* Help Text */}
         <div className="help-section">
-  <div className="circuit-board"></div>
-  <p className="help-text">
-    <span className="help-icon">🌐</span>
-    <strong>Important:</strong> For official GATE information visit the  
-    <a 
-      href="https://gate.iitkgp.ac.in/" 
-      target="_blank" 
-      rel="noopener noreferrer"
-      className="official-link"
-    >
-      Official GATE Website <br></br>
-    </a>
-     https://gate.iitkgp.ac.in/ 
-  </p>
-</div>
+          <div className="circuit-board"></div>
+          <p className="help-text">
+            <span className="help-icon">🌐</span>
+            <strong>Important:</strong> For official GATE information visit the  
+            <a 
+              href="https://gate.iitkgp.ac.in/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="official-link"
+            >
+              Official GATE Website <br></br>
+            </a>
+            https://gate.iitkgp.ac.in/ 
+          </p>
+        </div>
 
         {/* Calculator CTA */}
         <div className="calculator-cta">
@@ -756,7 +808,8 @@ function App() {
         setShowSettings={() => handleNavigation('settings')}
         setShowUnitConverter={() => handleNavigation('unit-converter')}
         setShowHelp={() => handleNavigation('help')}
-        setShowGateInfo={() => handleNavigation('gate-info')} // Add this line
+        setShowGateInfo={() => handleNavigation('gate-info')}
+        setShowToolPage={()=>handleNavigation('tools')} // Add this line
         onSearch={handleSearch}
         scrollToSection={scrollToSection}
 />
