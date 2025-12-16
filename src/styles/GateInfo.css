@@ -146,8 +146,8 @@
 
 .info-tab-btn {
   padding: 1rem 2rem;
-  background: var(--card-bg, #ffffff);
-  border: 2px solid #e2e8f0;
+  background:#8787c5 ;
+  border: 2px solid #c8d2de;
   border-radius: 12px;
   font-size: 1rem;
   font-weight: 600;
@@ -168,7 +168,7 @@
 
 .info-tab-btn.active {
   background: linear-gradient(135deg, #4361ee, #3a0ca3);
-  color: #ffffff !important; /* White text for active state */
+  color: #000000 !important; /* White text for active state */
   border-color: #4361ee;
   box-shadow: 0 5px 15px rgba(67, 97, 238, 0.3);
 }

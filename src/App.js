@@ -241,7 +241,7 @@ function App() {
   const resources = [
     {
       id: 1,
-      type: '📚 Text Books',
+      type: ' Text Books',
       items: [
         'Basic Electronics - B. Lal & N. Subrahmanyam',
         'Signals & Systems - Alan V. Oppenheim',
@@ -255,7 +255,7 @@ function App() {
     },
     {
       id: 2,
-      type: '🧮 Formula Sheets',
+      type: ' Formula Sheets',
       items: [
         'Network Theory Formulas (Complete)',
         'Signal Processing Transform Tables',
@@ -269,7 +269,7 @@ function App() {
     },
     {
       id: 3,
-      type: '📝 PYQs',
+      type: ' PYQs',
       items: [
         '2020-2024 Solved Papers',
         'Topic-wise Previous Questions',
@@ -283,7 +283,7 @@ function App() {
     },
     {
       id: 4,
-      type: '📓 Study Notes',
+      type: ' Study Notes',
       items: [
         'Handwritten Subject Notes',
         'Quick Revision Points',
@@ -297,7 +297,7 @@ function App() {
     },
     {
       id: 5,
-      type: '🔧 Tools & Software',
+      type: ' Tools & Software',
       items: [
         'Circuit Simulators',
         'MATLAB for Signals',
@@ -312,7 +312,7 @@ function App() {
     },
     {
       id: 6,
-      type: '🎯 Exam Strategy',
+      type: ' Exam Strategy',
       items: [
         'Time Management Tips',
         'Question Selection Strategy',
@@ -362,12 +362,12 @@ function App() {
 
   // Quick Reference
   const quickReference = [
-    { title: 'Total Questions', value: '65', detail: '65 questions total', icon: '❓' },
-    { title: 'Total Marks', value: '100', detail: '100 marks maximum', icon: '⭐' },
-    { title: 'Exam Duration', value: '3h', detail: '180 minutes duration', icon: '⏰' },
-    { title: 'Negative Marking', value: '1/3', detail: 'For MCQs only', icon: '⚠️' },
-    { title: 'Syllabus Topics', value: '45+', detail: 'Major topics covered', icon: '📖' },
-    { title: 'Core Subjects', value: '9', detail: 'ECE core subjects', icon: '🎯' }
+    { title: 'Total Questions', value: '65', detail: '65 questions total', icon: '' },
+    { title: 'Total Marks', value: '100', detail: '100 marks maximum', icon: '' },
+    { title: 'Exam Duration', value: '3h', detail: '180 minutes duration', icon: '' },
+    { title: 'Negative Marking', value: '1/3', detail: 'For MCQs only', icon: '' },
+    { title: 'Syllabus Topics', value: '45+', detail: 'Major topics covered', icon: '' },
+    { title: 'Core Subjects', value: '9', detail: 'ECE core subjects', icon: '' }
   ];
 
   const toggleCourse = (id) => {
@@ -458,10 +458,10 @@ function App() {
         className="stat-chip gate-info-chip"
         onClick={() => setShowGateInfo(true)}
       >
-        📊 GATE Exam Info
+         GATE Exam Info
       </button>
-      <span className="stat-chip">Click cards →</span>
-      <span className="stat-chip">View topics ↓</span>
+      {/* <span className="stat-chip">Click cards →</span> */}
+      {/* <span className="stat-chip">View topics ↓</span> */}
     </div>
   </div>
   <div className="circuit-dots"></div>
@@ -470,7 +470,7 @@ function App() {
         {/* Course Weightage Section */}
         <section className="section weightage-section" id="courses">
           <h2 className="section-title">
-            <span className="title-icon">📊</span>
+            <span className="title-icon"></span>
             Course Weightage & Topics
             {/* <span className="title-tag"></span> */}
           </h2>
@@ -490,7 +490,7 @@ function App() {
                     <h3>{course.course}</h3>
                     <div className="course-meta">
                       <span className="questions">
-                        <span className="meta-icon">❓</span>
+                        {/* <span className="meta-icon">❓</span> */}
                         {course.questions} questions
                       </span>
                       <span className={`importance ${course.importance.toLowerCase().replace(' ', '-')}`}>
@@ -516,7 +516,7 @@ function App() {
                   <div className="topic-details">
                     <div className="details-header">
                       <h4 className="details-title">
-                        <span className="details-icon">🔍</span>
+                        <span className="details-icon"></span>
                         Topics Covered
                       </h4>
                       <span className="topic-count">{course.topics.length} topics</span>
@@ -580,7 +580,7 @@ function App() {
                 {expandedCourse !== course.id && (
                   <div className="preview-hint">
                     <span className="hint-text">
-                      <span className="hint-icon">📂</span>
+                      <span className="hint-icon"></span>
                       Click to view topics
                     </span>
                     <span className="hint-arrow">▼</span>
@@ -594,7 +594,7 @@ function App() {
         {/* Math & Aptitude Section */}
         <section className="section aptitude-section" id="math">
           <h2 className="section-title">
-            <span className="title-icon">🧮</span>
+            {/* <span className="title-icon"></span> */}
             Mathematics & General Aptitude
             <span className="title-tag">30% Weight</span>
           </h2>
@@ -613,7 +613,7 @@ function App() {
                 </div>
                 
                 <div className="importance-tag circuit-tag">
-                  <span className="tag-icon">🎯</span>
+                  {/* <span className="tag-icon">🎯</span> */}
                   {section.important}
                 </div>
 
@@ -661,7 +661,7 @@ function App() {
 
                 {expandedMath !== section.id && (
                   <div className="preview">
-                    <span className="preview-icon">📖</span>
+                    <span className="preview-icon"></span>
                     <span>Click to view {section.topics.length} topics</span>
                   </div>
                 )}
@@ -673,7 +673,7 @@ function App() {
         {/* Resources Section */}
                 <section className="section resources-section" id="resources">
           <h2 className="section-title">
-            <span className="title-icon">📁</span>
+            {/* <span className="title-icon">📁</span> */}
             Study Resources
             <span className="title-tag">Complete Kit</span>
           </h2>
@@ -685,7 +685,7 @@ function App() {
                 key={resource.id}
                 className={`resource-card electronic-card ${expandedResource === resource.id ? 'expanded' : ''} ${resource.type === '🔧 Tools & Software' ? 'tool-special-card' : ''}`}
                 onClick={() => {
-                  if (resource.type === '🔧 Tools & Software') {
+                  if (resource.type === ' Tools & Software') {
                     // Redirect to ToolsPage for Tools & Software
                     setShowToolPage(true);
                   } else {
@@ -751,7 +751,7 @@ function App() {
                 )}
 
                 {/* Special preview for Tools & Software card */}
-                {resource.type === '🔧 Tools & Software' ? (
+                {resource.type === ' Tools & Software' ? (
                   <div className="tool-preview-content">
                     <div className="tool-features-showcase">
                       <div className="tool-feature-item">
@@ -759,7 +759,7 @@ function App() {
                         <span className="feature-text">Circuit Simulators</span>
                       </div>
                       <div className="tool-feature-item">
-                        {/* <span className="feature-icon">🧮</span> */}
+                        {/* <span className="feature-icon"></span> */}
                         <span className="feature-text">Calculators</span>
                       </div>
                       <div className="tool-feature-item">
@@ -783,7 +783,7 @@ function App() {
                     <span className="preview-icon">{resource.icon}</span>
                     <span>Contains study materials</span>
                     <span className="click-hint">
-                      <span className="hint-icon">👆</span>
+                      <span className="hint-icon"></span>
                       Click to view
                     </span>
                   </div>
@@ -796,7 +796,7 @@ function App() {
         {/* Quick Reference */}
         <section className="section reference-section" id="reference">
           <h2 className="section-title">
-            <span className="title-icon">⚡</span>
+            {/* <span className="title-icon"></span> */}
             Quick Reference
             <span className="title-tag">GATE Facts</span>
           </h2>
@@ -841,7 +841,7 @@ function App() {
                   className="gate-info-btn"
                   onClick={() => setShowGateInfo(true)}
                 >
-                  📊 GATE Exam Info
+                   GATE Exam Info
                 </button>
               </div>
             </div>
@@ -883,7 +883,7 @@ function App() {
         <div className="footer-content">
           <div className="footer-section">
             <h3 className="footer-title">
-              <span className="chip-icon">🖥️</span>
+              <span className="chip-icon"></span>
               GATE ECE Reference
             </h3>
             <p>Electronic Engineering Interactive Guide</p>
@@ -911,20 +911,20 @@ function App() {
           </div>
           <div className="footer-section">
             <h3>Features</h3>
-            <p><span className="feature-icon">⚡</span> Interactive Topic Details</p>
-            <p><span className="feature-icon">📊</span> Subject-wise Weightage</p>
-            <p><span className="feature-icon">🔧</span> Calculator Tools</p>
-            <p><span className="feature-icon">⚙️</span> Settings & Customization</p>
-            <p><span className="feature-icon">🎯</span> All info About GATE</p>
+            <p><span className="feature-icon"></span> Interactive Topic Details</p>
+            <p><span className="feature-icon"></span> Subject-wise Weightage</p>
+            <p><span className="feature-icon"></span> Calculator Tools</p>
+            <p><span className="feature-icon"></span> Settings & Customization</p>
+            <p><span className="feature-icon"></span> All info About GATE</p>
           </div>
           <div className="footer-section">
             <h3>Quick Access</h3>
-            <p><span className="nav-icon">👆</span> Click cards to expand</p>
+            <p><span className="nav-icon"></span> Click cards to expand</p>
             <button 
               className="footer-calc-link"
               onClick={() => setShowCalculator(true)}
             >
-              🧮 Open Calculator
+               Open Calculator
             </button>
             {/* <button 
               className="footer-settings-link"
@@ -936,19 +936,19 @@ function App() {
               className="footer-unit-link"
               onClick={() => setShowUnitConverter(true)}
             >
-              🔧 Unit Converter
+               Unit Converter
             </button>
             <button 
               className="footer-help-link"
               onClick={() => setShowHelp(true)}
             >
-              ❓ Help
+               Help
             </button>
             <button 
               className="footer-gateInfo-link"
               onClick={() => setShowGateInfo(true)}
             >
-              📊More info about GATE
+              More info about GATE
             </button>
           </div>
         </div>

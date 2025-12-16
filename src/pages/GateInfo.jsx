@@ -214,22 +214,22 @@ function GateInfo({ onClose }) {
               <h3>🔍 Key Insights</h3>
               <div className="insights-grid">
                 <div className="insight-card">
-                  <div className="insight-icon">📈</div>
+                  <div className="insight-icon"></div>
                   <h4>Highest Weightage 2022</h4>
                   <p>Engineering Mathematics (16%) & Communication (13%)</p>
                 </div>
                 <div className="insight-card">
-                  <div className="insight-icon">📉</div>
+                  {/* <div className="insight-icon">📉</div> */}
                   <h4>Lowest Weightage 2022</h4>
                   <p>Signals & Systems (6%) & Electromagnetic Theory (6%)</p>
                 </div>
                 <div className="insight-card">
-                  <div className="insight-icon">🎯</div>
+                  {/* <div className="insight-icon">🎯</div> */}
                   <h4>Most Consistent</h4>
                   <p>General Aptitude consistently at 15% every year</p>
                 </div>
                 <div className="insight-card">
-                  <div className="insight-icon">⚠️</div>
+                  {/* <div className="insight-icon">⚠️</div> */}
                   <h4>Most Variable</h4>
                   <p>Network Theory varies from 5% to 12%</p>
                 </div>
@@ -299,7 +299,7 @@ function GateInfo({ onClose }) {
             </div>
 
             <div className="study-plan">
-              <h3>📚 Recommended Study Plan</h3>
+              <h3> Recommended Study Plan</h3>
               <div className="plan-phases">
                 <div className="phase">
                   <div className="phase-title">Phase 1: Foundation (3 months)</div>
@@ -322,28 +322,28 @@ function GateInfo({ onClose }) {
       {/* Quick Stats */}
       <div className="quick-stats">
         <div className="stat-card">
-          <div className="stat-icon">⏰</div>
+          {/* <div className="stat-icon"></div> */}
           <div className="stat-data">
             <div className="stat-value">3 Hours</div>
             <div className="stat-label">Exam Duration</div>
           </div>
         </div>
         <div className="stat-card">
-          <div className="stat-icon">❓</div>
+          {/* <div className="stat-icon"></div> */}
           <div className="stat-data">
             <div className="stat-value">65</div>
             <div className="stat-label">Total Questions</div>
           </div>
         </div>
         <div className="stat-card">
-          <div className="stat-icon">🎯</div>
+          {/* <div className="stat-icon"></div> */}
           <div className="stat-data">
             <div className="stat-value">100</div>
             <div className="stat-label">Maximum Marks</div>
           </div>
         </div>
         <div className="stat-card">
-          <div className="stat-icon">📈</div>
+          {/* <div className="stat-icon"></div> */}
           <div className="stat-data">
             <div className="stat-value">27</div>
             <div className="stat-label">Papers Available</div>

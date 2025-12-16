@@ -116,14 +116,14 @@ const Header = ({
     }}
     title="Go to Home"
   >
-    <span className="nav-icon">🏠</span>
+    {/* <span className="nav-icon"></span> */}
     <span className="nav-text">Home</span>
   </button>
 
         
           <div className="nav-dropdown">
             <button className="nav-link">
-              <span className="nav-icon">📚</span>
+              {/* <span className="nav-icon">📚</span> */}
               <span className="nav-text">Study</span>
               <span className="dropdown-arrow">▼</span>
             </button>
@@ -132,19 +132,19 @@ const Header = ({
                 onClick={() => setShowGateInfo && setShowGateInfo(true)}
                 className="dropdown-item gate-info-highlight"
               >
-                📊 Complete GATE Exam Guide
+                 Complete GATE Exam Guide
               </button>
               <button 
                 onClick={() => scrollToSection('courses')}
                 className="dropdown-item"
               >
-                ⚖️ Course Weightage
+                 Course Weightage
               </button>
               <button 
                 onClick={() => scrollToSection('math')}
                 className="dropdown-item"
               >
-                🧮 Mathematics & Aptitude
+                 Mathematics & Aptitude
               </button>
               {/* <button 
                 onClick={() => scrollToSection('resources')}
@@ -156,14 +156,14 @@ const Header = ({
                 onClick={() => scrollToSection('reference')}
                 className="dropdown-item"
               >
-                ⚡ Quick Reference
+                 Quick Reference
               </button>
             </div>
           </div>
           
           <div className="nav-dropdown">
   <button className="nav-link">
-    <span className="nav-icon">🔧</span>
+    {/* <span className="nav-icon">🔧</span> */}
     <span className="nav-text">Tools</span>
     <span className="dropdown-arrow">▼</span>
   </button>
@@ -172,13 +172,13 @@ const Header = ({
       onClick={() => setShowUnitConverter && setShowUnitConverter(true)}
       className="dropdown-item"
     >
-      🔧 Unit Converter
+       Unit Converter
     </button>
     <button 
       onClick={() => setShowCalculator && setShowCalculator(true)}
       className="dropdown-item"
     >
-      🧮 Calculator
+       Calculator
     </button>
     <a 
       href="https://drive.google.com/drive/folders/1swp4dkS7X_gXmraYPLREKytm4O9S_c2D?usp=sharing"
@@ -186,19 +186,19 @@ const Header = ({
       rel="noopener noreferrer"
       className="dropdown-item"
     >
-      📁 Google Drive
+       Google Drive
     </a>
     <button 
       onClick={() => setShowSettings && setShowSettings(true)}
       className="dropdown-item"
     >
-      ⚙️ Settings
+       Settings
     </button>
     <button 
       onClick={() => setShowToolPage && setShowToolPage(true)}
       className="dropdown-item"
     >
-      🔧Tools & Software
+      Tools & Software
     </button>
   </div>
 </div>
@@ -213,14 +213,14 @@ const Header = ({
                 className="dropdown-item" 
                 onClick={() => setShowSettings && setShowSettings(true)}
               >
-                ⚙️ Settings
+                 Settings
               </button>
               {/* <button className="dropdown-item">🌙 Dark Mode</button> */}
               <button 
                 className="dropdown-item"
                 onClick={() => setShowHelp && setShowHelp(true)}
               >
-                ❓ Help
+                 Help
               </button>
               {/* <button className="dropdown-item">🚪 Logout</button> */}
             </div>
