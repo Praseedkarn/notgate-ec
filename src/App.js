@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
+import { Analytics } from '@vercel/analytics/react';
 import Calculator from './pages/Calculator';
 import Setting from './pages/Setting';
 import Header from './components/Header';
@@ -443,6 +444,7 @@ function App() {
     }
     return (
       <main className="main">
+        <Analytics />
         {/* Global Search Bar */}
         
 
