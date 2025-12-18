@@ -8,7 +8,6 @@ import Help from './components/Help';
 import GateInfo from './pages/GateInfo';
 import ToolsPage from './pages/ToolsPage';
 
-
 function App() {
   const [expandedCourse, setExpandedCourse] = useState(null);
   const [expandedResource, setExpandedResource] = useState(null);
@@ -961,6 +960,7 @@ function App() {
         </div>
         <div className="circuit-line"></div>
       </footer>
+      
     </div>
   );
 }
