@@ -159,7 +159,7 @@ body {
 
 /* Welcome Banner */
 .welcome-banner {
-  max-width: 1200px;
+  max-width: 1100px;
   margin: 2rem auto;
   padding: 2rem;
   background: var(--card-bg);
@@ -171,6 +171,7 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.3);
   position: relative;
   overflow: hidden;
+  top: 0;
 }
 
 .welcome-banner::before {
@@ -3502,4 +3503,32 @@ button:not(.digital-badge):not(.weight-badge) {
 .electronic-theme .tool-special-card {
   border: none !important;
   box-shadow: none !important;
+}
+.footer-about-link,
+.footer-Privacy-link,
+.footer-TandC-link {
+    background: none;
+    border: none;
+    color: inherit; /* or specify your color, e.g., #666 */
+    cursor: pointer;
+    font-family: inherit;
+    font-size: inherit;
+    padding: 0;
+    text-decoration: none;
+    display: inline-block;
+    margin: 0 10px; /* Adjust spacing between buttons */
+}
+
+/* If you want them to look like links instead of buttons */
+.footer-about-link:hover,
+.footer-Privacy-link:hover,
+.footer-TandC-link:hover {
+    /* No hover styles as requested */
+}
+
+/* Optional: Active/click state if needed */
+.footer-about-link:active,
+.footer-Privacy-link:active,
+.footer-TandC-link:active {
+    opacity: 0.8; /* Subtle feedback on click */
 }

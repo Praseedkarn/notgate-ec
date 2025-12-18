@@ -221,6 +221,33 @@ const ToolsPage = () => {
       ],
       isFree: true,
       difficulty: "intermediate"
+    },
+    {
+      id: 10,
+      name: "Multisim  ",
+      category: "tool",
+      icon: "🔧",
+      description: "Schematic capture , circuit simulation and PCB design ",
+      website: "https://www.ni.com/en/shop/electronic-test-instrumentation/application-software-for-electronic-test-and-instrumentation-category/what-is-multisim.html",
+      websiteName: "NI Multisim ",
+      howToUse: [
+         "Install Multisim (Student/Professional edition from NI).",
+         "Place components from the library onto the schematic.",
+         "Wire components together to build your circuit.",
+         "Add virtual instruments (e.g., oscilloscope) to test points.",
+         "Click 'Run/Simulate' to start SPICE analysis.",
+         "View results on instruments or as graphs."
+      ],
+      features: [
+         "Graphical schematic capture",
+          "Interactive SPICE simulation",
+          "Large component library",
+          "Virtual test instruments",
+          "FPGA/PLD design and export",
+          "Integration with PCB layout tools"
+      ],
+      isFree: "freemium",
+      difficulty: "intermediate"
     }
   ];
 
@@ -287,27 +314,27 @@ const ToolsPage = () => {
         
         <div className="header-controls">
           <div className="stats-bar">
-            <div className="stat">
+            {/* <div className="stat">
               <i className="fas fa-link"></i>
               <span>{toolsData.length} Resources</span>
-            </div>
-            <div className="stat">
+            </div> */}
+            {/* <div className="stat">
               <i className="fas fa-unlock"></i>
               <span>All Free to Use</span>
-            </div>
-            <div className="stat">
+            </div> */}
+            {/* <div className="stat">
               <i className="fas fa-globe"></i>
               <span>Online - No Download</span>
-            </div>
+            </div> */}
           </div>
           
-          <button 
+          {/* <button 
             className="expand-toggle-btn"
             onClick={handleExpandAll}
           >
             <i className={`fas ${expandedCardId ? 'fa-compress-alt' : 'fa-expand-alt'}`}></i>
             {expandedCardId ? 'Collapse All' : 'Expand All'}
-          </button>
+          </button> */}
         </div>
       </div>
 

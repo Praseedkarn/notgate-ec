@@ -7,6 +7,7 @@ import UnitConverter from './components/UnitConverter';
 import Help from './components/Help';
 import GateInfo from './pages/GateInfo';
 import ToolsPage from './pages/ToolsPage';
+import AboutUs from './pages/AboutUs';
 
 function App() {
   const [expandedCourse, setExpandedCourse] = useState(null);
@@ -21,6 +22,7 @@ function App() {
   const [currentTheme, setCurrentTheme] = useState('electronic');
   const [showGateInfo, setShowGateInfo] = useState(false);
   const [showToolPage , setShowToolPage]=useState(false);
+  const [showAbout , setShowAbout ]= useState(false);
 
   const handleNavigation = (page) => {
     // Close all pages first
@@ -31,7 +33,8 @@ function App() {
     setShowSettings(false);
     setShowHelp(false);
     setShowToolPage(false);
-    
+    setShowAbout(false);
+
     // Then open the requested page
     if (page === 'calculator') setShowCalculator(true);
     else if (page === 'unit-converter') setShowUnitConverter(true);
@@ -40,6 +43,7 @@ function App() {
     else if (page === 'settings') setShowSettings(true);
     else if (page === 'help') setShowHelp(true);
     else if(page ==='tools')setShowToolPage(true);
+    else if (page == 'about') setShowAbout(true);
   };
 
 
@@ -439,6 +443,9 @@ function App() {
     }
     if(showToolPage){
       return <ToolsPage onClose={() =>setShowToolPage(false)}/>
+    }
+    if (showAbout){
+      return <AboutUs onClose={() =>setShowAbout(false)}/>;
     }
     return (
       <main className="main">
@@ -858,9 +865,11 @@ function App() {
         setShowUnitConverter={() => handleNavigation('unit-converter')}
         setShowHelp={() => handleNavigation('help')}
         setShowGateInfo={() => handleNavigation('gate-info')}
-        setShowToolPage={()=>handleNavigation('tools')} // Add this line
+        setShowToolPage={()=>handleNavigation('tools')} 
+        setShowAbout = {()=>handleNavigation('about')}
         onSearch={handleSearch}
         scrollToSection={scrollToSection}
+        
 />
 
       {renderContent()}
@@ -918,7 +927,7 @@ function App() {
           </div>
           <div className="footer-section">
             <h3>Quick Access</h3>
-            <p><span className="nav-icon"></span> Click cards to expand</p>
+            {/* <p><span className="nav-icon"></span> Click cards to expand</p> */}
             <button 
               className="footer-calc-link"
               onClick={() => setShowCalculator(true)}
@@ -958,6 +967,22 @@ function App() {
           </p>
           <p className="tech-note"></p>
         </div>
+        <button 
+        className='footer-about-link'
+        onClick={() =>handleNavigation('about')}
+        >About Us  
+        </button>
+        <button 
+        className='footer-Privacy-link'
+        onClick={() =>handleNavigation('Privacy')}
+        >   Privacy Policy
+        </button>
+        <button 
+        className='footer-TandC-link'
+        onClick={() =>handleNavigation('terms')}
+        > Terms & Conditions
+        </button>
+        {/* <button className='footer-cont'></button> */}
         <div className="circuit-line"></div>
       </footer>
       

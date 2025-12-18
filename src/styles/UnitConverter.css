@@ -1,7 +1,7 @@
 /* Unit Converter Styles - Matching Calculator Theme */
 .unit-converter-overlay {
   position: fixed;
-  top: 0;
+  top: 1500;
   left: 0;
   right: 0;
   bottom: 0;
@@ -10,7 +10,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 1000;
+  z-index: 1500;
   padding: 20px;
 }
 

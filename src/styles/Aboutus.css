@@ -1,0 +1,249 @@
+/* AboutUs.css - Simplified Minimal Version */
+
+/* Base Page Styles */
+.about-page {
+  min-height: 100vh;
+  padding: 20px;
+  position: relative;
+  background: var(--bg-color, #f5f7fa);
+  padding-top: 100px !important;
+}
+
+/* Back Button - Simple */
+.about-back-btn {
+  position: absolute;
+  top: 120px;
+  left: 30px;
+  background: black;
+  border: 2px solid #666;
+  color: #666;
+  padding: 12px 24px;
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+.about-back-btn:hover {
+  background: #666;
+  color: white;
+  transform: translateX(-5px);
+}
+
+/* Main Container */
+.about-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Header Section - Simple */
+.about-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.about-header h1 {
+  font-size: 3.5rem;
+  color: var(--text-primary, #2c3e50);
+  margin-bottom: 10px;
+  font-weight: 800;
+}
+
+.about-subtitle {
+  font-size: 1.2rem;
+  color: var(--text-secondary, #7f8c8d);
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* Content Card - Plain */
+.about-content-card {
+  background: var(--card-bg, white);
+  border-radius: 20px;
+  padding: 50px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Sections - Clean */
+.about-section {
+  margin-bottom: 50px;
+}
+
+.about-section h2 {
+  color: var(--text-primary, #2c3e50);
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.about-paragraph {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--text-secondary, #555);
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+/* Milestones - Simplified */
+.milestones {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin: 40px 0;
+}
+
+.milestone {
+  text-align: center;
+  padding: 30px 20px;
+  background: var(--card-bg, white);
+  border-radius: 15px;
+  flex: 1;
+  min-width: 200px;
+  color: var(--text-primary, #2c3e50);
+  transition: transform 0.3s ease;
+}
+
+.milestone:hover {
+  transform: translateY(-10px);
+}
+
+/* Contact Section - Clean */
+.contact-section {
+  margin-top: 60px;
+  padding-top: 40px;
+  border-top: 2px solid var(--border-color, #eee);
+  text-align: center;
+}
+
+.contact-section h3 {
+  color: var(--text-primary, #2c3e50);
+  font-size: 2rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.contact-info {
+  font-size: 1.1rem;
+  color: var(--text-secondary, #555);
+  line-height: 1.8;
+  margin-bottom: 30px;
+}
+
+/* =========================================== */
+/* THEME SPECIFIC TEXT VISIBILITY */
+/* =========================================== */
+
+/* Light/Electronic Theme - Dark text */
+:not(.dark-theme) .about-page {
+  background: var(--bg-color, #f5f7fa);
+  color: #000000;
+}
+
+:not(.dark-theme) .about-content-card {
+  background: var(--card-bg, #ffffff);
+  color: #000000;
+}
+
+:not(.dark-theme) .about-header h1,
+:not(.dark-theme) .about-section h2,
+:not(.dark-theme) .contact-section h3 {
+  color: #000000;
+}
+
+:not(.dark-theme) .about-paragraph,
+:not(.dark-theme) .about-subtitle,
+:not(.dark-theme) .contact-info,
+:not(.dark-theme) .milestone {
+  color: #4a5568;
+}
+
+/* Dark Theme - White text */
+.dark-theme .about-page {
+  background: var(--bg-color, #0a0e17);
+  color: #ffffff;
+}
+
+.dark-theme .about-content-card {
+  background: var(--card-bg, #181c2a);
+  color: #ffffff;
+}
+
+.dark-theme .about-header h1,
+.dark-theme .about-section h2,
+.dark-theme .contact-section h3 {
+  color: #ffffff;
+}
+
+.dark-theme .about-paragraph,
+.dark-theme .about-subtitle,
+.dark-theme .contact-info,
+.dark-theme .milestone {
+  color: #a0aec0;
+}
+
+/* Electronic Theme - Same as light */
+.electronic-theme .about-page {
+  background: var(--bg-color, #f5f7fa);
+}
+
+/* =========================================== */
+/* RESPONSIVE DESIGN */
+/* =========================================== */
+
+@media (max-width: 768px) {
+  .about-container {
+    padding: 10px;
+  }
+  
+  .about-back-btn {
+    position: relative;
+    top: 0;
+    left: 0;
+    margin-bottom: 20px;
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .about-header h1 {
+    font-size: 2.5rem;
+  }
+  
+  .about-content-card {
+    padding: 30px 20px;
+  }
+  
+  .about-section h2 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-header h1 {
+    font-size: 2rem;
+  }
+  
+  .about-section h2 {
+    font-size: 1.5rem;
+  }
+  
+  .about-paragraph {
+    font-size: 1rem;
+  }
+  
+  .milestones {
+    flex-direction: column;
+  }
+  
+  .milestone {
+    min-width: 100%;
+  }
+}

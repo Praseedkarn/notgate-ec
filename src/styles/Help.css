@@ -1,16 +1,26 @@
 .help-overlay {
-  position: fixed;
+  position:fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   background: rgba(0, 0, 0, 0.85);
   backdrop-filter: blur(4px);
-  display: flex;
+  display:inline-flex;
   justify-content: center;
   align-items: center;
   z-index: 1000;
   padding: 20px;
+}
+/* Hide header when help overlay is active */
+.help-overlay.active ~ .header,
+.help-overlay.active + .header {
+  display: none !important;
+}
+
+/* Or hide header when help overlay is present */
+body:has(.help-overlay) .header {
+  display: none !important;
 }
 
 .help-container {
