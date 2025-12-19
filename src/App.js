@@ -895,7 +895,7 @@ function App() {
       {renderContent()}
 
       {/* Floating Calculator Button */}
-      {!showCalculator && !showSettings && !showUnitConverter && !showHelp && (
+      {/* {!showCalculator && !showSettings && !showUnitConverter && !showHelp && (
         <button 
           className="floating-calculator-btn"
           onClick={() => setShowCalculator(true)}
@@ -903,7 +903,7 @@ function App() {
         >
           🧮
         </button>
-      )}
+      )} */}
 
       {/* Footer */}
       <footer className="footer">

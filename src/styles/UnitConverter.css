@@ -166,7 +166,7 @@
 
 /* Calc Header */
 .calc-header {
-  background: linear-gradient(135deg, rgba(67, 97, 238, 0.1), rgba(76, 201, 240, 0.1));
+  background:white;
   padding: 1rem 1.5rem;
   border-radius: 10px;
   margin-bottom: 1.5rem;
@@ -181,14 +181,14 @@
   margin-bottom: 0.25rem;
 }
 
-.calc-icon {
+/* .calc-icon {
   font-size: 1.2rem;
-}
+} */
 
-.calc-info {
+/* .calc-info {
   color: #666;
   font-size: 0.9rem;
-}
+} */
 
 /* Conversion Inputs */
 .conversion-inputs {

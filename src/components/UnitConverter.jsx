@@ -344,7 +344,7 @@ const UnitConverter = ({ onClose }) => {
             {/* Current Category Header */}
             <div className="calc-header">
               <h3>
-                <span className="calc-icon">{unitCategories[category].icon}</span>
+                {/* <span className="calc-icon">{unitCategories[category].icon}</span> */}
                 {unitCategories[category].name}
               </h3>
               <p className="calc-info">
