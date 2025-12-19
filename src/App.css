@@ -3558,7 +3558,7 @@ button:not(.digital-badge):not(.weight-badge) {
   .weightage-card,
   .aptitude-card,
   .resource-card {
-    max-height: 180px;
+    max-height: 280px;
     margin-bottom: 1rem;
   }
   
@@ -3634,7 +3634,7 @@ button:not(.digital-badge):not(.weight-badge) {
   .weightage-card,
   .aptitude-card,
   .resource-card {
-    max-height: 160px;
+    max-height: 250px;
   }
   
   .weightage-card.expanded,
