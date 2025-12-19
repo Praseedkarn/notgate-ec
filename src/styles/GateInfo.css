@@ -5,7 +5,7 @@
   padding: 2rem;
   padding-top: 5rem;
   animation: fadeIn 0.5s ease;
-  color: var(--text-primary, #2d3748); /* Default text color */
+  color: var(--text-primary, #2d3748);
 }
 
 @keyframes fadeIn {
@@ -136,62 +136,100 @@
   opacity: 0.9;
 }
 
-/* Navigation Tabs */
+/* Navigation Tabs - UPDATED WITH GRID LAYOUT */
 .info-tabs {
-  display: flex;
-  gap: 1rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
   margin-bottom: 2rem;
-  flex-wrap: wrap;
-  justify-content: center;
 }
 
+@media (min-width: 769px) {
+  .info-tabs {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+/* Default/Light theme */
 .info-tab-btn {
-  padding: 1rem 2rem;
-  background:#8787c5 ;
+  padding: 1rem;
+  background: #8787c5;
   border: 2px solid #c8d2de;
   border-radius: 12px;
-  font-size: 1rem;
+  font-size: 0.95rem;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 0.5rem;
-  color: #000000 !important; /* Black text for default/light theme */
+  text-align: center;
+  min-height: 60px;
+  color: #000000;
+  word-break: break-word;
+  white-space: normal;
+  line-height: 1.3;
 }
 
 .info-tab-btn:hover {
   transform: translateY(-2px);
   border-color: #4361ee;
   box-shadow: 0 5px 15px rgba(67, 97, 238, 0.2);
-  color: #000000 !important; /* Keep black on hover */
+  color: #000000;
 }
 
 .info-tab-btn.active {
   background: linear-gradient(135deg, #4361ee, #3a0ca3);
-  color: #000000 !important; /* White text for active state */
+  color: #ffffff !important;
   border-color: #4361ee;
   box-shadow: 0 5px 15px rgba(67, 97, 238, 0.3);
 }
 
-/* Dark theme - white text */
+/* Dark theme */
 .dark-theme .info-tab-btn {
-  color: #ffffff !important; /* White text for dark theme */
+  color: #e2e8f0;
   border-color: #4a5568;
-  background: rgba(255, 255, 255, 0.1) !important;
+  background: #2d3748;
 }
 
 .dark-theme .info-tab-btn:hover {
-  color: #ffffff !important; /* White text on hover */
+  color: #ffffff;
   border-color: #4cc9f0;
   box-shadow: 0 5px 15px rgba(76, 201, 240, 0.2);
 }
 
 .dark-theme .info-tab-btn.active {
   background: linear-gradient(135deg, #4cc9f0, #4361ee);
-  color: #ffffff !important; /* White text for active state */
+  color: #ffffff !important;
   border-color: #4cc9f0;
   box-shadow: 0 5px 15px rgba(76, 201, 240, 0.3);
+}
+
+/* Electronic theme */
+.electronic-theme .info-tab-btn {
+  color: #ffffff;
+  border-color: #4cc9f0;
+  background: rgba(76, 201, 240, 0.1);
+}
+
+.electronic-theme .info-tab-btn.active {
+  background: linear-gradient(135deg, #4cc9f0, #f72585);
+  color: #ffffff !important;
+  border-color: #f72585;
+}
+
+/* Blue theme */
+.blue-theme .info-tab-btn {
+  color: #2d3748;
+  border-color: #4299e1;
+  background: rgba(66, 153, 225, 0.1);
+}
+
+.blue-theme .info-tab-btn.active {
+  background: linear-gradient(135deg, #4299e1, #0d47a1);
+  color: #ffffff !important;
+  border-color: #0d47a1;
 }
 
 /* Content Sections */
@@ -667,10 +705,11 @@
   margin-top: 0.5rem;
 }
 
-/* Responsive Design */
+/* ===== RESPONSIVE DESIGN ===== */
 @media (max-width: 768px) {
   .gate-info-page {
     padding: 1rem;
+    padding-top: 2rem;
   }
   
   .gate-info-header {
@@ -686,22 +725,28 @@
   }
   
   .header-main h1 {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     flex-direction: column;
+    gap: 0.5rem;
+    text-align: left;
+    align-items: flex-start;
+  }
+  
+  /* Mobile: 2 columns for tabs */
+  .info-tabs {
+    grid-template-columns: repeat(2, 1fr);
     gap: 0.5rem;
   }
   
-  .info-tabs {
-    flex-direction: column;
-  }
-  
   .info-tab-btn {
-    width: 100%;
-    justify-content: center;
+    padding: 0.75rem 0.5rem;
+    font-size: 0.85rem;
+    min-height: 50px;
+    gap: 0.25rem;
   }
   
   .info-content {
-    padding: 1.5rem;
+    padding: 1.25rem;
   }
   
   .timer-display {
@@ -711,16 +756,29 @@
   
   .quick-stats {
     grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
   }
 }
 
 @media (max-width: 480px) {
   .header-main h1 {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
   }
   
   .section-title {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
+  }
+  
+  /* Very small screens: 2 columns for tabs */
+  .info-tabs {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.4rem;
+  }
+  
+  .info-tab-btn {
+    padding: 0.6rem 0.4rem;
+    font-size: 0.8rem;
+    min-height: 45px;
   }
   
   .quick-stats {
@@ -730,5 +788,68 @@
   .insights-grid,
   .tips-grid {
     grid-template-columns: 1fr;
+  }
+  
+  /* Reduce font sizes for very small screens */
+  .info-content p,
+  .tip-content p,
+  .insight-card p,
+  .phase p,
+  .stat-label,
+  .footer-note {
+    font-size: 0.85rem;
+  }
+}
+
+/* Tablet optimizations */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .gate-info-page {
+    padding: 1.5rem;
+    padding-top: 4.5rem;
+  }
+  
+  .distribution-cards,
+  .insights-grid,
+  .tips-grid,
+  .plan-phases,
+  .quick-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .timer-display {
+    gap: 1.5rem;
+  }
+}
+
+/* Touch-friendly improvements */
+@media (hover: none) and (pointer: coarse) {
+  .info-tab-btn,
+  .back-home-btn,
+  .back-home-btn-footer,
+  .tip-card,
+  .insight-card,
+  .stat-card,
+  .distribution-card,
+  .phase {
+    min-height: 44px;
+  }
+  
+  /* Touch feedback */
+  .info-tab-btn:active,
+  .back-home-btn:active,
+  .tip-card:active,
+  .insight-card:active {
+    opacity: 0.8;
+    transform: scale(0.98);
+  }
+  
+  /* Remove hover effects on mobile */
+  .info-tab-btn:hover,
+  .tip-card:hover,
+  .insight-card:hover,
+  .stat-card:hover,
+  .distribution-card:hover {
+    transform: none;
+    box-shadow: none;
   }
 }

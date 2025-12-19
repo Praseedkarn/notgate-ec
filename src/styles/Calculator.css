@@ -245,48 +245,6 @@
   box-shadow: 0 5px 15px rgba(67, 97, 238, 0.3);
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-  .calculator-tabs {
-    flex-direction: column;
-  }
-  
-  .tab-btn {
-    width: 100%;
-  }
-  
-  .calc-row {
-    grid-template-columns: repeat(4, 1fr);
-  }
-  
-  .calc-btn {
-    padding: 1rem;
-    font-size: 1rem;
-  }
-  
-  .calc-screen {
-    font-size: 2rem;
-  }
-  
-  .tools-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 480px) {
-  .calc-row {
-    grid-template-columns: repeat(3, 1fr);
-  }
-  
-  .calculator-container {
-    padding: 1rem;
-  }
-  
-  .calc-btn {
-    padding: 0.75rem;
-    font-size: 0.9rem;
-  }
-}
 /* Back Button Styles */
 .header-top {
   display: flex;
@@ -415,11 +373,61 @@
   font-size: 0.9rem;
 }
 
-/* Responsive */
+/* Mobile Responsive Additions */
 @media (max-width: 768px) {
+  .calculator-page {
+    padding: 1rem;
+    padding-top: 80px !important;
+  }
+  
+  .calculator-header {
+    padding: 1.5rem;
+    border-radius: 16px;
+  }
+  
+  .calculator-header h1 {
+    font-size: 2rem;
+  }
+  
+  .calculator-tabs {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .tab-btn {
+    width: 100%;
+    padding: 0.9rem;
+  }
+  
+  .calculator-container {
+    padding: 1.5rem;
+    border-radius: 16px;
+  }
+  
+  .calc-display {
+    padding: 1.25rem;
+  }
+  
+  .calc-screen {
+    font-size: 2rem;
+  }
+  
+  .calc-row {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  .calc-btn {
+    padding: 1rem;
+    font-size: 1rem;
+  }
+  
+  .tools-grid {
+    grid-template-columns: 1fr;
+  }
+  
   .header-top {
     flex-direction: column;
-    align-items: stretch;
+    gap: 0.75rem;
   }
   
   .back-home-btn {
@@ -433,15 +441,68 @@
   .header-main h1 {
     justify-content: flex-start;
   }
-  
-  .calculator-tabs {
-    flex-direction: column;
+}
+
+@media (max-width: 480px) {
+  .calculator-page {
+    padding: 0.75rem;
+    padding-top: 70px !important;
   }
   
-  .tab-btn {
-    width: 100%;
+  .calculator-header {
+    padding: 1.25rem;
+  }
+  
+  .calculator-header h1 {
+    font-size: 1.75rem;
+  }
+  
+  .calculator-container {
+    padding: 1rem;
+  }
+  
+  .calc-row {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+  }
+  
+  .calc-btn {
+    padding: 0.9rem;
+    font-size: 0.9rem;
+  }
+  
+  .calc-screen {
+    font-size: 1.75rem;
   }
 }
+
+@media (max-width: 360px) {
+  .calc-row {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .calc-btn {
+    padding: 0.8rem;
+    font-size: 0.85rem;
+  }
+  
+  .calculator-header h1 {
+    font-size: 1.5rem;
+  }
+}
+
+/* Touch device optimizations */
+@media (hover: none) and (pointer: coarse) {
+  .calc-btn:hover {
+    transform: none;
+  }
+  
+  .calc-btn:active {
+    opacity: 0.7;
+  }
+}
+
+/* Theme fixes remain exactly the same as original */
 /* QUICK THEME FIX FOR CALCULATOR PAGE */
 
 /* Default theme colors - electronic/light theme */

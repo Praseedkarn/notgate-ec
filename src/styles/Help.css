@@ -487,3 +487,315 @@ body:has(.help-overlay) .header {
 .dark-theme .help-overlay .help-container .help-body .faq-answer p {
   color: #a0aec0 !important;
 }
+/* ===== MOBILE RESPONSIVE HELP OVERLAY ===== */
+
+/* Base overlay for mobile */
+@media (max-width: 768px) {
+  .help-overlay {
+    padding: 10px !important;
+    align-items: flex-start !important;
+    padding-top: 20px !important;
+  }
+  
+  .help-container {
+    max-height: 95vh !important;
+    margin-top: 10px !important;
+    border-radius: 15px !important;
+  }
+  
+  /* Header adjustments */
+  .help-header {
+    padding: 1.5rem 1rem !important;
+    border-radius: 15px 15px 0 0 !important;
+  }
+  
+  .header-top {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 1rem !important;
+  }
+  
+  .back-home-btn {
+    align-self: flex-start !important;
+    padding: 0.75rem !important;
+    font-size: 0.9rem !important;
+  }
+  
+  .header-main h1 {
+    font-size: 1.6rem !important;
+    justify-content: center !important;
+    text-align: center !important;
+    flex-wrap: wrap !important;
+  }
+  
+  .help-icon {
+    font-size: 1.4rem !important;
+  }
+  
+  /* Body content */
+  .help-body {
+    padding: 1.5rem 1rem !important;
+  }
+  
+  /* Guide steps */
+  .guide-steps {
+    grid-template-columns: 1fr !important;
+    gap: 1rem !important;
+  }
+  
+  .step {
+    padding: 1.25rem !important;
+  }
+  
+  .step-number {
+    width: 35px !important;
+    height: 35px !important;
+    font-size: 1rem !important;
+  }
+  
+  /* FAQ */
+  .faq-item {
+    padding: 1.25rem 1rem !important;
+  }
+  
+  .faq-question h3 {
+    font-size: 0.95rem !important;
+    line-height: 1.4 !important;
+  }
+  
+  .faq-answer p {
+    font-size: 0.85rem !important;
+  }
+  
+  /* Contact */
+  .contact-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1rem !important;
+  }
+  
+  .contact-card {
+    padding: 1.25rem !important;
+  }
+  
+  .contact-icon {
+    font-size: 1.5rem !important;
+  }
+  
+  /* Form */
+  .contact-form {
+    padding: 1.25rem !important;
+  }
+  
+  .form-input,
+  .form-textarea {
+    padding: 0.75rem !important;
+    font-size: 0.9rem !important;
+  }
+  
+  .submit-btn {
+    padding: 0.75rem !important;
+    font-size: 0.9rem !important;
+  }
+  
+  /* Tips */
+  .tips-list {
+    padding: 1.25rem !important;
+  }
+  
+  .tips-list li {
+    font-size: 0.85rem !important;
+    line-height: 1.5 !important;
+  }
+  
+  /* Footer */
+  .help-footer {
+    padding: 1.25rem !important;
+  }
+  
+  .close-help-btn {
+    width: 100% !important;
+    padding: 0.75rem !important;
+  }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+  .help-overlay {
+    padding: 5px !important;
+    padding-top: 15px !important;
+  }
+  
+  .help-container {
+    max-height: 98vh !important;
+    margin-top: 5px !important;
+    border-radius: 12px !important;
+  }
+  
+  .help-header {
+    padding: 1.25rem 0.75rem !important;
+  }
+  
+  .header-main h1 {
+    font-size: 1.4rem !important;
+    flex-direction: column !important;
+    gap: 0.5rem !important;
+  }
+  
+  .help-body {
+    padding: 1rem 0.75rem !important;
+  }
+  
+  .help-section {
+    margin-bottom: 2rem !important;
+  }
+  
+  .help-section h2 {
+    font-size: 1.2rem !important;
+    margin-bottom: 1rem !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 0.5rem !important;
+  }
+  
+  .section-icon {
+    font-size: 1.1rem !important;
+  }
+  
+  /* Adjust step boxes for very small screens */
+  .step {
+    padding: 1rem !important;
+  }
+  
+  .step-number {
+    width: 30px !important;
+    height: 30px !important;
+    font-size: 0.9rem !important;
+  }
+  
+  /* FAQ items */
+  .faq-item {
+    padding: 1rem 0.75rem !important;
+  }
+  
+  /* Contact cards */
+  .contact-card {
+    flex-direction: column !important;
+    text-align: center !important;
+    gap: 0.75rem !important;
+    padding: 1rem !important;
+  }
+  
+  /* Reduce font sizes for very small screens */
+  .help-body p,
+  .step-content p,
+  .faq-answer p,
+  .contact-details p,
+  .tips-list li,
+  .help-footer p {
+    font-size: 0.8rem !important;
+  }
+  
+  /* Form adjustments */
+  .form-input,
+  .form-textarea {
+    font-size: 0.85rem !important;
+    padding: 0.6rem !important;
+  }
+  
+  /* Make sure close button is visible */
+  .close-help-btn {
+    font-size: 0.85rem !important;
+    padding: 0.6rem !important;
+  }
+}
+
+/* Tablet adjustments */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .help-container {
+    max-width: 90% !important;
+    margin: 0 auto !important;
+  }
+  
+  .guide-steps {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  
+  .contact-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+/* Touch-friendly improvements for mobile */
+@media (hover: none) and (pointer: coarse) {
+  /* Increase touch targets */
+  .back-home-btn,
+  .submit-btn,
+  .close-help-btn,
+  .faq-item,
+  .step,
+  .contact-card {
+    min-height: 44px !important; /* Apple's minimum touch target size */
+  }
+  
+  /* Add touch feedback */
+  .step:active,
+  .faq-item:active,
+  .contact-card:active,
+  .back-home-btn:active {
+    opacity: 0.8 !important;
+    transform: scale(0.98) !important;
+  }
+  
+  /* Remove hover effects on mobile */
+  .step:hover,
+  .faq-item:hover,
+  .contact-card:hover,
+  .back-home-btn:hover {
+    transform: none !important;
+    box-shadow: none !important;
+  }
+}
+
+/* Prevent scrolling of main content when help is open */
+body:has(.help-overlay) {
+  overflow: hidden !important;
+}
+
+/* Smooth opening animation for mobile */
+@keyframes mobileSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(100px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@media (max-width: 768px) {
+  .help-container {
+    animation: mobileSlideUp 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+  }
+}
+
+/* Ensure close button is always accessible */
+.close-help-btn {
+  position: relative !important;
+  z-index: 10 !important;
+}
+
+/* Add swipe-down to close hint for mobile */
+@media (max-width: 768px) {
+  .help-header::after {
+    content: '';
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 2px;
+  }
+}
