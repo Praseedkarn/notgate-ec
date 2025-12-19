@@ -69,7 +69,7 @@
   left: 0;
   right: 0;
   height: 4px;
-  background: linear-gradient(90deg, #4cc9f0, #f72585, #4cc9f0);
+  background: transparent;
   animation: shimmer 3s infinite;
 }
 
@@ -209,14 +209,14 @@
 /* Electronic theme */
 .electronic-theme .info-tab-btn {
   color: #ffffff;
-  border-color: #4cc9f0;
-  background: rgba(76, 201, 240, 0.1);
+  border-color: #acacac;
+  background:transparent;
 }
 
 .electronic-theme .info-tab-btn.active {
-  background: linear-gradient(135deg, #4cc9f0, #f72585);
+  background: rgb(111, 108, 108);
   color: #ffffff !important;
-  border-color: #f72585;
+  border-color: #b9b9b9;
 }
 
 /* Blue theme */

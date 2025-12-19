@@ -8,6 +8,8 @@ import Help from './components/Help';
 import GateInfo from './pages/GateInfo';
 import ToolsPage from './pages/ToolsPage';
 import AboutUs from './pages/AboutUs';
+import TermsConditions from './pages/TermsCondition';
+import PrivacyPolicy from './pages/PrivacyPolicy';
 
 function App() {
   const [expandedCourse, setExpandedCourse] = useState(null);
@@ -23,6 +25,8 @@ function App() {
   const [showGateInfo, setShowGateInfo] = useState(false);
   const [showToolPage , setShowToolPage]=useState(false);
   const [showAbout , setShowAbout ]= useState(false);
+  const [showTermsCondition  , setShowTermsCondition]= useState(false);
+  const [showPrivacyPolicy , setShowPrivacyPolicy]=useState(false);
 
   const handleNavigation = (page) => {
     // Close all pages first
@@ -34,6 +38,9 @@ function App() {
     setShowHelp(false);
     setShowToolPage(false);
     setShowAbout(false);
+    setShowPrivacyPolicy(false);
+    setShowTermsCondition(false);
+
 
     // Then open the requested page
     if (page === 'calculator') setShowCalculator(true);
@@ -43,7 +50,10 @@ function App() {
     else if (page === 'settings') setShowSettings(true);
     else if (page === 'help') setShowHelp(true);
     else if(page ==='tools')setShowToolPage(true);
-    else if (page == 'about') setShowAbout(true);
+    else if (page === 'about') setShowAbout(true);
+    else if (page==='Term-conditions') setShowTermsCondition(true);
+    else if (page ==='Privacy-Policy') setShowPrivacyPolicy(true);
+
   };
 
 
@@ -447,6 +457,14 @@ function App() {
     if (showAbout){
       return <AboutUs onClose={() =>setShowAbout(false)}/>;
     }
+    if (showPrivacyPolicy){
+      return <PrivacyPolicy onClose={()=>setShowPrivacyPolicy(false)}/>;
+    }
+    if (showTermsCondition){
+      return <TermsConditions onClose={()=>setShowTermsCondition(false)}/>;
+    }
+
+
     return (
       <main className="main">
         {/* Global Search Bar */}
@@ -867,6 +885,8 @@ function App() {
         setShowGateInfo={() => handleNavigation('gate-info')}
         setShowToolPage={()=>handleNavigation('tools')} 
         setShowAbout = {()=>handleNavigation('about')}
+        setShowPrivacyPolicy={()=>handleNavigation('Privacy-Policy')}
+        setShowTermsCondition={()=>handleNavigation('Term-conditions')}
         onSearch={handleSearch}
         scrollToSection={scrollToSection}
         
@@ -974,12 +994,12 @@ function App() {
         </button>
         <button 
         className='footer-Privacy-link'
-        onClick={() =>handleNavigation('Privacy')}
+        onClick={() =>handleNavigation('Privacy-Policy')}
         >   Privacy Policy
         </button>
         <button 
         className='footer-TandC-link'
-        onClick={() =>handleNavigation('terms')}
+        onClick={() =>handleNavigation('Term-conditions')}
         > Terms & Conditions
         </button>
         {/* <button className='footer-cont'></button> */}
