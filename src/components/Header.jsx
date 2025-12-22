@@ -154,6 +154,12 @@ const Header = ({
           >
             <span className="nav-text">Home</span>
           </button>
+          <button 
+                onClick={() => handleNavClick(() => setShowArticles && setShowArticles(true))}
+                className="nav-link"
+              >
+                Articles
+              </button>
 
           <div className={`nav-dropdown ${activeDropdown === 'study' ? 'active' : ''}`}>
             <button 
@@ -188,12 +194,7 @@ const Header = ({
               >
                 Quick Reference
               </button>
-              <button 
-                onClick={() => handleNavClick(() => setShowArticles && setShowArticles(true))}
-                className="dropdown-item"
-              >
-                Articles
-              </button>
+              
             </div>
           </div>
           

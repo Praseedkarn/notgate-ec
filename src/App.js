@@ -246,7 +246,7 @@ function App() {
     },
     { 
       id: 9,
-      course: 'Genral Aptitude', 
+      course: 'General Aptitude', 
       percentage: '15%', 
       questions: '10-12',
       topics: [
@@ -477,8 +477,8 @@ function App() {
     }
     if (showArticles){
       return <Articles 
-    onClose={() => setShowArticles(false)}
-    onNavigateToBooks={() => {
+      onClose={() => setShowArticles(false)}
+      onNavigateToBooks={() => {
       setShowBookPage(true);
       setShowArticles(false); // Close articles when navigating to books
     }}
@@ -493,7 +493,11 @@ function App() {
   />
     }
     if (showBookPage){
-      return <BooksPage onClose={()=>setShowBookPage(false)}
+      return <BooksPage 
+      onClose={()=>{
+        setShowBookPage(false)
+        setShowArticles(true);
+      }}
       onNavigateToArticles={()=>setShowArticles(true)}
 
       />

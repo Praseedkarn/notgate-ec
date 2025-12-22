@@ -147,25 +147,7 @@
   animation: logoPulse 2s infinite;
 }
 
-.nav-link {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  padding: 12px 24px;
-  background: transparent;
-  color: white;
-  text-decoration: none;
-  font-size: 15px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  position: relative;
-  overflow: hidden;
-  min-width: 110px;
-  text-align: center;
-  justify-content: center;
-  border: none;
-}
+
 
 .nav-link::before {
   content: '';
@@ -182,12 +164,6 @@
   left: 100%;
 }
 
-.nav-link:hover {
-  background: rgba(255, 255, 255, 0.15);
-  border-color: rgba(255, 255, 255, 0.3);
-  transform: translateY(-3px);
-  box-shadow: 0 6px 20px rgba(76, 201, 240, 0.25);
-}
 
 .nav-icon {
   font-size: 18px;
@@ -198,10 +174,57 @@
   transform: scale(1.2);
 }
 
-.nav-text {
-  display:block;
+/* Base navigation link - ALL boxes same size */
+.nav-link, .dropdown-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 24px;
+  background: transparent;
+  color: white;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
-  letter-spacing: 0.3px;
+  overflow: hidden;
+  min-width: 140px;  /* Same width for all */
+  text-align: center;
+  justify-content: center;
+  border: none;
+  height: 44px;      /* Same height for all */
+  box-sizing: border-box;
+  border-radius: 8px;
+}
+
+/* Ensure dropdown items also have same size */
+.dropdown-item {
+  justify-content: flex-start;
+  min-width: 140px;
+  height: 44px;
+}
+
+/* Keep hover effects simple and consistent */
+.nav-link:hover, .dropdown-item:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-1px);
+}
+
+/* Icons same size */
+.nav-icon {
+  font-size: 18px;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Text alignment */
+.nav-text {
+  display: block;
+  white-space: nowrap;
 }
 
 .dropdown-arrow {
@@ -244,30 +267,9 @@
   transform: translateY(0);
 }
 
-.dropdown-item {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  width: 100%;
-  padding: 14px 24px;
-  background: transparent;
-  border: none;
-  text-align: left;
-  color: white;
-  text-decoration: none;
-  font-size: 14px;
-  font-weight: 500;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  border-radius: 0;
-}
 
-.dropdown-item:hover {
-  background: rgba(76, 201, 240, 0.2);
-  color: #4cc9f0;
-  padding-left: 28px;
-  transform: translateX(5px);
-}
+
+
 
 /* User Menu */
 .user-menu {
