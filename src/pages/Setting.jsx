@@ -9,7 +9,7 @@ const Settings = ({ onClose, currentTheme, onThemeChange }) => {
       return JSON.parse(saved);
     } else {
       return {
-        theme: currentTheme || 'electronic', // Use the prop, not hardcoded
+        theme: currentTheme || 'light', // Default to light theme
         fontSize: 'medium',
         animations: true,
         showNotifications: true,
@@ -27,15 +27,17 @@ const Settings = ({ onClose, currentTheme, onThemeChange }) => {
     // Remove only theme classes, not all classes
     document.body.classList.remove('dark-mode', 'light-mode', 'blue-theme', 'electronic-theme');
     
-    // Add the selected theme class
-    if (themeName === 'dark') {
+    // Add the selected theme class - FIXED: Added specific check for electronic
+    if (themeName === 'electronic') {
+      document.body.classList.add('electronic-theme');
+    } else if (themeName === 'dark') {
       document.body.classList.add('dark-mode');
     } else if (themeName === 'light') {
       document.body.classList.add('light-mode');
     } else if (themeName === 'blue') {
       document.body.classList.add('blue-theme');
     } else {
-      document.body.classList.add('electronic-theme');
+      document.body.classList.add('light-mode'); // Default fallback
     }
     
     // Notify parent component about theme change
@@ -56,12 +58,13 @@ const Settings = ({ onClose, currentTheme, onThemeChange }) => {
     
   }, [settings]);
 
-  // Apply theme on component mount (but don't override existing)
+  // Apply theme on component mount
   useEffect(() => {
     // Only apply if theme is different from current
     const currentBodyTheme = document.body.classList.contains('dark-mode') ? 'dark' :
                             document.body.classList.contains('light-mode') ? 'light' :
-                            document.body.classList.contains('blue-theme') ? 'blue' : 'electronic';
+                            document.body.classList.contains('blue-theme') ? 'blue' :
+                            document.body.classList.contains('electronic-theme') ? 'electronic' : 'light';
     
     if (currentBodyTheme !== settings.theme) {
       applyTheme(settings.theme);
@@ -83,7 +86,7 @@ const Settings = ({ onClose, currentTheme, onThemeChange }) => {
 
   const handleReset = () => {
     const defaultSettings = {
-      theme: 'electronic', // Always reset to electronic
+      theme: 'light', // Reset to light theme
       fontSize: 'medium',
       animations: true,
       showNotifications: true,
@@ -95,7 +98,7 @@ const Settings = ({ onClose, currentTheme, onThemeChange }) => {
     };
     
     setSettings(defaultSettings);
-    applyTheme('electronic'); // Force apply electronic theme
+    applyTheme('light'); // Apply light theme
     alert('Settings reset to default!');
   };
 
@@ -121,16 +124,13 @@ const Settings = ({ onClose, currentTheme, onThemeChange }) => {
       
       // Show success message
       alert("Cache cleared successfully!");
-      
-    
     }
   };
 
   const themes = [
-    { id: 'electronic', name: 'Electronic Theme', icon: '⚡', desc: 'Default electronic style' },
+    { id: 'light', name: 'Light Mode', icon: '☀️', desc: 'Default light theme' },
+    { id: 'electronic', name: 'Electronic Theme', icon: '⚡', desc: 'Electronic style with dark blue' },
     { id: 'dark', name: 'Dark Mode', icon: '🌙', desc: 'Pure dark theme' },
-    { id: 'light', name: 'Light Mode', icon: '☀️', desc: 'Light theme for day' },
-    // { id: 'blue', name: 'Blue Theme', icon: '🔵', desc: 'Professional blue theme' }
   ];
 
   const fontSizes = [
@@ -148,7 +148,10 @@ const Settings = ({ onClose, currentTheme, onThemeChange }) => {
   useEffect(() => {
     const savedSettings = localStorage.getItem('gate-ece-settings');
     if (savedSettings) {
-      setSettings(JSON.parse(savedSettings));
+      const parsedSettings = JSON.parse(savedSettings);
+      setSettings(parsedSettings);
+      // Apply the saved theme
+      applyTheme(parsedSettings.theme);
     }
   }, []);
 
@@ -182,7 +185,12 @@ const Settings = ({ onClose, currentTheme, onThemeChange }) => {
         <div className="settings-section">
           <div className="section-header">
             <h2>🎨 App Theme</h2>
-            <p>Choose your preferred visual style</p>
+            {/* <p>Choose your preferred visual style</p>
+            <div className="current-theme-indicator">
+              Current: <strong>{settings.theme === 'light' ? 'Light Mode' : 
+                              settings.theme === 'electronic' ? 'Electronic Theme' : 
+                              settings.theme === 'dark' ? 'Dark Mode' : 'Light Mode'}</strong>
+            </div> */}
           </div>
           <div className="theme-options">
             {themes.map(theme => (
@@ -222,67 +230,6 @@ const Settings = ({ onClose, currentTheme, onThemeChange }) => {
             ))}
           </div>
         </div>
-
-        {/* Calculator Settings */}
-        {/* <div className="settings-section">
-          <div className="section-header">
-            <h2>🧮 Calculator</h2>
-            <p>Customize calculator preferences</p>
-          </div>
-          <div className="calculator-options">
-            {calculatorTypes.map(calc => (
-              <button
-                key={calc.id}
-                className={`calc-card ${settings.defaultCalculator === calc.id ? 'active' : ''}`}
-                onClick={() => handleChange('defaultCalculator', calc.id)}
-                title={calc.desc}
-              >
-                <span className="calc-icon">{calc.icon}</span>
-                <div className="calc-info">
-                  <span className="calc-name">{calc.name}</span>
-                  <span className="calc-desc">{calc.desc}</span>
-                </div>
-                {settings.defaultCalculator === calc.id && (
-                  <span className="selected-badge">✓</span>
-                )}
-              </button>
-            ))}
-          </div>
-        </div> */}
-
-        {/* Toggle Settings */}
-        {/* <div className="settings-section">
-          <div className="section-header">
-            <h2>⚡ Features</h2>
-            <p>Enable or disable app features</p>
-          </div>
-          <div className="toggle-settings">
-            {[
-              { id: 'animations', label: 'Animations', desc: 'Smooth transitions and effects', icon: '✨' },
-              { id: 'showNotifications', label: 'Notifications', desc: 'Get important updates', icon: '🔔' },
-              { id: 'autoSaveNotes', label: 'Auto-save Notes', desc: 'Automatically save your notes', icon: '📝' },
-              { id: 'offlineAccess', label: 'Offline Access', desc: 'Access content without internet', icon: '📴' }
-            ].map(setting => (
-              <div key={setting.id} className="toggle-item">
-                <div className="toggle-info">
-                  <span className="toggle-icon">{setting.icon}</span>
-                  <div className="toggle-text">
-                    <span className="toggle-label">{setting.label}</span>
-                    <span className="toggle-desc">{setting.desc}</span>
-                  </div>
-                </div>
-                <label className="toggle-switch">
-                  <input
-                    type="checkbox"
-                    checked={settings[setting.id]}
-                    onChange={(e) => handleChange(setting.id, e.target.checked)}
-                  />
-                  <span className="toggle-slider"></span>
-                </label>
-              </div>
-            ))}
-          </div>
-        </div> */}
 
         {/* Download Quality */}
         <div className="settings-section">
@@ -325,10 +272,6 @@ const Settings = ({ onClose, currentTheme, onThemeChange }) => {
               className="language-dropdown"
             >
               <option value="english">🇺🇸 English</option>
-              {/* <option value="hindi">🇮🇳 Hindi</option> */}
-              {/* <option value="telugu">🌐 Telugu</option> */}
-              {/* <option value="tamil">🌐 Tamil</option> */}
-              {/* <option value="bengali">🌐 Bengali</option> */}
             </select>
           </div>
         </div>
@@ -341,32 +284,18 @@ const Settings = ({ onClose, currentTheme, onThemeChange }) => {
           <div className="info-grid">
             <div className="info-item">
               <span className="info-label">Version</span>
-              <span className="info-value">2.1.4</span>
+              <span className="info-value">2.2.0</span>
             </div>
             <div className="info-item">
               <span className="info-label">Last Updated</span>
-              <span className="info-value">18 Dec 2025</span>
+              <span className="info-value">22 Dec 2025</span>
             </div>
-            {/* <div className="info-item">
-              <span className="info-label"></span>
-              <span className="info-value"></span>
-            </div>
-            <div className="info-item">
-              <span className="info-label"></span>
-              <span className="info-value"></span>
-            </div> */}
+            
           </div>
           <div className="app-actions">
-            <button className="action-btn clear-btn" title="Clear cache" onClick={handleClearCache}
-            >
+            <button className="action-btn clear-btn" title="Clear cache" onClick={handleClearCache}>
               🗑️ Clear Cache
             </button>
-            {/* <button className="action-btn feedback-btn" title="Send feedback">
-              💬
-            </button>
-            <button className="action-btn update-btn" title="Check for updates">
-              🔄 Check Updates
-            </button> */}
           </div>
         </div>
       </div>

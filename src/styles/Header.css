@@ -199,7 +199,7 @@
 }
 
 .nav-text {
-  display: inline-block;
+  display:block;
   position: relative;
   letter-spacing: 0.3px;
 }

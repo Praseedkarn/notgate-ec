@@ -5,7 +5,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: var(--bg-color, #0a0e17);
+  background: var(--bg-color, #687eb1);
   color: var(--text-primary, #ffffff);
   z-index: 1001;
   overflow-y: auto;
@@ -76,7 +76,7 @@
 .header-title h1 {
   margin: 0;
   font-size: 1.8rem;
-  background: linear-gradient(135deg, var(--primary, #4361ee), var(--accent, #f72585));
+  background: rgb(0, 0, 0);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: 700;
@@ -110,8 +110,8 @@
 }
 
 .reset-btn {
-  background: rgba(var(--warning-rgb, 255, 209, 102), 0.1);
-  color: var(--warning, #ffd166);
+  background:linear-gradient(135deg, var(--success, #4cc9f0), var(--primary, #4361ee));
+  color: var(--warning, #abaaa8);
   border: 1px solid rgba(var(--warning-rgb, 255, 209, 102), 0.3);
 }
 
@@ -526,10 +526,7 @@ input:checked + .toggle-slider:before {
 
 /* App Info */
 .app-info {
-  background: linear-gradient(135deg, 
-    rgba(var(--primary-rgb, 67, 97, 238), 0.1), 
-    rgba(var(--accent-rgb, 247, 37, 133), 0.1)
-  );
+  background: white;
   border-left: 4px solid var(--primary, #4361ee);
 }
 

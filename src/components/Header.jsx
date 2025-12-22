@@ -9,7 +9,8 @@ const Header = ({
   setShowHelp,
   setShowGateInfo,
   onSearch,
-  setShowToolPage
+  setShowToolPage,
+  setShowArticles
 }) => {
   const [lastScrollY, setLastScrollY] = useState(0);
   const [showHeader, setShowHeader] = useState(true);
@@ -165,7 +166,7 @@ const Header = ({
             <div className="dropdown-content">
               <button 
                 onClick={() => handleNavClick(() => setShowGateInfo && setShowGateInfo(true))}
-                className="dropdown-item gate-info-highlight"
+                className="dropdown-item"
               >
                 Complete GATE Exam Guide
               </button>
@@ -186,6 +187,12 @@ const Header = ({
                 className="dropdown-item"
               >
                 Quick Reference
+              </button>
+              <button 
+                onClick={() => handleNavClick(() => setShowArticles && setShowArticles(true))}
+                className="dropdown-item"
+              >
+                Articles
               </button>
             </div>
           </div>

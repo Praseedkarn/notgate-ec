@@ -10,6 +10,9 @@ import ToolsPage from './pages/ToolsPage';
 import AboutUs from './pages/AboutUs';
 import TermsConditions from './pages/TermsCondition';
 import PrivacyPolicy from './pages/PrivacyPolicy';
+import Articles from './pages/Articles';
+import BooksPage from './pages/BookPage';
+import EligibilityPage from './pages/EligibilityPage';
 
 function App() {
   const [expandedCourse, setExpandedCourse] = useState(null);
@@ -21,12 +24,15 @@ function App() {
   const [showMaterials, setShowMaterials] = useState(false);
   const [showUnitConverter, setShowUnitConverter] = useState(false);
   const [showHelp, setShowHelp] = useState(false);
-  const [currentTheme, setCurrentTheme] = useState('electronic');
+  const [currentTheme, setCurrentTheme] = useState('light');
   const [showGateInfo, setShowGateInfo] = useState(false);
   const [showToolPage , setShowToolPage]=useState(false);
   const [showAbout , setShowAbout ]= useState(false);
   const [showTermsCondition  , setShowTermsCondition]= useState(false);
   const [showPrivacyPolicy , setShowPrivacyPolicy]=useState(false);
+  const [showArticles , setShowArticles ]= useState(false);
+  const [showBookPage , setShowBookPage]=useState(false);
+  const [showEligigibilityPage , setShowEligibilityPage]=useState(false);
 
   const handleNavigation = (page) => {
     // Close all pages first
@@ -40,7 +46,9 @@ function App() {
     setShowAbout(false);
     setShowPrivacyPolicy(false);
     setShowTermsCondition(false);
-
+    setShowArticles(false);
+    setShowBookPage(false);
+    setShowEligibilityPage(false);
 
     // Then open the requested page
     if (page === 'calculator') setShowCalculator(true);
@@ -49,11 +57,13 @@ function App() {
     else if (page === 'materials') setShowMaterials(true);
     else if (page === 'settings') setShowSettings(true);
     else if (page === 'help') setShowHelp(true);
-    else if(page ==='tools')setShowToolPage(true);
+    else if (page ==='tools')setShowToolPage(true);
     else if (page === 'about') setShowAbout(true);
     else if (page==='Term-conditions') setShowTermsCondition(true);
     else if (page ==='Privacy-Policy') setShowPrivacyPolicy(true);
-
+    else if (page ==='articles') setShowArticles(true);
+    else if (page ==='books') setShowBookPage(true);
+    else if (page ==='eligibility-page') setShowEligibilityPage(true);
   };
 
 
@@ -62,8 +72,8 @@ function App() {
     const savedSettings = localStorage.getItem('gate-ece-settings');
     if (savedSettings) {
       const settings = JSON.parse(savedSettings);
-      setCurrentTheme(settings.theme || 'electronic');
-      applyThemeToBody(settings.theme || 'electronic');
+      setCurrentTheme(settings.theme || 'light');
+      applyThemeToBody(settings.theme || 'light');
       
       // Apply font size
       if (settings.fontSize) {
@@ -72,7 +82,7 @@ function App() {
         document.documentElement.style.fontSize = fontSize;
       }
     } else {
-      applyThemeToBody('electronic');
+      applyThemeToBody('light');
     }
   }, []);
 
@@ -87,11 +97,13 @@ function App() {
     if (theme === 'dark') {
       document.body.classList.add('dark-mode');
     } else if (theme === 'light') {
-      document.body.classList.add('light-mode');
+      document.body.classList.add('light-mode'); // FIXED
     } else if (theme === 'blue') {
       document.body.classList.add('blue-theme');
+    } else if (theme === 'electronic') {
+      document.body.classList.add('electronic-theme'); // FIXED
     } else {
-      document.body.classList.add('electronic-theme');
+      document.body.classList.add('light-mode'); // Default fallback
     }
   };
 
@@ -462,6 +474,32 @@ function App() {
     }
     if (showTermsCondition){
       return <TermsConditions onClose={()=>setShowTermsCondition(false)}/>;
+    }
+    if (showArticles){
+      return <Articles 
+    onClose={() => setShowArticles(false)}
+    onNavigateToBooks={() => {
+      setShowBookPage(true);
+      setShowArticles(false); // Close articles when navigating to books
+    }}
+    onNavigateToGateInfo={() => {
+      setShowGateInfo(true);
+      setShowArticles(false); // Close articles when navigating to gate info
+    }}
+    onNavigateToEligibility={()=>{
+      setShowEligibilityPage(true);
+      setShowArticles(false);
+    }}
+  />
+    }
+    if (showBookPage){
+      return <BooksPage onClose={()=>setShowBookPage(false)}
+      onNavigateToArticles={()=>setShowArticles(true)}
+
+      />
+    }
+    if (showEligigibilityPage){
+      return <EligibilityPage onClose={()=>setShowEligibilityPage(false)}/>;
     }
 
 
@@ -858,14 +896,14 @@ function App() {
         {/* Calculator CTA */}
         <div className="calculator-cta">
             <div className="cta-content">
-              <h3>Need complete GATE information?</h3>
-              <p>Detailed exam pattern, syllabus, weightage and important dates</p>
+              <h3>GATE POST AND ARTICLES</h3>
+              <p>The post & articles will encourage those wanting to explore GATE in the near future</p>
               <div className="cta-buttons">
                 <button 
                   className="gate-info-btn"
-                  onClick={() => setShowGateInfo(true)}
+                  onClick={() => setShowArticles(true)}
                 >
-                   GATE Exam Info
+                   POST & ARTICLES
                 </button>
               </div>
             </div>
@@ -887,6 +925,8 @@ function App() {
         setShowAbout = {()=>handleNavigation('about')}
         setShowPrivacyPolicy={()=>handleNavigation('Privacy-Policy')}
         setShowTermsCondition={()=>handleNavigation('Term-conditions')}
+        setShowArticles={()=>handleNavigation('articles')}
+
         onSearch={handleSearch}
         scrollToSection={scrollToSection}
         
