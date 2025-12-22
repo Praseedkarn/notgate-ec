@@ -303,7 +303,7 @@
 }
 
 .user-settings:hover {
-  background: linear-gradient(135deg, #4cc9f0, #f72585);
+  background:transparent;
   color: white;
   transform: rotate(45deg);
   border-color: transparent;

@@ -19,61 +19,61 @@ function EligibilityPage({ onClose }) {
       degree: 'B.E./ B.Tech./ B.Pharm.',
       description: "Bachelor's degree holders in Engineering/ Technology (4 years after 10+2 or 3 years after B.Sc./Diploma in Engineering/Technology)",
       eligibility: 'Currently in the final year or already completed',
-      icon: '🎓'
+    //   icon: '🎓'
     },
     {
       degree: 'B. Arch.',
       description: "Bachelor's degree holders of Architecture (5 years course)/Naval Architecture (4 years course)/Planning (4 years course)",
       eligibility: 'Currently in the final year or already completed',
-      icon: '🏗️'
+    //   icon: '🏗️'
     },
     {
       degree: 'B.Sc. (Research)/ B.S.',
       description: "Bachelor's degree in Science (Post-Diploma/4 years after 10+2)",
       eligibility: 'Currently in the 4th year or already completed',
-      icon: '🔬'
+    //   icon: '🔬'
     },
     {
       degree: 'Pharm. D. (after 10+2)',
       description: 'Degree holders of 6 years program, consisting of internship or residency training during sixth year',
       eligibility: 'Currently in the 4th/5th/6th year or already completed',
-      icon: '💊'
+    //   icon: '💊'
     },
     {
       degree: 'MBBS',
       description: "Degree holders of M.B.B.S. and those who are in the 7th/8th/9th semester of such programme.",
       eligibility: '7th, 8th, 9th or already completed',
-      icon: '⚕️'
+    //   icon: '⚕️'
     },
     {
       degree: 'M. Sc./M.A./MCA or equivalent',
       description: "Master's degree in any branch of Science / Mathematics/Statistics/Computer Applications or equivalent",
       eligibility: 'Currently in the final year or already completed',
-      icon: '📊'
+    //   icon: '📊'
     },
     {
       degree: 'Int. M.E./ M.Tech. (Post-B.Sc.)',
       description: 'Post-BSc Integrated Master’s degree programs in Engineering/Technology (4 years program)',
       eligibility: 'Currently in the 2nd/3rd/4th year or already completed',
-      icon: '⚙️'
+    //   icon: '⚙️'
     },
     {
       degree: 'Int. M.E./ M.Tech. or Dual Degree (after Diploma or 10+2)',
       description: 'Integrated Master’s degree program or Dual Degree program in Engineering/Technology (5 years program)',
       eligibility: 'Currently in the 4th/5th year or already completed',
-      icon: '🎓'
+    //   icon: '🎓'
     },
     {
       degree: 'Int. M.Sc./ Int. B.S.-M.S.',
       description: 'Integrated M.Sc. or 5 years integrated B.S.-M.S. program',
       eligibility: 'Currently in the final year or already completed',
-      icon: '🧪'
+    //   icon: '🧪'
     },
     {
       degree: 'Professional Society Examinations (equivalent to B.E./B.Tech./ B.Arch.)',
       description: 'B.E./B.Tech./B.Arch. equivalent examinations of Professional Societies, recognized by MHRD/ UPSC/AICTE (e.g., AMIE by Institution of Engineers-India, AMICE by the Institute of Civil Engineers-India and so on)',
       eligibility: 'Completed Section A or equivalent of such professional course',
-      icon: '📜'
+    //   icon: '📜'
     },
   ];
 
@@ -118,7 +118,7 @@ function EligibilityPage({ onClose }) {
           </button>
           <div className="header-main">
             <h1>
-              <span className="header-icon">🎓</span>
+              <span className="header-icon"></span>
               GATE Eligibility Criteria 2025
             </h1>
             <p className="header-subtitle">
@@ -138,28 +138,28 @@ function EligibilityPage({ onClose }) {
           className={`eligibility-tab ${activeSection === 'overview' ? 'active' : ''}`}
           onClick={() => setActiveSection('overview')}
         >
-          <span className="tab-icon">📋</span>
+          <span className="tab-icon"></span>
           Overview
         </button>
         <button 
           className={`eligibility-tab ${activeSection === 'educational' ? 'active' : ''}`}
           onClick={() => setActiveSection('educational')}
         >
-          <span className="tab-icon">🎓</span>
+          <span className="tab-icon"></span>
           Educational Qualification
         </button>
         <button 
           className={`eligibility-tab ${activeSection === 'international' ? 'active' : ''}`}
           onClick={() => setActiveSection('international')}
         >
-          <span className="tab-icon">🌍</span>
+          <span className="tab-icon"></span>
           International Candidates
         </button>
         <button 
           className={`eligibility-tab ${activeSection === 'important' ? 'active' : ''}`}
           onClick={() => setActiveSection('important')}
         >
-          <span className="tab-icon">⚠️</span>
+          <span className="tab-icon"></span>
           Important Points
         </button>
       </div>
@@ -187,7 +187,7 @@ function EligibilityPage({ onClose }) {
         {activeSection === 'overview' && (
           <div className="overview-section">
             <h2 className="section-title">
-              <span className="title-icon">📋</span>
+              <span className="title-icon"></span>
               General Eligibility Criteria
             </h2>
             <p className="section-intro">
@@ -225,7 +225,7 @@ function EligibilityPage({ onClose }) {
         {activeSection === 'educational' && (
           <div className="educational-section">
             <h2 className="section-title">
-              <span className="title-icon">🎓</span>
+              <span className="title-icon"></span>
               Educational Qualification for GATE 2025
             </h2>
             <p className="section-subtitle">
@@ -275,7 +275,7 @@ function EligibilityPage({ onClose }) {
         {activeSection === 'international' && (
           <div className="international-section">
             <h2 className="section-title">
-              <span className="title-icon">🌍</span>
+              <span className="title-icon"></span>
               GATE Eligibility for International Candidates
             </h2>
             <p className="section-intro">

@@ -62,7 +62,7 @@
 }
 
 .back-home-btn:hover {
-  background-color: var(--header-text);
+  background-color: rgb(42, 37, 37);
   color: var(--primary-color);
   transform: translateY(-2px);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
@@ -83,6 +83,17 @@
   justify-content: center;
   gap: 15px;
 }
+.eligibility-page .header-subtitle {
+  color: #000000 !important;
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.5); /* Optional: add text shadow for better contrast */
+}
+.dark-theme .category-subtitle,
+.dark-theme .eligibility-page .header-subtitle,
+body.dark-mode .category-subtitle,
+body.dark-mode .eligibility-page .header-subtitle {
+  color: #ece7e7 !important; /* Force black in dark theme */
+  font-weight: 600; /* Make it bolder for better visibility */
+}
 
 .header-icon {
   font-size: 2.2rem;
@@ -94,7 +105,7 @@
   max-width: 800px;
   margin: 0 auto 25px;
   line-height: 1.6;
-  color: var(--header-text);
+  color: black;
 }
 
 .header-meta {
@@ -123,7 +134,7 @@
   padding: 20px;
   background: #8787c5; /* Changed to your blue color */
   box-shadow: 0 2px 10px var(--shadow);
-  position: sticky;
+  position: relative;
   top: 0;
   z-index: 100;
   border-bottom: 1px solid #6b6ba9; /* Darker blue border for contrast */

@@ -330,24 +330,7 @@ function Articles({ onClose, onNavigateToBooks, onNavigateToGateInfo, onNavigate
               <div className="articles-sidebar-widget">
                 <h3 className="articles-widget-title">Quick Links</h3>
                 <div className="articles-quick-links">
-                  <button 
-                    className="articles-quick-link" 
-                    onClick={navigateToBooksPage}
-                  >
-                    <i className="fas fa-book"></i> Book Recommendations
-                  </button>
-                  <button 
-                    className="articles-quick-link" 
-                    onClick={navigateToGateInfoPage}
-                  >
-                    <i className="fas fa-chart-bar"></i> Exam Pattern
-                  </button>
-                  <button 
-                    className="articles-quick-link" 
-                    onClick={navigateToEligibilityPage}
-                  >
-                    <i className="fas fa-graduation-cap"></i> Eligibility Criteria
-                  </button>
+                  
                   <a href="/syllabus" className="articles-quick-link" onClick={(e) => { e.preventDefault(); alert('Syllabus page would open'); }}>
                     <i className="fas fa-file-alt"></i> Syllabus 2025
                   </a>
