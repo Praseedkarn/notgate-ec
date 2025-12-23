@@ -3879,3 +3879,29 @@ button:not(.digital-badge):not(.weight-badge) {
 body {
   padding-top: 95px !important; /* Increase from 85px */
 }
+
+/* Prevent page jump when clicking cards */
+.weightage-card:focus {
+  outline: none;
+}
+
+.weightage-card {
+  position: relative;
+}
+
+/* Add smooth expansion without scroll */
+.topic-details {
+  animation: slideDown 0.3s ease-out;
+  overflow: hidden;
+}
+
+@keyframes slideDown {
+  from {
+    max-height: 0;
+    opacity: 0;
+  }
+  to {
+    max-height: 500px;
+    opacity: 1;
+  }
+}

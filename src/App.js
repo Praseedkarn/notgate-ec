@@ -424,6 +424,7 @@ const handleNavigation = (page, section = 'pattern') => {
   };
 
   const toggleMath = (id) => {
+    console.log('toggleMath called with id :',id,'current expendedMath: ',expandedMath);
     setExpandedMath(expandedMath === id ? null : id);
   };
 
@@ -552,7 +553,7 @@ const handleNavigation = (page, section = 'pattern') => {
     <div className="banner-stats">
       <button 
         className="stat-chip gate-info-chip"
-        onClick={() => setShowGateInfo(true)}
+        onClick={() => handleNavigation('gate-info', 'pattern')}
       >
          GATE Exam Info
       </button>
@@ -960,7 +961,7 @@ const handleNavigation = (page, section = 'pattern') => {
         setShowPrivacyPolicy={()=>handleNavigation('Privacy-Policy')}
         setShowTermsCondition={()=>handleNavigation('Term-conditions')}
         setShowArticles={()=>handleNavigation('articles')}
-
+        handleNavigation={handleNavigation}
         onSearch={handleSearch}
         scrollToSection={scrollToSection}
         

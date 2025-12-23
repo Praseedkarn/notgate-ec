@@ -10,7 +10,9 @@ const Header = ({
   setShowGateInfo,
   onSearch,
   setShowToolPage,
-  setShowArticles
+  setShowArticles,
+  handleNavigation,  // ADDED
+  scrollToSection    // This should already be in your props
 }) => {
   const [lastScrollY, setLastScrollY] = useState(0);
   const [showHeader, setShowHeader] = useState(true);
@@ -73,14 +75,6 @@ const Header = ({
     });
   };
 
-  const scrollToSection = (sectionId) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-    closeMobileMenu();
-  };
-
   const handleNavClick = (action) => {
     if (typeof action === 'function') {
       action();
@@ -96,18 +90,8 @@ const Header = ({
         <div 
           className="logo-container" 
           onClick={() => {
-            setShowCalculator(false);
-            setShowSettings(false);
-            setShowUnitConverter(false);
-            setShowHelp(false);
-            setShowGateInfo(false);
-            setShowMaterials && setShowMaterials(false);
-            
-            window.scrollTo({ 
-              top: 0, 
-              behavior: 'smooth' 
-            });
-            
+            handleNavigation('home'); // Use handleNavigation
+            scrollToTop();
             closeMobileMenu();
           }}
           style={{ cursor: 'pointer' }}
@@ -136,30 +120,21 @@ const Header = ({
           <button 
             className="nav-link" 
             onClick={() => {
-              setShowCalculator(false);
-              setShowSettings(false);
-              setShowUnitConverter(false);
-              setShowHelp(false);
-              setShowGateInfo(false);
-              setShowMaterials && setShowMaterials(false);
-              
-              window.scrollTo({ 
-                top: 0, 
-                behavior: 'smooth' 
-              });
-              
+              handleNavigation('home');
+              scrollToTop();
               handleNavClick();
             }}
             title="Go to Home"
           >
             <span className="nav-text">Home</span>
           </button>
+          
           <button 
-                onClick={() => handleNavClick(() => setShowArticles && setShowArticles(true))}
-                className="nav-link"
-              >
-                Articles
-              </button>
+            onClick={() => handleNavClick(() => handleNavigation('articles'))}
+            className="nav-link"
+          >
+            Articles
+          </button>
 
           <div className={`nav-dropdown ${activeDropdown === 'study' ? 'active' : ''}`}>
             <button 
@@ -171,7 +146,7 @@ const Header = ({
             </button>
             <div className="dropdown-content">
               <button 
-                onClick={() => handleNavClick(() => setShowGateInfo && setShowGateInfo(true))}
+                onClick={() => handleNavClick(() => handleNavigation('gate-info', 'pattern'))}
                 className="dropdown-item"
               >
                 Complete GATE Exam Guide
@@ -194,7 +169,6 @@ const Header = ({
               >
                 Quick Reference
               </button>
-              
             </div>
           </div>
           
@@ -208,13 +182,13 @@ const Header = ({
             </button>
             <div className="dropdown-content">
               <button 
-                onClick={() => handleNavClick(() => setShowUnitConverter && setShowUnitConverter(true))}
+                onClick={() => handleNavClick(() => handleNavigation('unit-converter'))}
                 className="dropdown-item"
               >
                 Unit Converter
               </button>
               <button 
-                onClick={() => handleNavClick(() => setShowCalculator && setShowCalculator(true))}
+                onClick={() => handleNavClick(() => handleNavigation('calculator'))}
                 className="dropdown-item"
               >
                 Calculator
@@ -229,13 +203,13 @@ const Header = ({
                 Google Drive
               </a>
               <button 
-                onClick={() => handleNavClick(() => setShowHelp && setShowHelp(true))}
+                onClick={() => handleNavClick(() => handleNavigation('help'))}
                 className="dropdown-item"
               >
                 Help
               </button>
               <button 
-                onClick={() => handleNavClick(() => setShowToolPage && setShowToolPage(true))}
+                onClick={() => handleNavClick(() => handleNavigation('tools'))}
                 className="dropdown-item"
               >
                 Tools & Software
@@ -244,13 +218,13 @@ const Header = ({
           </div>
         </nav>
 
-        {/* User Menu - SIMPLIFIED VERSION */}
+        {/* User Menu */}
         <div className="user-menu">
           <button 
             className="user-settings" 
             title="Settings"
             onClick={() => {
-              setShowSettings && setShowSettings(true);
+              handleNavigation('settings');
               closeMobileMenu();
             }}
           >
