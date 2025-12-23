@@ -3,7 +3,7 @@ import '../styles/TermsConditions.css';
 
 const TermsConditions = () => {
   const currentYear = new Date().getFullYear();
-  const lastUpdated = "March 2025";
+  const lastUpdated = "Dec 2025";
 
   return (
     <div className="terms-page">
@@ -31,7 +31,7 @@ const TermsConditions = () => {
           </div>
 
           <section className="terms-section">
-            <h2>1. Acceptance of Terms</h2>
+            <h2> Acceptance of Terms</h2>
             <p>
               By accessing and using the NotGate website, you acknowledge that you have read, 
               understood, and agree to be bound by these Terms and Conditions.
@@ -44,8 +44,8 @@ const TermsConditions = () => {
             </div>
           </section>
 
-          <section className="terms-section">
-            <h2>2. Description of Service</h2>
+          {/* <section className="terms-section">
+            <h2> Description of Service</h2>
             <p>NotGate provides the following educational resources for GATE ECE preparation:</p>
             <div className="service-grid">
               <div className="service-card">
@@ -76,10 +76,10 @@ const TermsConditions = () => {
                 </ul>
               </div>
             </div>
-          </section>
+          </section> */}
 
-          <section className="terms-section">
-            <h2>3. Intellectual Property Rights</h2>
+          {/* <section className="terms-section">
+            <h2> Intellectual Property Rights</h2>
             <div className="ip-rights">
               <div className="ip-item">
                 <h4>✅ You MAY:</h4>
@@ -100,10 +100,10 @@ const TermsConditions = () => {
                 </ul>
               </div>
             </div>
-          </section>
+          </section> */}
 
           <section className="terms-section">
-            <h2>4. External Resources & Links</h2>
+            <h2> External Resources & Links</h2>
             <p>The website contains links to external resources:</p>
             <div className="external-links">
               <div className="external-link-item">
@@ -138,7 +138,7 @@ const TermsConditions = () => {
             </div>
           </section>
 
-          <section className="terms-section">
+          {/* <section className="terms-section">
             <h2>5. Educational Use Disclaimer</h2>
             <div className="disclaimer-grid">
               <div className="disclaimer-item">
@@ -158,20 +158,20 @@ const TermsConditions = () => {
                 <p>You are solely responsible for your study plan and preparation strategy.</p>
               </div>
             </div>
-          </section>
+          </section> */}
 
-          <section className="terms-section">
-            <h2>6. User Responsibilities</h2>
+          {/* <section className="terms-section">
+            <h2> User Responsibilities</h2>
             <ul className="responsibility-list">
               <li>Use the website for lawful educational purposes only</li>
               <li>Verify information from primary sources when making important decisions</li>
               <li>Respect intellectual property rights of all content providers</li>
               <li>Report any inaccuracies or issues you encounter</li>
             </ul>
-          </section>
+          </section> */}
 
           <section className="terms-section">
-            <h2>7. Changes to Terms</h2>
+            <h2> Changes to Terms</h2>
             <p>
               We reserve the right to modify these Terms and Conditions at any time. 
               The "Effective Date" at the top will be updated accordingly. 
@@ -180,11 +180,11 @@ const TermsConditions = () => {
           </section>
 
           <section className="terms-section contact-section">
-            <h2>8. Contact & Information</h2>
+            <h2> Contact & Information</h2>
             <div className="contact-info">
               <p><strong>Website:</strong> <a href="https://notgate-ec.vercel.app/">https://notgate-ec.vercel.app/</a></p>
               <p><strong>Purpose:</strong> GATE ECE Preparation Portal</p>
-              <p><strong>Subjects Covered:</strong> 9 Core ECE subjects + General Aptitude</p>
+              {/* <p><strong>Subjects Covered:</strong> 9 Core ECE subjects + General Aptitude</p> */}
               <p>
                 <strong>Official GATE Information:</strong>{' '}
                 <a href="https://gate.iitkgp.ac.in/" target="_blank" rel="noopener noreferrer">
@@ -207,19 +207,7 @@ const TermsConditions = () => {
         </div>
       </main>
 
-      <footer className="terms-footer">
-        <div className="container">
-          <p>© {currentYear} NotGate. All rights reserved.</p>
-          <p className="footer-links">
-            <a href="/">Home</a> | 
-            <a href="/privacy">Privacy Policy</a> | 
-            <a href="/terms">Terms & Conditions</a>
-          </p>
-          <p className="footer-note">
-            Educational Resource for GATE Electronics & Communication Engineering
-          </p>
-        </div>
-      </footer>
+      
     </div>
   );
 };

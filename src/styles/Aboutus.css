@@ -118,9 +118,9 @@
 
 /* Contact Section - Clean */
 .contact-section {
-  margin-top: 60px;
-  padding-top: 40px;
-  border-top: 2px solid var(--border-color, #eee);
+  /* margin-top: 60px; */
+  /* padding-top: 40px; */
+  /* border-top: 2px solid var(--border-color, #eee); */
   text-align: center;
 }
 

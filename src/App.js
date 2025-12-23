@@ -855,18 +855,7 @@ const handleNavigation = (page, section = 'pattern') => {
                 {resource.type === ' Tools & Software' ? (
                   <div className="tool-preview-content">
                     <div className="tool-features-showcase">
-                      <div className="tool-feature-item">
-                        {/* <span className="feature-icon">🔌</span> */}
-                        <span className="feature-text">Circuit Simulators</span>
-                      </div>
-                      <div className="tool-feature-item">
-                        {/* <span className="feature-icon"></span> */}
-                        <span className="feature-text">Calculators</span>
-                      </div>
-                      <div className="tool-feature-item">
-                        {/* <span className="feature-icon">💻</span> */}
-                        <span className="feature-text">Design Tools</span>
-                      </div>
+                      
                     </div>
                     <div className="tool-access-hint">
                       <div className="hint-content">

@@ -35,7 +35,7 @@ const AboutUs = ({ onClose }) => {
 
           {/* Journey to Solution */}
           <div className="about-section">
-            <h2>Our Journey</h2>
+            {/* <h2>Our Journey</h2> */}
             {/* <p className="about-paragraph">
               That's why I built a centralized platform where every GATE ECE resource is organized by 
               subject weightage, topic importance, and exam relevance. What began as a personal 
@@ -46,7 +46,7 @@ const AboutUs = ({ onClose }) => {
 
           {/* Milestones */}
           <div className="about-section">
-            <h2>Our Progress</h2>
+            {/* <h2>Our Progress</h2> */}
             <div className="milestones">
               <div className="milestone">
                 {/* <div className="milestone-number">1,000+</div> */}
@@ -70,7 +70,7 @@ const AboutUs = ({ onClose }) => {
 
           {/* Mission Forward */}
           <div className="about-section">
-            <h2>Our Mission</h2>
+            {/* <h2>Our Mission</h2> */}
             {/* <p className="about-paragraph">
               We want to be the most trusted and comprehensive GATE ECE preparation platform in India, 
               making high-quality education accessible to every student regardless of their background 
@@ -88,16 +88,16 @@ const AboutUs = ({ onClose }) => {
               </div>
               <div className="mission-point">
                 <i className="fas fa-check-circle"></i>
-                <span>Expand to more engineering branches</span>
+                {/* <span>Expand to more engineering branches</span> */}
               </div>
             </div>
           </div>
 
           {/* Contact */}
           <div className="contact-section">
-            <h3>Get in Touch</h3>
+            {/* <h3>Get in Touch</h3> */}
             <p className="contact-info">
-              Created by <strong>Praseed</strong>, 2nd Year ECE Student<br />
+              Created by <strong>Praseed</strong><br />
               Email: <strong>praseedkumar104@gmail.com</strong>
             </p>
             {/* <p className="support-text">
