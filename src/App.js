@@ -763,7 +763,7 @@ const handleNavigation = (page, section = 'pattern') => {
                 {expandedMath !== section.id && (
                   <div className="preview">
                     <span className="preview-icon"></span>
-                    <span>Click to view {section.topics.length} topics</span>
+                    <span>Click to view topics</span>
                   </div>
                 )}
               </div>
@@ -843,10 +843,10 @@ const handleNavigation = (page, section = 'pattern') => {
                         <span className="btn-icon">🔗</span>
                         Open Google Drive Folder
                       </a>
-                      <div className="drive-tips">
+                      {/* <div className="drive-tips">
                         <span className="tip-icon">💡</span>
                         <span>Tip: You can view, download, or add to your own Drive</span>
-                      </div>
+                      </div> */}
                     </div>
                   </div>
                 )}
