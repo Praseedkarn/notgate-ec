@@ -603,6 +603,7 @@ body {
     inset 0 1px 0 rgba(255, 255, 255, 0.6);
   position: relative;
   overflow: visible;
+  min-height: 180px;
 }
 
 .aptitude-card::before {
@@ -637,7 +638,11 @@ body {
   max-height: none;
   overflow: visible;
   z-index: 10;
-  margin: 10px 0; /* Add some margin to prevent overlap */
+  margin: 10px 0;
+  grid-column: span 1;
+  width: 100%;
+  min-height: 600px;
+  padding: 2rem;
 }
 
 .aptitude-header {

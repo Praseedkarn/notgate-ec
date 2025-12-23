@@ -381,7 +381,7 @@ const handleNavigation = (page, section = 'pattern') => {
         'Calculus: Limits, Continuity, Partial derivatives',
         'Vector Calculus: Gradient, Divergence, Curl theorems',
         'Complex Analysis: Analytic functions, Residue theorem',
-        'Probability: Random variables, Distributions, Hypothesis testing'
+        'Probability: Random variables, Distributions'
       ],
       important: 'Very High - Scoring section',
       chapters: 5,
@@ -578,7 +578,9 @@ const handleNavigation = (page, section = 'pattern') => {
               <div 
                 key={course.id} 
                 className={`weightage-card electronic-card ${expandedCourse === course.id ? 'expanded' : ''}`}
-                onClick={() => toggleCourse(course.id)}
+                onClick={(e) =>{
+                e.preventDefault();
+                toggleCourse(course.id)}}
                 style={{ '--card-color': course.color }}
               >
                 <div className="card-glow"></div>
@@ -621,7 +623,7 @@ const handleNavigation = (page, section = 'pattern') => {
                     <ul className="topics-list">
                       {course.topics.map((topic, index) => (
                         <li key={index} className="topic-item electronic-item">
-                          <span className="topic-bullet electronic-bullet">⚫</span>
+                          {/* <span className="topic-bullet electronic-bullet">⚫</span> */}
                           <span className="topic-text">{topic}</span>
                         </li>
                       ))}
@@ -635,6 +637,7 @@ const handleNavigation = (page, section = 'pattern') => {
                         target='_blank'
                         rel='noopner noreferrer'
                         className='youtube-btn'
+                        onClick={(e) => e.stopPropagation()}
                         style={{
                           display: 'flex',
                           alignItems: 'center',
@@ -667,10 +670,10 @@ const handleNavigation = (page, section = 'pattern') => {
                       )}
 
 
-                    <div className="view-tip">
+                    {/* <div className="view-tip">
                       <span className="tip-icon">👆</span>
                       Click again to collapse
-                    </div>
+                    </div> */}
                   </div>
                 )}
 
@@ -723,7 +726,8 @@ const handleNavigation = (page, section = 'pattern') => {
                     <ul className="aptitude-topics">
                       {section.topics.map((topic, index) => (
                         <li key={index} className="topic-item electronic-item">
-                          <span className="topic-bullet electronic-bullet">▶</span>
+                          {/* <span className="topic-bullet electronic-bullet">▶</span> */}
+                          {/* <span className='toipic-item '></span> */}
                           <span>{topic}</span>
                         </li>
                       ))}
@@ -732,7 +736,7 @@ const handleNavigation = (page, section = 'pattern') => {
                     {/* Google Drive Access */}
                     <div className="aptitude-drive-access">
                       <div className="drive-access-header">
-                        <span className="drive-icon">📁</span>
+                        {/* <span className="drive-icon">📁</span> */}
                         <h4>Google Drive Folder</h4>
                       </div>
                       <p className="drive-info">
@@ -748,10 +752,10 @@ const handleNavigation = (page, section = 'pattern') => {
                         <span className="btn-icon">🔗</span>
                         Open {section.category} Folder
                       </a>
-                      <div className="access-tip">
+                      {/* <div className="access-tip">
                         <span className="tip-icon">💡</span>
                         <span>Contains formulas, PYQs, notes, and practice problems</span>
-                      </div>
+                      </div> */}
                     </div>
                   </div>
                 )}
