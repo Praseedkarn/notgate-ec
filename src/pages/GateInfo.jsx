@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import '../styles/GateInfo.css';
 
-function GateInfo({ onClose }) {
-  const [activeSection, setActiveSection] = useState('pattern');
+function GateInfo({ onClose ,initialSection='pattern'}) {
+  const [activeSection, setActiveSection] = useState(initialSection);
 
   // Exam pattern data
   const examPattern = [

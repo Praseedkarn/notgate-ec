@@ -2,14 +2,14 @@ import React, { useState } from 'react';
 import '../styles/Articles.css';
 import ArticleCard from './ArticleCard';
 
-function Articles({ onClose, onNavigateToBooks, onNavigateToGateInfo, onNavigateToEligibility }) {
+function Articles({ onClose, onNavigateToBooks, onNavigateToGateInfo, onNavigateToEligibility,onNavigateToCutoff }) {
   const [activeFilter, setActiveFilter] = useState('All');
   
   const articles = [
     {
       id: 2,
       title: "Best books for GATE 2025",
-      updatedDate: "Updated",
+      updatedDate: "DEC 2025",
       description: "Check the best books for GATE exam preparation here. The aspiring candidates are looking for the best books of their subjects to score well in the upcoming exam.",
       category: "Books",
       linkText: "Visit now",
@@ -20,7 +20,7 @@ function Articles({ onClose, onNavigateToBooks, onNavigateToGateInfo, onNavigate
     {
       id: 3,
       title: "GATE 2025 exam pattern",
-      updatedDate: "Updated",
+      updatedDate: "DEC 2025",
       description: "The paper's pattern of Questions in GATE exam is divided into Multiple Choice Question (MCQ) and Numerical Answer Type (NAT) questions. Understand the marking scheme and section-wise distribution.",
       category: "Pattern",
       linkText: "Visit now",
@@ -30,7 +30,7 @@ function Articles({ onClose, onNavigateToBooks, onNavigateToGateInfo, onNavigate
     {
       id: 4,
       title: "Eligibility for GATE 2025",
-      updatedDate: "Updated",
+      updatedDate: "DEC 2025",
       description: "The GATE 2025 eligibility includes the prescribed age limit, educational qualification, and nationality criteria. Check if you're eligible to apply for the examination.",
       category: "Eligibility",
       linkText: "How to fill gate",
@@ -40,19 +40,20 @@ function Articles({ onClose, onNavigateToBooks, onNavigateToGateInfo, onNavigate
     {
       id: 5,
       title: "Fill out GATE 2025 app form",
-      updatedDate: "Updated",
+      updatedDate: "DEC 2025",
       description: "The last date to fill the GATE application form is 24th September 2023, and GATE 2025 will take place on 1st February 2025. Step-by-step guide to complete your application.",
       category: "Application",
       linkText: "Read more",
-      linkUrl: "/application",
-      isFeatured: false
+      linkUrl: "https://gate2026.iitg.ac.in/index.html",
+      isFeatured: false,
+      isExternalLink:true
     },
     {
       id: 6,
       title: "GATE 2025 cutoff trends",
-      updatedDate: "Updated",
+      updatedDate: "DEC 2025",
       description: "Analyze previous year cutoff trends for various IITs and PSUs. Understand how cutoffs vary by branch and category.",
-      category: "Cutoff",
+      category: "cutoff",
       linkText: "Visit now",
       linkUrl: "/cutoff",
       isFeatured: false
@@ -60,7 +61,7 @@ function Articles({ onClose, onNavigateToBooks, onNavigateToGateInfo, onNavigate
     {
       id: 7,
       title: "Preparation strategy for GATE 2025",
-      updatedDate: "Updated",
+      updatedDate: "DEC 2025",
       description: "Comprehensive 6-month study plan, time management tips, and subject-wise preparation strategy from GATE toppers.",
       category: "Strategy",
       linkText: "Visit now",
@@ -70,7 +71,7 @@ function Articles({ onClose, onNavigateToBooks, onNavigateToGateInfo, onNavigate
     {
       id: 8,
       title: "Previous year question papers",
-      updatedDate: "Updated",
+      updatedDate: "DEC 2025",
       description: "Download solved previous year GATE question papers (2015-2024) with detailed solutions and explanations.",
       category: "PYQs",
       linkText: "Download now",
@@ -106,27 +107,37 @@ function Articles({ onClose, onNavigateToBooks, onNavigateToGateInfo, onNavigate
     }, 100);
   };
 
-  // Function to navigate to GateInfo page
-  const navigateToGateInfoPage = () => {
+  // Function to navigate to GateInfo page - UPDATED
+  const navigateToGateInfoPage = (section = 'pattern') => {
     if (onNavigateToGateInfo) {
-      onNavigateToGateInfo();
+      onNavigateToGateInfo(section);  // Pass the section
       onClose();
       return;
     }
     
     const navigateEvent = new CustomEvent('navigateToPage', {
-      detail: { page: 'gateinfo', section: 'pattern' }
+      detail: { page: 'gateinfo', section: section }
     });
     window.dispatchEvent(navigateEvent);
     
     if (onClose) onClose();
     
     setTimeout(() => {
-      alert("Opening GATE Exam Information Page...\n\n📊 Complete GATE ECE Exam Pattern & Details");
+      let message = "";
+      if (section === 'pattern') message = "📊 Complete GATE ECE Exam Pattern & Details";
+      else if (section === 'tips') message = "💡 Complete GATE Preparation Strategy & Tips";
+      else if (section === 'weightage') message = "⚖️ GATE Subject-wise Weightage Analysis";
+      else if (section === 'dates') message = "📅 GATE Important Dates & Schedule";
+      alert(`Opening GATE Exam Information Page...\n\n${message}`);
     }, 100);
   };
 
-  // Function to navigate to Eligibility page (ADDED)
+  // Function to navigate to Preparation Tips
+  const navigateToPreparationTips = () => {
+    navigateToGateInfoPage('tips');  // Call with 'tips' section
+  };
+
+  // Function to navigate to Eligibility page
   const navigateToEligibilityPage = () => {
     if (onNavigateToEligibility) {
       onNavigateToEligibility();
@@ -146,6 +157,27 @@ function Articles({ onClose, onNavigateToBooks, onNavigateToGateInfo, onNavigate
     }, 100);
   };
 
+  // Function to navigate to CutoffPage - ADD THIS
+// Function to navigate to CutoffPage
+const navigateToCutoffPage = () => {
+  if (onNavigateToCutoff) {
+    onNavigateToCutoff();  // Use the prop
+    onClose();
+    return;
+  }
+  
+  const navigateEvent = new CustomEvent('navigateToPage', {
+    detail: { page: 'cutoff' }
+  });
+  window.dispatchEvent(navigateEvent);
+  
+  if (onClose) onClose();
+  
+  setTimeout(() => {
+    alert("Opening GATE Cutoff Trends Page...\n\n📊 Complete GATE Cutoff Analysis for ECE");
+  }, 100);
+};
+
   // Function to test Google Drive link
   const testDriveLink = (driveUrl) => {
     const newWindow = window.open(driveUrl, '_blank', 'noopener,noreferrer');
@@ -162,9 +194,13 @@ function Articles({ onClose, onNavigateToBooks, onNavigateToGateInfo, onNavigate
     if (article.category === 'Books') {
       navigateToBooksPage();
     } else if (article.category === 'Pattern') {
-      navigateToGateInfoPage();
+      navigateToGateInfoPage('pattern');  // Pass 'pattern' section
     } else if (article.category === 'Eligibility') {
-      navigateToEligibilityPage(); // ADDED
+      navigateToEligibilityPage();
+    } else if (article.category === 'Strategy') {
+      navigateToGateInfoPage('tips');
+    } else if (article.category === 'cutoff') {  // ADD THIS
+      navigateToCutoffPage(); 
     } else if (article.isExternalLink) {
       if (article.category === 'PYQs') {
         testDriveLink(article.linkUrl);
@@ -181,9 +217,11 @@ function Articles({ onClose, onNavigateToBooks, onNavigateToGateInfo, onNavigate
     if (category === 'Books') {
       navigateToBooksPage();
     } else if (category === 'Pattern') {
-      navigateToGateInfoPage();
+      navigateToGateInfoPage('pattern');  // Pass 'pattern' section
     } else if (category === 'Eligibility') {
-      navigateToEligibilityPage(); // ADDED
+      navigateToEligibilityPage();
+    } else if (category === 'Strategy') {
+      navigateToGateInfoPage('tips');  // Pass 'tips' section
     } else {
       setActiveFilter(category);
     }
@@ -194,9 +232,14 @@ function Articles({ onClose, onNavigateToBooks, onNavigateToGateInfo, onNavigate
     if (article.category === 'Books') {
       navigateToBooksPage();
     } else if (article.category === 'Pattern') {
-      navigateToGateInfoPage();
+      navigateToGateInfoPage('pattern');  // Pass 'pattern' section
     } else if (article.category === 'Eligibility') {
-      navigateToEligibilityPage(); // ADDED
+      navigateToEligibilityPage();
+    } else if (article.category === 'Strategy') {
+      navigateToGateInfoPage('tips');
+    } else if (article.category==='cutoff'){
+      navigateToCutoffPage();
+    // Pass 'tips' section
     } else {
       handleArticleClick(article);
     }
@@ -206,14 +249,16 @@ function Articles({ onClose, onNavigateToBooks, onNavigateToGateInfo, onNavigate
     alert('Load more articles feature would be implemented here');
   };
 
-  // Update topics list to include Eligibility navigation
+  // Update topics list to include Strategy navigation
   const handleTopicClick = (category) => {
     if (category === 'Books') {
       navigateToBooksPage();
     } else if (category === 'Pattern') {
-      navigateToGateInfoPage();
+      navigateToGateInfoPage('pattern');  // Pass 'pattern' section
     } else if (category === 'Eligibility') {
       navigateToEligibilityPage();
+    } else if (category === 'Strategy') {  // Add Strategy navigation
+      navigateToGateInfoPage('tips');  // Pass 'tips' section
     }
     // Add other categories as needed
   };
@@ -257,6 +302,7 @@ function Articles({ onClose, onNavigateToBooks, onNavigateToGateInfo, onNavigate
                       {category === 'Books' && ' 📚'}
                       {category === 'Pattern' && ' 📋'}
                       {category === 'Eligibility' && ' 🎓'}
+                      {category === 'Strategy' && ' 💡'}  {/* Add icon for Strategy */}
                     </button>
                   ))}
                 </div>
@@ -301,7 +347,7 @@ function Articles({ onClose, onNavigateToBooks, onNavigateToGateInfo, onNavigate
 
             {/* Sidebar */}
             <aside className="articles-sidebar">
-              <div className="articles-sidebar-widget">
+              {/* <div className="articles-sidebar-widget">
                 <h3 className="articles-widget-title">Popular Topics</h3>
                 <ul className="articles-topic-list">
                   <li className="articles-topic-item" onClick={() => handleTopicClick('Books')} style={{cursor: 'pointer'}}>
@@ -316,6 +362,10 @@ function Articles({ onClose, onNavigateToBooks, onNavigateToGateInfo, onNavigate
                     <span className="articles-topic-badge" style={{backgroundColor: '#FF9800'}}>Eligibility</span>
                     <span className="articles-topic-count">🎓 Criteria</span>
                   </li>
+                  <li className="articles-topic-item" onClick={() => handleTopicClick('Strategy')} style={{cursor: 'pointer'}}>
+                    <span className="articles-topic-badge" style={{backgroundColor: '#673AB7'}}>Strategy</span>
+                    <span className="articles-topic-count">💡 Tips</span>
+                  </li>
                   <li className="articles-topic-item">
                     <span className="articles-topic-badge" style={{backgroundColor: '#F44336'}}>Cutoff</span>
                     <span className="articles-topic-count">-</span>
@@ -325,7 +375,7 @@ function Articles({ onClose, onNavigateToBooks, onNavigateToGateInfo, onNavigate
                     <span className="articles-topic-count">-</span>
                   </li>
                 </ul>
-              </div>
+              </div> */}
 
               <div className="articles-sidebar-widget">
                 <h3 className="articles-widget-title">Quick Links</h3>

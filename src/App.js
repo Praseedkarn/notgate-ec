@@ -13,6 +13,7 @@ import PrivacyPolicy from './pages/PrivacyPolicy';
 import Articles from './pages/Articles';
 import BooksPage from './pages/BookPage';
 import EligibilityPage from './pages/EligibilityPage';
+import CutoffPage from './pages/CutoffPage';
 
 function App() {
   const [expandedCourse, setExpandedCourse] = useState(null);
@@ -33,38 +34,57 @@ function App() {
   const [showArticles , setShowArticles ]= useState(false);
   const [showBookPage , setShowBookPage]=useState(false);
   const [showEligigibilityPage , setShowEligibilityPage]=useState(false);
+  const [gateInfoSection ,setGateInfoSection]=useState('pattern');
+  const [showCutoffPage , setShowCutoffPage]=useState(false);
 
-  const handleNavigation = (page) => {
-    // Close all pages first
-    setShowCalculator(false);
-    setShowUnitConverter(false);
-    setShowGateInfo(false);
-    setShowMaterials(false);
-    setShowSettings(false);
-    setShowHelp(false);
-    setShowToolPage(false);
-    setShowAbout(false);
-    setShowPrivacyPolicy(false);
-    setShowTermsCondition(false);
-    setShowArticles(false);
-    setShowBookPage(false);
-    setShowEligibilityPage(false);
-
-    // Then open the requested page
-    if (page === 'calculator') setShowCalculator(true);
-    else if (page === 'unit-converter') setShowUnitConverter(true);
-    else if (page === 'gate-info') setShowGateInfo(true);
-    else if (page === 'materials') setShowMaterials(true);
-    else if (page === 'settings') setShowSettings(true);
-    else if (page === 'help') setShowHelp(true);
-    else if (page ==='tools')setShowToolPage(true);
-    else if (page === 'about') setShowAbout(true);
-    else if (page==='Term-conditions') setShowTermsCondition(true);
-    else if (page ==='Privacy-Policy') setShowPrivacyPolicy(true);
-    else if (page ==='articles') setShowArticles(true);
-    else if (page ==='books') setShowBookPage(true);
-    else if (page ==='eligibility-page') setShowEligibilityPage(true);
-  };
+const handleNavigation = (page, section = 'pattern') => {
+  // Close all pages first
+  setShowCalculator(false);
+  setShowUnitConverter(false);
+  setShowGateInfo(false);
+  setShowMaterials(false);
+  setShowSettings(false);
+  setShowHelp(false);
+  setShowToolPage(false);
+  setShowAbout(false);
+  setShowPrivacyPolicy(false);
+  setShowTermsCondition(false);
+  setShowArticles(false);
+  setShowBookPage(false);
+  setShowEligibilityPage(false);
+  setShowCutoffPage(false);
+  // Then open the requested page
+  if (page === 'gate-info' || page === 'gateinfo') {
+    setGateInfoSection(section);  // Set the section
+    setShowGateInfo(true);
+  } else if (page === 'calculator') {
+    setShowCalculator(true);
+  } else if (page === 'unit-converter') {
+    setShowUnitConverter(true);
+  } else if (page === 'materials') {
+    setShowMaterials(true);
+  } else if (page === 'settings') {
+    setShowSettings(true);
+  } else if (page === 'help') {
+    setShowHelp(true);
+  } else if (page === 'tools') {
+    setShowToolPage(true);
+  } else if (page === 'about') {
+    setShowAbout(true);
+  } else if (page === 'Term-conditions') {
+    setShowTermsCondition(true);
+  } else if (page === 'Privacy-Policy') {
+    setShowPrivacyPolicy(true);
+  } else if (page === 'articles') {
+    setShowArticles(true);
+  } else if (page === 'books') {
+    setShowBookPage(true);
+  } else if (page === 'eligibility-page') {
+    setShowEligibilityPage(true);
+  }else if (page==='cutoff'){
+    setShowCutoffPage(true);
+  }
+};
 
 
   // Load theme from localStorage on app start
@@ -461,7 +481,8 @@ function App() {
       return <Help onClose={() => setShowHelp(false)} />;
     }
     if (showGateInfo) {
-      return <GateInfo onClose={() => setShowGateInfo(false)} />;
+      return <GateInfo onClose={() => setShowGateInfo(false)}
+      initialSection={gateInfoSection} />;
     }
     if(showToolPage){
       return <ToolsPage onClose={() =>setShowToolPage(false)}/>
@@ -482,7 +503,8 @@ function App() {
       setShowBookPage(true);
       setShowArticles(false); // Close articles when navigating to books
     }}
-    onNavigateToGateInfo={() => {
+    onNavigateToGateInfo={(section= 'pattern') => {
+      setGateInfoSection(section);
       setShowGateInfo(true);
       setShowArticles(false); // Close articles when navigating to gate info
     }}
@@ -490,6 +512,11 @@ function App() {
       setShowEligibilityPage(true);
       setShowArticles(false);
     }}
+    onNavigateToCutoff={() => {  // ADD THIS
+      setShowCutoffPage(true);
+      setShowArticles(false);
+    }}
+
   />
     }
     if (showBookPage){
@@ -504,6 +531,9 @@ function App() {
     }
     if (showEligigibilityPage){
       return <EligibilityPage onClose={()=>setShowEligibilityPage(false)}/>;
+    }
+    if (showCutoffPage){
+      return<CutoffPage onClose={()=> setShowCutoffPage(false)}/>
     }
 
 
@@ -924,7 +954,7 @@ function App() {
         setShowSettings={() => handleNavigation('settings')}
         setShowUnitConverter={() => handleNavigation('unit-converter')}
         setShowHelp={() => handleNavigation('help')}
-        setShowGateInfo={() => handleNavigation('gate-info')}
+        setShowGateInfo={() => handleNavigation('gate-info','pattern')}
         setShowToolPage={()=>handleNavigation('tools')} 
         setShowAbout = {()=>handleNavigation('about')}
         setShowPrivacyPolicy={()=>handleNavigation('Privacy-Policy')}

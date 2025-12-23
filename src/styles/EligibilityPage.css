@@ -49,7 +49,7 @@
 .back-home-btn {
   background-color: rgba(0, 0, 0, 0.637);
   border: 2px solid var(--header-text);
-  color: var(--header-text);
+  color:var(--header-text)!important;
   padding: 10px 20px;
   border-radius: 30px;
   cursor: pointer;
@@ -63,7 +63,7 @@
 
 .back-home-btn:hover {
   background-color: rgb(42, 37, 37);
-  color: var(--primary-color);
+  color:white !important;
   transform: translateY(-2px);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
@@ -84,15 +84,15 @@
   gap: 15px;
 }
 .eligibility-page .header-subtitle {
-  color: #000000 !important;
+  color: var(--header-text) !important;
   text-shadow: 0 1px 2px rgba(255, 255, 255, 0.5); /* Optional: add text shadow for better contrast */
 }
 .dark-theme .category-subtitle,
 .dark-theme .eligibility-page .header-subtitle,
 body.dark-mode .category-subtitle,
 body.dark-mode .eligibility-page .header-subtitle {
-  color: #ece7e7 !important; /* Force black in dark theme */
-  font-weight: 600; /* Make it bolder for better visibility */
+  /* color: #ece7e7 !important; Force black in dark theme */
+  /* font-weight: 600; Make it bolder for better visibility */
 }
 
 .header-icon {
@@ -123,6 +123,7 @@ body.dark-mode .eligibility-page .header-subtitle {
   padding: 8px 16px;
   border-radius: 20px;
   backdrop-filter: blur(5px);
+  color: rgb(239, 238, 238) !important;
 }
 
 /* ===== NAVIGATION TABS ===== */

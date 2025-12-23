@@ -1,0 +1,157 @@
+/* CutoffPage.css */
+.cutoff-page {
+  min-height: 100vh;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.cutoff-header {
+  background: var(--header-bg);
+  color: var(--header-text);
+  padding: 20px 40px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.header-top {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.back-home-btn {
+  background: none;
+  border: 2px solid var(--header-text);
+  color: var(--header-text);
+  padding: 10px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.3s ease;
+  align-self: flex-start;
+}
+
+.back-home-btn:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: translateX(-5px);
+}
+
+.header-main {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.header-main h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.header-main p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+/* Placeholder Content */
+.cutoff-content-placeholder {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 40px;
+  background-color: var(--card-bg);
+  border-radius: 15px;
+  box-shadow: 0 5px 15px var(--shadow);
+  text-align: center;
+  border: 1px solid var(--border-color);
+}
+
+.placeholder-message {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.placeholder-message h3 {
+  font-size: 1.8rem;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+}
+
+.placeholder-message p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+
+.placeholder-message ul {
+  text-align: left;
+  max-width: 500px;
+  margin: 20px auto;
+  padding-left: 20px;
+}
+
+.placeholder-message li {
+  margin-bottom: 10px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+/* Footer */
+.cutoff-footer {
+  padding: 30px 40px;
+  text-align: center;
+  border-top: 1px solid var(--border-color);
+  background-color: var(--card-bg);
+  margin-top: 50px;
+}
+
+.back-home-btn-footer {
+  background: var(--gradient);
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  margin-bottom: 20px;
+}
+
+.back-home-btn-footer:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px var(--shadow-hover);
+}
+
+.footer-note {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-top: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .cutoff-header {
+    padding: 20px;
+  }
+  
+  .header-main h1 {
+    font-size: 2rem;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .cutoff-content-placeholder {
+    margin: 30px 20px;
+    padding: 30px 20px;
+  }
+  
+  .placeholder-message h3 {
+    font-size: 1.5rem;
+  }
+}
