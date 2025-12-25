@@ -30,7 +30,7 @@ const Help = ({ onClose }) => {
   ];
 
   const contactInfo = [
-    { type: "Email", value: "praseedkumar104@gmail.com", icon: "📧",link : "praseedkumar104@gmail.com"},
+    { type: "Email", value: "notgate.ec@gmail.com", icon: "📧",link : "notgate.ec@gmail.com"},
     { type: "GitHub", value: "https://github.com/Praseedkarn", icon: "🌐",link:"https://github.com/Praseedkarn" },
    // { type: "Hours", value: "", icon: "🕐" }
   ];

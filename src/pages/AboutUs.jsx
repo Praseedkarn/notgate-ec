@@ -98,7 +98,7 @@ const AboutUs = ({ onClose }) => {
             {/* <h3>Get in Touch</h3> */}
             <p className="contact-info">
               Created by <strong>Praseed</strong><br />
-              Email: <strong>praseedkumar104@gmail.com</strong>
+              Email: <strong>notgate.ec@gmail.com</strong>
             </p>
             {/* <p className="support-text">
               Support this student-run project:

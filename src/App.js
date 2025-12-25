@@ -991,7 +991,7 @@ const handleNavigation = (page, section = 'pattern') => {
             className="developer-link"
             title="Send Email"
           >
-            📧 praseedkumar104@gmail.com
+            📧 notgate.ec@gmail.com
           </a>
           <a 
             href="https://github.com/Praseedkarn"
