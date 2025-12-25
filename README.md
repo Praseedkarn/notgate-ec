@@ -10,53 +10,47 @@
 
 [🚀 Live Demo](#) | [📁 Project Structure](#project-structure) | [🛠️ Features](#features) | [📸 Screenshots](#screenshots)
 
-## 📖 Overview
+📖 Overview
+NOTGATE is a modern, interactive web application designed specifically for GATE ECE aspirants. It provides a clear overview of subject weightage, direct access to organized study materials, and essential exam information—all presented in a clean, user-friendly interface.
 
-NOT GATE is an interactive web application designed specifically for GATE ECE aspirants. It provides complete subject-wise weightage analysis, topic details, study materials, calculators, and exam information - all wrapped in a sleek electronic-themed interface.
+The portal simplifies exam preparation by consolidating key resources and data, allowing students to focus on their studies.
 
+✨ Features
+📊 Core Features
+Subject-wise Weightage Analysis: Interactive cards display the marks percentage for all nine GATE ECE subjects, plus General Aptitude.
 
+Detailed Topic Breakdown: Each subject card can be clicked to reveal a detailed list of covered topics (feature in development).
 
-## ✨ Features
+Integrated Study Resources: Quick-access panels link to organized Google Drive folders containing textbooks, formula sheets, previous year questions (PYQs), study notes, exam strategies, and software tools.
 
-### 📊 **Core Features**
-- **✅ Subject-wise Weightage Analysis** - Interactive cards showing percentage distribution
-- **✅ Detailed Topic Breakdown** - Click cards to expand and view all topics
-- **✅ Google Drive Integration** - Direct access to organized study materials
-- **✅ Electronic-Themed UI** - Circuit board animations & LED effects
-- **✅ Responsive Design** - Works on desktop, tablet, and mobile
+Quick Reference Hub: A dedicated section presents key GATE exam facts (total questions, marks, duration, etc.) for instant review.
 
-### 🛠️ **Tools Included**
-- **🧮 Scientific Calculator** - ECE-specific calculations
-- **🔧 Unit Converter** - Common ECE unit conversions
-- **⚙️ Settings Panel** - Theme customization & font size
-- **📖 GATE Information Hub** - Complete exam details & syllabus
-- **🔍 Search Functionality** - Quick topic search
+Responsive Design: Fully functional and optimized for desktop, tablet, and mobile devices.
 
-### 🎨 **UI/UX Highlights**
-- **⚡ Real-time Animations** - LED progress bars, circuit effects
-- **🌓 Theme Support** - Electronic, Dark, Light, Blue themes
-- **📱 Mobile Optimized** - Touch-friendly interactions
-- **🔔 Interactive Feedback** - Hover effects & smooth transitions
+🛠️ Tools & References
+Official Information: Direct link to the official GATE website (gate.iitkgp.ac.in) for authoritative updates.
 
-## 🛠️ Tech Stack
+Resource Gateway: Centralized access to a complete kit of digital study materials.
 
-| Layer | Technology |
-|-------|------------|
-| **Frontend** | React 18.2.0, React Router |
-| **Styling** | CSS3 with CSS Variables, Flexbox, Grid |
-| **Animations** | CSS Keyframes, Transitions |
-| **Icons** | Emoji icons, Custom SVG |
-| **Storage** | LocalStorage (for settings) |
-| **Deployment** | Netlify / Vercel |
-| **Version Control** | Git, GitHub |
+🎨 UI/UX Highlights
+Clean & Modern Interface: A professional layout with intuitive navigation and clear visual hierarchy.
 
-## 🚀 Getting Started
+Visual Progress Indicators: Percentage bars and labels provide an immediate grasp of subject importance.
 
-### Prerequisites
-- Node.js (v14 or higher)
-- npm or yarn
-- Git
+Interactive Elements: Hover effects and expandable sections for engaging user interaction.
 
+🛠️ Tech Stack
+Layer	Technology
+Frontend	React
+Styling	CSS3
+Deployment	Vercel
+Version Control	Git, GitHub
+
+🚀 Getting Started
+The application is live and ready to use.
+
+View the Live Application
+Simply visit https://notgate-ec.vercel.app in your browser to start using all features immediately.
 ### Installation
 
 ```bash
@@ -99,22 +93,7 @@ notgate/
 ├── package.json
 ├── README.md
 └── .gitignore
-📸 Screenshots
-🖥️ Main Dashboard
-text
-📱 [Course Weightage Cards]
-┌─────────────────────────┐
-│  Engineering Mathematics │
-│  ────────────────────── │
-│  📊 15% weightage        │
-│  ❓ 10-12 questions      │
-│  ⭐ Very High Importance │
-│  ↓ Click to expand →    │
-└─────────────────────────┘
-🎨 Theme Showcase
-Electronic Theme	Dark Theme	Light Theme
-Circuit effects	Dark mode	Clean white
-LED animations	Blue accent	Blue accent
+
 🛠️ Tools Preview
 Calculator: Scientific functions
 
@@ -122,10 +101,10 @@ Unit Converter: dBm, MHz, Ω conversions
 
 Settings: Theme switcher, font size
 
-🔗 Live Demo
-🚀 Live Application: Coming Soon
+🔗 Live Links
+🚀 Live Application: https://notgate-ec.vercel.app
 
-🌐 GitHub Repository: https://github.com/Praseedkarn/NotGate
+🌐 GitHub Repository: The repository link appears to be private or renamed, as the public fetch failed. Please check your local git remote configuration (git remote -v).
 
 
 🤝 Contributing
@@ -175,4 +154,3 @@ React Team - For the amazing framework
 ECE Community - For valuable feedback
 
 Open Source - For wonderful tools and libraries
-
