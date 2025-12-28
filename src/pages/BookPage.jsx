@@ -180,7 +180,7 @@ function BooksPage({ onClose }) {
       {/* Header Section */}
       <section className="category-header-section">
         <div className="category-container">
-          <h1 className="category-main-title">📚 Best Books for GATE 2025 - ECE</h1>
+          <h1 className="category-main-title"> Best Books for GATE 2025 - ECE</h1>
           <p className="category-subtitle">
             Electronics & Communication Engineering - Highly recommended and best books for GATE 2025
           </p>

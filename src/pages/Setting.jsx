@@ -128,9 +128,9 @@ const Settings = ({ onClose, currentTheme, onThemeChange }) => {
   };
 
   const themes = [
-    { id: 'light', name: 'Light Mode', icon: '☀️', desc: 'Default light theme' },
-    { id: 'electronic', name: 'Electronic Theme', icon: '⚡', desc: 'Electronic style with dark blue' },
-    { id: 'dark', name: 'Dark Mode', icon: '🌙', desc: 'Pure dark theme' },
+    { id: 'light', name: 'Light Mode', icon: '', desc: 'Default light theme' },
+    { id: 'electronic', name: 'Electronic Theme', icon: '', desc: 'Electronic style with dark blue' },
+    { id: 'dark', name: 'Dark Mode', icon: '', desc: 'Pure dark theme' },
   ];
 
   const fontSizes = [
@@ -140,8 +140,8 @@ const Settings = ({ onClose, currentTheme, onThemeChange }) => {
   ];
 
   const calculatorTypes = [
-    { id: 'scientific', name: 'Scientific Calculator', icon: '🧮', desc: 'Advanced calculations' },
-    { id: 'simple', name: 'Simple Calculator', icon: '📱', desc: 'Basic operations' }
+    { id: 'scientific', name: 'Scientific Calculator', icon: '', desc: 'Advanced calculations' },
+    { id: 'simple', name: 'Simple Calculator', icon: '', desc: 'Basic operations' }
   ];
 
   // Load settings on mount
@@ -171,10 +171,10 @@ const Settings = ({ onClose, currentTheme, onThemeChange }) => {
         </div>
         <div className="header-actions">
           <button onClick={handleReset} className="reset-btn" title="Reset to default">
-            🔄 Reset
+             Reset
           </button>
           <button onClick={handleSave} className="save-btn" title="Save settings">
-            💾 Save
+             Save
           </button>
         </div>
       </div>
@@ -184,7 +184,7 @@ const Settings = ({ onClose, currentTheme, onThemeChange }) => {
         {/* App Theme */}
         <div className="settings-section">
           <div className="section-header">
-            <h2>🎨 App Theme</h2>
+            <h2> App Theme</h2>
             {/* <p>Choose your preferred visual style</p>
             <div className="current-theme-indicator">
               Current: <strong>{settings.theme === 'light' ? 'Light Mode' : 
@@ -213,7 +213,7 @@ const Settings = ({ onClose, currentTheme, onThemeChange }) => {
         {/* Text Size */}
         <div className="settings-section">
           <div className="section-header">
-            <h2>📝 Text Size</h2>
+            <h2> Text Size</h2>
             <p>Adjust text size for better readability</p>
           </div>
           <div className="size-options">
@@ -234,7 +234,7 @@ const Settings = ({ onClose, currentTheme, onThemeChange }) => {
         {/* Download Quality */}
         <div className="settings-section">
           <div className="section-header">
-            <h2>📥 Download Quality</h2>
+            <h2> Download Quality</h2>
             <p>Choose quality for downloaded materials</p>
           </div>
           <div className="quality-options">
@@ -262,7 +262,7 @@ const Settings = ({ onClose, currentTheme, onThemeChange }) => {
         {/* Language */}
         <div className="settings-section">
           <div className="section-header">
-            <h2>🌐 Language</h2>
+            <h2> Language</h2>
             <p>Select your preferred language</p>
           </div>
           <div className="language-select">
@@ -279,7 +279,7 @@ const Settings = ({ onClose, currentTheme, onThemeChange }) => {
         {/* App Info */}
         <div className="settings-section app-info">
           <div className="section-header">
-            <h2>ℹ️ App Information</h2>
+            <h2>ℹ App Information</h2>
           </div>
           <div className="info-grid">
             <div className="info-item">
@@ -294,7 +294,7 @@ const Settings = ({ onClose, currentTheme, onThemeChange }) => {
           </div>
           <div className="app-actions">
             <button className="action-btn clear-btn" title="Clear cache" onClick={handleClearCache}>
-              🗑️ Clear Cache
+               Clear Cache
             </button>
           </div>
         </div>
@@ -303,13 +303,13 @@ const Settings = ({ onClose, currentTheme, onThemeChange }) => {
       {/* Quick Actions */}
       <div className="quick-actions">
         <button className="quick-btn" onClick={handleSave} title="Save and close">
-          💾 Save & Close
+          Save & Close
         </button>
         <button className="quick-btn" onClick={onClose} title="Cancel">
-          ❌ Cancel
+           Cancel
         </button>
         <button className="quick-btn reset-all-btn" onClick={handleReset} title="Reset all">
-          🔄 Reset All
+           Reset All
         </button>
       </div>
     </div>

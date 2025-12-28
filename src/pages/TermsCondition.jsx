@@ -19,7 +19,7 @@ const TermsConditions = () => {
         <div className="container">
           {/* Important Notice */}
           <div className="notice-box">
-            <div className="notice-icon">ℹ️</div>
+            <div className="notice-icon">ℹ</div>
             <div className="notice-content">
               <h3>About NotGate</h3>
               <p>
@@ -107,14 +107,14 @@ const TermsConditions = () => {
             <p>The website contains links to external resources:</p>
             <div className="external-links">
               <div className="external-link-item">
-                <span className="link-icon">📁</span>
+                <span className="link-icon"></span>
                 <div>
                   <h4>Google Drive Resources</h4>
                   <p>Study materials hosted on Google Drive - access at your own discretion</p>
                 </div>
               </div>
               <div className="external-link-item">
-                <span className="link-icon">🌐</span>
+                <span className="link-icon"></span>
                 <div>
                   <h4>Official GATE Website</h4>
                   <p>
@@ -123,7 +123,7 @@ const TermsConditions = () => {
                 </div>
               </div>
               <div className="external-link-item">
-                <span className="link-icon">⚡</span>
+                <span className="link-icon"></span>
                 <div>
                   <h4>Online Tools</h4>
                   <p>Circuit simulators and calculators from third-party providers</p>

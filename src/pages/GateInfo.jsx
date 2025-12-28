@@ -80,25 +80,25 @@ function GateInfo({ onClose ,initialSection='pattern'}) {
           className={`info-tab-btn ${activeSection === 'pattern' ? 'active' : ''}`}
           onClick={() => setActiveSection('pattern')}
         >
-          📋 Exam Pattern
+           Exam Pattern
         </button>
         <button 
           className={`info-tab-btn ${activeSection === 'weightage' ? 'active' : ''}`}
           onClick={() => setActiveSection('weightage')}
         >
-          ⚖️ Subject Weightage
+           Subject Weightage
         </button>
         <button 
           className={`info-tab-btn ${activeSection === 'dates' ? 'active' : ''}`}
           onClick={() => setActiveSection('dates')}
         >
-          📅 Important Dates
+           Important Dates
         </button>
         <button 
           className={`info-tab-btn ${activeSection === 'tips' ? 'active' : ''}`}
           onClick={() => setActiveSection('tips')}
         >
-          💡 Preparation Tips
+           Preparation Tips
         </button>
       </div>
 
@@ -107,7 +107,7 @@ function GateInfo({ onClose ,initialSection='pattern'}) {
         {activeSection === 'pattern' && (
           <div className="pattern-section">
             <h2 className="section-title">
-              <span className="title-icon">📋</span>
+              <span className="title-icon"></span>
               GATE Exam Pattern: Key Highlights
             </h2>
             
@@ -138,7 +138,7 @@ function GateInfo({ onClose ,initialSection='pattern'}) {
             </div>
 
             <div className="mark-distribution">
-              <h3>📊 Mark Distribution</h3>
+              <h3> Mark Distribution</h3>
               <div className="distribution-cards">
                 <div className="distribution-card">
                   <div className="dist-value">15</div>
@@ -163,7 +163,7 @@ function GateInfo({ onClose ,initialSection='pattern'}) {
         {activeSection === 'weightage' && (
           <div className="weightage-section">
             <h2 className="section-title">
-              <span className="title-icon">⚖️</span>
+              <span className="title-icon"></span>
               GATE Subject-wise Weightage for ECE (2014-2022)
             </h2>
             <p className="section-subtitle">
@@ -211,7 +211,7 @@ function GateInfo({ onClose ,initialSection='pattern'}) {
             </div>
 
             <div className="weightage-insights">
-              <h3>🔍 Key Insights</h3>
+              <h3> Key Insights</h3>
               <div className="insights-grid">
                 <div className="insight-card">
                   <div className="insight-icon"></div>
@@ -241,7 +241,7 @@ function GateInfo({ onClose ,initialSection='pattern'}) {
         {activeSection === 'dates' && (
           <div className="dates-section">
             <h2 className="section-title">
-              <span className="title-icon">📅</span>
+              <span className="title-icon"></span>
               Important Dates for GATE 2025
             </h2>
 
@@ -282,7 +282,7 @@ function GateInfo({ onClose ,initialSection='pattern'}) {
         {activeSection === 'tips' && (
           <div className="tips-section">
             <h2 className="section-title">
-              <span className="title-icon">💡</span>
+              <span className="title-icon"></span>
               GATE Preparation Tips & Strategies
             </h2>
 

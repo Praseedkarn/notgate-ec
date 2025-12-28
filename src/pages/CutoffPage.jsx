@@ -13,7 +13,7 @@ function CutoffPage({ onClose }) {
           </button>
           <div className="header-main">
             <h1>
-              <span className="info-icon">📊</span>
+              <span className="info-icon"></span>
               GATE ECE Cutoff Trends
             </h1>
             <p>Complete analysis of GATE cutoff marks for top institutes</p>

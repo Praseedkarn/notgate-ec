@@ -124,10 +124,10 @@ function Articles({ onClose, onNavigateToBooks, onNavigateToGateInfo, onNavigate
     
     setTimeout(() => {
       let message = "";
-      if (section === 'pattern') message = "📊 Complete GATE ECE Exam Pattern & Details";
-      else if (section === 'tips') message = "💡 Complete GATE Preparation Strategy & Tips";
-      else if (section === 'weightage') message = "⚖️ GATE Subject-wise Weightage Analysis";
-      else if (section === 'dates') message = "📅 GATE Important Dates & Schedule";
+      if (section === 'pattern') message = " Complete GATE ECE Exam Pattern & Details";
+      else if (section === 'tips') message = " Complete GATE Preparation Strategy & Tips";
+      else if (section === 'weightage') message = " GATE Subject-wise Weightage Analysis";
+      else if (section === 'dates') message = " GATE Important Dates & Schedule";
       alert(`Opening GATE Exam Information Page...\n\n${message}`);
     }, 100);
   };
@@ -174,7 +174,7 @@ const navigateToCutoffPage = () => {
   if (onClose) onClose();
   
   setTimeout(() => {
-    alert("Opening GATE Cutoff Trends Page...\n\n📊 Complete GATE Cutoff Analysis for ECE");
+    alert("Opening GATE Cutoff Trends Page...\n\n Complete GATE Cutoff Analysis for ECE");
   }, 100);
 };
 
@@ -299,10 +299,10 @@ const navigateToCutoffPage = () => {
                       onClick={() => handleFilterClick(category)}
                     >
                       {category}
-                      {category === 'Books' && ' 📚'}
-                      {category === 'Pattern' && ' 📋'}
-                      {category === 'Eligibility' && ' 🎓'}
-                      {category === 'Strategy' && ' 💡'}  {/* Add icon for Strategy */}
+                      {category === 'Books' && ' '}
+                      {category === 'Pattern' && ' '}
+                      {category === 'Eligibility' && ' '}
+                      {category === 'Strategy' && ' '}  {/* Add icon for Strategy */}
                     </button>
                   ))}
                 </div>

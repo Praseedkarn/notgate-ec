@@ -168,7 +168,7 @@ function EligibilityPage({ onClose }) {
             </div>
 
             <div className="highlight-box">
-              <div className="highlight-icon">💡</div>
+              <div className="highlight-icon"></div>
               <div className="highlight-content">
                 <h3>Key Takeaway</h3>
                 <p>
